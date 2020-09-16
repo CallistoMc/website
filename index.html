@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Page information -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Yeetcraft | Home</title>
+
+    <!-- Native Css project files -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/toggle-classes.css">
+    <link rel="stylesheet" href="css/main_media.css">
+
+    <!-- Libraries -->
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"
+      />
+
+    <link rel="icon" href="assets/logo.png">
+      
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+
+
+</head>
+<body>
+
+    <div class="preloader">
+        <img src="assets/logo.png" alt="Logo-preloading" class="preloader-img rotate">
+    </div>
+
+    <!-- Main wrapper -->
+    <div id="wrapper">
+        <header>
+             <div class="container">
+                 <div class="logo-wrapper">
+                    <img src="assets/logo.png" alt="Logo" class="logo">
+                    <a href="index.html" class="server-name">Yeetcraft</a>
+                 </div>
+        
+                 <nav class="header-nav">
+                    <ul>
+                        <li><a href="AboutUs.html">About us</a></li>
+                        <li><a href="https://yeetcraftmc.craftingstore.net/">Store</a></li>
+                        <li><a href="updates.html">Updates</a></li>
+                        <li><a href="ourteam.html">Our team</a></li>
+                        <li><a href="support.html">Support</a></li>
+                        <li><a href="https://discord.gg/vMvucJG">Discord</a></li>
+                    </ul>
+                </nav>
+
+                <div class="burger-menu">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+             </div>   
+        </header>
+
+        <div class="header-static"></div>
+
+        <main>
+            <video autoplay muted loop id="bgvideo">
+                <source src="assets/" type="video/mp4">
+            </video>
+
+            <div class="overlay">
+                <div class="container">
+                    <div class="titles">
+                        <h1>Kit pvp</h1>
+                        <h2>server</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="server-stats-container wow fadeInUp" data-wow-delay="0.5s">
+                    <h3>Server info</h3>
+                    <div class="server-stats" >
+                        <ul>
+                            <li>IP: <span class="server-ip">yeetcraft.my.pebble.host</span></li>
+                            <li>Status: <span class="server-status status-online"></span></li>
+                            <li>Players online: <span data-playercounter-ip="yeetcraft.my.pebble.host" class="players-online"></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container cta-container wow fadeInUp" data-wow-delay="0.5s">
+                <a href="updates.html" class="cta">see what's new</a>
+                
+            </div>
+        </main>
+    </div>
+
+    <footer>
+       <div class="container">
+        <div class="links-block">
+           <div class="links">
+                <nav class="footer-nav wow fadeInUp">
+                   <h2>Navigation</h2>
+                   <ul>
+                       <li><a href="index.html">Homepage</a></li>
+                       <li><a href="AboutUs.html">About us</a></li>
+                       <li><a href="https://yeetcraftmc.craftingstore.net/">Store</a></li>
+                       <li><a href="ourteam.html">Our team</a></li>
+                       <li><a href="updates.html">Updates</a></li>
+                       <li><a href="support.html">Suport</a></li>
+                   </ul>
+               </nav>
+                   
+               <nav class="social-media wow fadeInUp wow fadeInUp">
+                   <h2>Social media</h2>
+                   <ul>
+                       <li><a href="https://twitter.com/IamTheRoland">Twitter</a></li>
+                       <li><a href="https://discord.gg/vMvucJG">Discord</a></li>
+                   </ul>
+               </nav>
+               
+               <nav class="uesfulLinks wow fadeInUp">
+                   <h2>Useful links</h2>
+                   <ul>
+                       <li><a href="upcoming.html">FAQ</a></li>
+                       <li><a href="upcoming.html">Privacy policy</a></li>
+                       <li><a href="upcoming.html">Terms of Service</a></li>
+                   </ul>
+               </nav>
+           </div>
+
+            <form action="" class="wow fadeInUp">
+                <h2>Contact form</h2>
+
+                <label for="email">Email address</label>
+                <input type="text" id="email">
+
+                <label for="name">Your name</label>
+                <input type="text" id="name">
+
+                <label for="msg">Your message / question</label>
+                <textarea name="" id="msg" cols="30" rows="10"></textarea>
+
+                <input type="submit" value="Send">
+                <p class="form-error"></p>
+            </form>
+        </div>
+        
+        <p class="copyright wow fadeInUp">
+          <span class="rights">Copyright &copy; Yeetcraft 2020. All rights reserved.</span>
+        </p>
+       </div>
+    </footer>
+
+    <div class="page-unloader"></div>
+
+    <!-- Scripts -->
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js"></script>
+    <script src="https://mcapi.us/scripts/minecraft.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
+
+    <script>
+
+        new PlayerCounter({
+            element: document.querySelectorAll("[data-playercounter-ip]")[0],
+            ip: 'yeetcraft.my.pebble.host',
+            format: '{online}', // default {online}
+            refreshRate: 100 * 60 // default 1m
+        });
+
+        let refreshTime = 100 * 60 * 5;
+
+        MinecraftAPI.getServerStatus('yeetcraft.my.pebble.host', {}, function (err, status) {
+
+            // you can change these to your own message!
+
+            if(status.online) {
+                $(".server-status").html("Online").removeClass("status-offline").addClass("status-online");
+            } else {
+                $(".server-status").html("Offline").removeClass("status-online").addClass("status-offline");
+            }
+
+            setInterval(() => {
+                if(status.online) {
+                    $(".server-status").html("Online").removeClass("status-offline").addClass("status-online");
+                } else {
+                    $(".server-status").html("Offline").removeClass("status-online").addClass("status-offline");
+                }
+            }, refreshTime);
+            
+      });
+    </script>
+    
+</body>
+</html>
