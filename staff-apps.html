@@ -10,6 +10,8 @@
     <title>Callisto | Staff applications</title>
 
     <!-- Native Css project files -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/staff-apps.css">
 
     <!-- Libraries -->
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
@@ -34,7 +36,51 @@
 
     <!-- Main wrapper -->
     <div id="wrapper">
-       
+      <main>
+
+        <div class="container">
+          <img src="assets/callisto.png" alt="Logo">
+
+          <div class="staff-apps">
+            <div class="tabs">
+              <p class="tab active-tab">Helper</p>
+              <p class="tab">Developer</p>
+              <p class="tab">Builder</p>
+            </div>
+
+            <form class="staff-app-block">
+              <div class="basic-info">
+                <label for="ign">Your IGN</label>
+                <input  id="ign" type="text" name="ign">
+
+                <label for="tag">Your Discord tag</label>
+                <input id="tag" type="text" name="tag">
+              </div>
+
+              <div class="helper-block-1">
+                <label for="ign">Your IGN</label>
+                <input  id="ign" type="text" name="ign">
+
+                <label for="tag">Your Discord tag</label>
+                <input id="tag" type="text" name="tag">
+
+                <label for="choice">Elaborate choice of becoming a helper on our server (200 words)</label>
+                <p class="extra-info"><span class="star">*</span> See our article on <a href="#">how to apply for a helper position</a></p>
+                <textarea name="" id="choice" cols="30" rows="10"></textarea>
+              </div>
+
+              <div class="helper-block-2">
+                <label for="choice">Elaborate choice of becoming a helper on our server (200 words)</label>
+                <p class="extra-info"><span class="star">*</span> See our article on <a href="#">how to apply for a helper position</a></p>
+                <textarea name="" id="choice" cols="30" rows="10"></textarea>
+              </div>
+
+              <input type="submit" value="APPLY">
+            </form>
+          </div>
+        </div>
+
+      </main>
     </div>
 
     <footer>
