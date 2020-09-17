@@ -20,6 +20,8 @@ footer {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
+  footer .copyright {
+    line-height: 1.3em; }
   footer ul.social {
     font-size: 0; }
     footer ul.social li {
@@ -33,5 +35,23 @@ footer {
         transition: 0.3s; }
         footer ul.social li a:hover {
           color: #555; }
-      footer ul.social li:first-of-type {
-        margin-left: 0; }
+      footer ul.social li .discord {
+        margin-left: 0 !important; }
+
+@media only screen and (max-width: 425px) {
+  footer {
+    padding: 2em 0; }
+    footer .container {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: start;
+      -webkit-align-items: flex-start;
+          -ms-flex-align: start;
+              align-items: flex-start; }
+    footer p.copyright {
+      margin-bottom: 1em; }
+    footer a {
+      margin-left: 0.9em !important; } }

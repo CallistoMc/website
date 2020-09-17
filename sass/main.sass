@@ -10,6 +10,9 @@ footer
 		justify-content: space-between
 		align-items: center
 
+	.copyright
+		line-height: 1.3em
+
 	ul.social
 		font-size: 0
 
@@ -25,5 +28,20 @@ footer
 				&:hover
 					color: #555
 
-			&:first-of-type
-				margin-left: 0
+			.discord
+				margin-left: 0 !important
+
+@media only screen and (max-width: 425px)
+	footer
+		padding: 2em 0
+		
+		.container
+			flex-direction: column
+			align-items: flex-start
+
+		p.copyright
+			margin-bottom: 1em
+
+		a
+			margin-left: 0.9em !important
+

@@ -103,7 +103,7 @@ $("form").on("submit", (e) => {
     e.preventDefault();
 
     // Show success message and hide error(red) borders
-    $(".form-error").html("Your application will be reviewed soon, We will reply as soon as possible.").addClass("success");
+    $(".form-error").html("Your application will be reviewed soon. We will reply as soon as possible.").addClass("success");
     $("input[type=text], textarea").css("border", "none");
 
     // Checks whether all inputs and textareas within specific section are empty
