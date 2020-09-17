@@ -12,10 +12,11 @@
     <!-- Native Css project files -->
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/staff-apps.css">
+    <link rel="stylesheet" href="css/main.css">
 
     <!-- Libraries -->
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"
@@ -42,10 +43,12 @@
           <img src="assets/callisto.png" alt="Logo">
 
           <div class="staff-apps">
+          <h1>Staff applications</h1>
+
             <div class="tabs">
-              <p class="tab active-tab">Helper</p>
-              <p class="tab">Developer</p>
-              <p class="tab">Builder</p>
+              <p class="tab active-tab" data-tab="helper">Helper</p>
+              <p class="tab" data-tab="developer">Developer</p>
+              <p class="tab" data-tab="builder">Builder</p>
             </div>
 
             <form class="staff-app-block">
@@ -57,7 +60,8 @@
                 <input id="tag" type="text" name="tag">
               </div>
 
-              <div class="helper-block-1">
+              <div data-block="helper" class="helper-block app-block">
+                <div class="helper-block-1">
                 <label for="ign">Your IGN</label>
                 <input  id="ign" type="text" name="ign">
 
@@ -74,8 +78,50 @@
                 <p class="extra-info"><span class="star">*</span> See our article on <a href="#">how to apply for a helper position</a></p>
                 <textarea name="" id="choice" cols="30" rows="10"></textarea>
               </div>
+              </div>
+
+              <div data-block="developer" class="developer-block app-block">
+                <div class="deverloper-block-1">
+                <label for="ign">Your Dev IGN</label>
+                <input  id="ign" type="text" name="ign">
+
+                <label for="tag">Your Discord tag :p</label>
+                <input id="tag" type="text" name="tag">
+
+                <label for="choice">Elaborate choice of becoming a developer on our server (200 words)</label>
+                <p class="extra-info"><span class="star">*</span> See our article on <a href="#">how to apply for a helper position</a></p>
+                <textarea name="" id="choice" cols="30" rows="10"></textarea>
+              </div>
+
+              <div class="developer-block-2">
+                <label for="choice">Elaborate choice of becoming a developer... on our server (200 words)</label>
+                <p class="extra-info"><span class="star">*</span> See our article on <a href="#">how to apply for a helper position</a></p>
+                <textarea name="" id="choice" cols="30" rows="10"></textarea>
+              </div>
+              </div>
+
+              <div data-block="builder" class="builder-block app-block">
+                <div class="builder-block-1">
+                <label for="ign">Your Builder IGN</label>
+                <input  id="ign" type="text" name="ign">
+
+                <label for="tag">Your Discord tag pls gimmie :3</label>
+                <input id="tag" type="text" name="tag">
+
+                <label for="choice">Elaborate choice of becoming a builder on our server (200 words)</label>
+                <p class="extra-info"><span class="star">*</span> See our article on <a href="#">how to apply for a helper position</a></p>
+                <textarea name="" id="choice" cols="30" rows="10"></textarea>
+              </div>
+
+              <div class="builder-block-2">
+                <label for="choice">Elaborate choice of becoming a builder bob... on our server (200 words)</label>
+                <p class="extra-info"><span class="star">*</span> See our article on <a href="#">how to apply for a helper position</a></p>
+                <textarea name="" id="choice" cols="30" rows="10"></textarea>
+              </div>
+              </div>
 
               <input type="submit" value="APPLY">
+              <p class="form-error"></p>
             </form>
           </div>
         </div>
@@ -84,7 +130,14 @@
     </div>
 
     <footer>
-      
+      <div class="container">
+        <p class="copyright">Copyright &copy; Callisto Network 2020. All rights reserved</p>
+
+        <ul class="social">
+          <li><a href="#"><i class="fab fa-discord"></i></a></li>
+          <li><a href=""><i class="fab fa-twitter-square"></i></a></li>
+        </ul>
+      </div>
     </footer>
 
     <!-- Scripts -->

@@ -26,11 +26,7 @@ main img {
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  margin-top: 3em;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  margin-top: 2.5em;
   -webkit-align-self: flex-start;
       -ms-flex-item-align: start;
           align-self: flex-start; }
@@ -63,7 +59,7 @@ main img {
         background: #222; }
   .staff-apps .staff-app-block {
     width: 100%; }
-  .staff-apps .staff-app-block, .staff-apps .staff-app-block > div {
+  .staff-apps .app-block {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
@@ -77,12 +73,35 @@ main img {
     -webkit-align-items: flex-start;
         -ms-flex-align: start;
             align-items: flex-start; }
-  .staff-apps .basic-info, .staff-apps .staff-app-block > div {
+  .staff-apps .staff-app-block, .staff-apps .app-block > div {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .staff-apps .basic-info, .staff-apps .app-block > div {
     margin-top: 2em;
     background: #fff;
     padding: 2em;
-    width: 100%; }
-  .staff-apps .basic-info {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  .staff-apps .basic-info:first-of-type {
     margin-top: 0; }
   .staff-apps input {
     border: none;
@@ -112,11 +131,33 @@ main img {
     border: 2px solid #000;
     font-weight: 600;
     margin-top: 2em;
-    margin-bottom: 10em;
     cursor: pointer;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
-    transition: 0.3s; }
+    transition: 0.3s;
+    -webkit-align-self: flex-start;
+        -ms-flex-item-align: start;
+            align-self: flex-start; }
     .staff-apps input[type="submit"]:hover {
       background: #000;
       color: #fff; }
+
+.form-error {
+  color: red;
+  margin-bottom: 10em;
+  margin-top: 0.9em;
+  font-size: 0.9rem; }
+
+.success {
+  color: green; }
+
+h1 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.8em; }
+
+@media only screen and (max-width: 425px) {
+  .tab {
+    padding: 0.6em 1em !important; } }
