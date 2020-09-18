@@ -78,7 +78,7 @@ $("[data-block]").each((index, el) => {
 })
 
 $(".tabs").on("click", ".tab", (e) => {
-    $("input[type=text], textarea").css("border", "none");
+    $("input[type=text], input[type=number], input[type=email], textarea").css("border", "none");
     $(".tab").removeClass("active-tab");
     $(e.target).addClass("active-tab");
 
@@ -104,10 +104,10 @@ $("form").on("submit", (e) => {
 
     // Show success message and hide error(red) borders
     $(".form-error").html("Your application will be reviewed soon. We will reply as soon as possible.").addClass("success");
-    $("input[type=text], textarea").css("border", "none");
+    $("input[type=text], input[type=number], input[type=email], textarea").css("border", "none");
 
     // Checks whether all inputs and textareas within specific section are empty
-    for(let i = 0; i < parentNode.find("input[type=text]").length; i++) {
+    for(let i = 0; i < parentNode.find("input[type=text], input[type=email]").length + 1; i++) {
         if(parentNode.find("input").eq(i).val() === "") {
             $(".form-error").html("Please fill in all the fields.")
             parentNode.find("input").eq(i).css("border", "1px solid #DC000F");
@@ -132,4 +132,45 @@ $("form").on("submit", (e) => {
         }
     }
 
+    if(parentNode.attr("data-block") === "helper") {
+        if ($('.helper-block-2:not(:has(:radio:checked))').length) {
+            $(".form-error").html("Please choose one of the options above.").removeClass("success");
+        }
+    }
+
 })
+
+$("#building-ss").change(function(){
+    $("p.filename").html("Your file has been successfully uploaded.")
+ });
+
+// Dropdown script
+$(".multiple .active").click(() => {
+    $(".multiple .fas").toggleClass("rotate");
+    $(".dropdown").toggle();
+})
+
+$(".dropdown").on("click", "li", (e) => {
+    $(".dropdown li").show();
+    let prevOption = $(".active span").html();
+    let newOption = $(e.target).html()
+
+    $(".dropdown").hide();
+    $(".active span").html(newOption)
+    $(e.target).hide();
+})
+
+// This varibale contains chosen option from custom selection tag
+let dev_specialization = $(".dropdown .active span").html();
+
+// Preloader animation
+// $(".preloader img").animate({opacity: 1, width: "14em"}, 1500, () => {
+// })
+
+// $(window).on("load", () => {
+//         setTimeout(() => {
+//             $(".preloader").animate({opacity: 0}, 400, () => {
+//                 $(".preloader").hide();
+//             })
+//         }, 1900)
+//     })

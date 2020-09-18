@@ -31,9 +31,9 @@
 </head>
 <body>
 
-    <div class="preloader">
-        
-    </div>
+   <!--  <div class="preloader">
+        <img src="assets/callisto.png" alt="Logo">
+    </div> -->
 
     <!-- Main wrapper -->
     <div id="wrapper">
@@ -58,66 +58,137 @@
 
                 <label for="tag">Your Discord tag</label>
                 <input id="tag" type="text" name="tag">
+
+                <label for="twitter">Your twitter username</label>
+                <input id="twitter" type="text" name="twitter">
               </div>
 
               <div data-block="helper" class="helper-block app-block">
                 <div class="helper-block-1">
-                <label for="ign">Your IGN</label>
-                <input  id="ign" type="text" name="ign">
+                  <label for="age">Your age</label>
+                  <input  id="age" type="number" name="age">
 
-                <label for="tag">Your Discord tag</label>
-                <input id="tag" type="text" name="tag">
+                  <label for="timezone">Your timezone (GMT) / region</label>
+                  <input id="timezone" type="text" name="timezone">
 
-                <label for="choice">Elaborate choice of becoming a helper on our server (200 words)</label>
-                <p class="extra-info"><span class="star">*</span> See our article on <a href="#">how to apply for a helper position</a></p>
-                <textarea name="" id="choice" cols="30" rows="10"></textarea>
-              </div>
+                  <label for="email">Your email</label>
+                  <input id="email" type="email" name="email">
+                </div>
 
-              <div class="helper-block-2">
-                <label for="choice">Elaborate choice of becoming a helper on our server (200 words)</label>
-                <p class="extra-info"><span class="star">*</span> See our article on <a href="#">how to apply for a helper position</a></p>
-                <textarea name="" id="choice" cols="30" rows="10"></textarea>
-              </div>
+                <div class="helper-block-2">
+                  <label>Can you record and upload evidence if needed?</label>
+                     <div class="options">
+                       <div class="option">
+                        <label for="canUpload">Yes</label>
+                        <input type="radio" name="canUpload" value="yes" id="canUpload">
+                       </div>
+                       <div class="option">
+                        <label for="cantUpload">No</label>
+                        <input type="radio" name="canUpload" value="no" id="cantUpload">
+                       </div>
+                     </div>
+
+                  <label for="choice">Why do you want to be a helper?  (200 words)</label>
+                  <p class="extra-info"><span class="star">*</span> See our article on <a href="#">how to apply for a helper position</a></p>
+                  <textarea name="" id="choice" cols="30" rows="10"></textarea>
+                </div>
+
+                <div>
+                  <label for="experince-in-other-server">Have you had any previous experience as a helper or staff on another server?</label>
+                  <textarea name="experince-in-other-server" id="experince-in-other-server" cols="30" rows="10"></textarea>
+                </div>
               </div>
 
               <div data-block="developer" class="developer-block app-block">
-                <div class="deverloper-block-1">
-                <label for="ign">Your Dev IGN</label>
-                <input  id="ign" type="text" name="ign">
+                <div class="developer-block">
+                  <label for="age">Your age</label>
+                  <input  id="age" type="number" name="age">
 
-                <label for="tag">Your Discord tag :p</label>
-                <input id="tag" type="text" name="tag">
+                  <label for="timezone">Your timezone (GMT) / region</label>
+                  <input id="timezone" type="text" name="timezone">
 
-                <label for="choice">Elaborate choice of becoming a developer on our server (200 words)</label>
-                <p class="extra-info"><span class="star">*</span> See our article on <a href="#">how to apply for a helper position</a></p>
-                <textarea name="" id="choice" cols="30" rows="10"></textarea>
-              </div>
+                  <label for="email">Your email</label>
+                  <input id="email" type="email" name="email">
+                </div>
 
-              <div class="developer-block-2">
-                <label for="choice">Elaborate choice of becoming a developer... on our server (200 words)</label>
-                <p class="extra-info"><span class="star">*</span> See our article on <a href="#">how to apply for a helper position</a></p>
-                <textarea name="" id="choice" cols="30" rows="10"></textarea>
-              </div>
+                <div class="dev">
+                  <label for="dev-experiences">What is your past experience with developing?</label>
+                  <textarea name="dev-experiences" id="dev-experiences" cols="30" rows="10"></textarea>
+                </div>
+
+                <div class="dev">
+                  <div class="skills">
+                    <label for="">What are your main skills?</label>
+                    <div class="multiple">
+                      <p class="active"><span class="active-name">Spigot/CraftBukkit Development</span> <i class="fas fa-caret-up"></i></p>
+                      <ul class="dropdown">
+                          <li style="display: none">Spigot/CraftBukkit Development</li>
+                          <li>Packet/NMS Coding</li>
+                          <li>Backend Systems</li>
+                          <li>Data Storage MySQL/Mongo</li>
+                          <li>Website Development (HTML/CSS/JavaScript)</li>
+                          <li>Discord Bot Coding</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <label for="forhowlong">How long have you been coding/developing for?</label>
+                  <input id="forhowlong" type="text" name="forhowlong">
+
+                  <label for="dev-works">Link us to some of your previous work (Spigot/GitHub) ?</label>
+                  <textarea name="dev-works" id="dev-works" cols="30" rows="5"></textarea>
+
+                </div>
+
+                <div class="dev">
+                  <label for="why-callisto">Why do you want to be a developer on Callisto?</label>
+                  <textarea name="why-callisto" id="why-callisto" cols="30" rows="10"></textarea>
+
+                  <label for="what-to-develop">What would you want to develop / help develop?</label>
+                  <textarea name="what-to-develop" id="what-to-develop" cols="30" rows="10"></textarea>
+                </div>
+
               </div>
 
               <div data-block="builder" class="builder-block app-block">
-                <div class="builder-block-1">
-                <label for="ign">Your Builder IGN</label>
-                <input  id="ign" type="text" name="ign">
+                <div class="builder-block">
+                  <label for="age">Your age</label>
+                  <input  id="age" type="number" name="age">
 
-                <label for="tag">Your Discord tag pls gimmie :3</label>
-                <input id="tag" type="text" name="tag">
+                  <label for="timezone">Your timezone (GMT) / region</label>
+                  <input id="timezone" type="text" name="timezone">
 
-                <label for="choice">Elaborate choice of becoming a builder on our server (200 words)</label>
-                <p class="extra-info"><span class="star">*</span> See our article on <a href="#">how to apply for a helper position</a></p>
-                <textarea name="" id="choice" cols="30" rows="10"></textarea>
-              </div>
+                  <label for="email">Your email</label>
+                  <input id="email" type="email" name="email">
+                </div>
 
-              <div class="builder-block-2">
-                <label for="choice">Elaborate choice of becoming a builder bob... on our server (200 words)</label>
-                <p class="extra-info"><span class="star">*</span> See our article on <a href="#">how to apply for a helper position</a></p>
-                <textarea name="" id="choice" cols="30" rows="10"></textarea>
-              </div>
+                <div class="builder-block">
+                  <label for="building-experiences">What are your previous experiences in building? (Attach .zip file with screenshots if possible)</label>
+                  <textarea name="building-experiences" id="building-experiences" cols="30" rows="10"></textarea>
+
+                  <div class="attachment-block">
+                    <label for="building-ss"><i class="fas fa-paperclip"></i> Attach archive</label>
+                    <input type="file" accept=".zip" multiple="multiple" name="building-ss" id="building-ss">
+
+                    <div class="attachment">
+                      <!-- Make sure to extract the filename of the uploaded file via server side script and put it into this element -->
+                      <p class="filename"></p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="builder-block">
+                  <label for="building-strengths">What are your strengths building wise? (ie, details, houses, etc)</label>
+                  <textarea name="building-strengths" id="building-strengths" cols="30" rows="5"></textarea>
+
+                  <label for="building-weaknesses">What are your weaknesses building wise? (ie, large trees, mountains, etc)</label>
+                  <textarea name="building-weaknesses" id="building-weaknesses" cols="30" rows="5"></textarea>
+                </div>
+
+                 <div class="builder-block">
+                  <label for="why-building-team">Why do you want to join the building team?</label>
+                  <textarea name="why-building-team" id="why-building-team" cols="30" rows="10"></textarea>
+                </div>
               </div>
 
               <input type="submit" value="APPLY">
