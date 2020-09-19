@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Page information -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Callisto ~ Home</title>
+
+    <!-- Native Css project files -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/home.css">
+
+    <!-- Libraries -->
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"
+      />
+
+    <!-- Icon in the tab -->
+    <link rel="icon" href="assets/callisto-icon.png">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+
+
+</head>
+<body>
+
+   <!--  <div class="preloader">
+        <img src="assets/callisto.png" alt="Logo">
+    </div> -->
+
+    <!-- Main wrapper -->
+    <div id="wrapper">
+      <aside>
+        <div class="side-line"></div>
+         <div class="search">
+              <div class="side-container">
+                    <div class="search-input">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search">
+                    </div>
+              </div>
+          </div>
+
+          <div class="side-container">
+              <ul class="points">
+              <li>
+                  <a href="#" class="main-point"><i class="fas fa-home"></i>Home</a>
+                  <p class="subpoint">Home sweet home</p>
+              </li>
+              <li>
+                  <a href="#" class="main-point"><i class="fas fa-mountain"></i>About Callisto</a>
+                  <p class="subpoint">Get to know us</p>
+              </li>
+              <li>
+                  <a href="#" class="main-point"><i class="fas fa-gem"></i>Shop</a>
+                  <p class="subpoint">Ranks, boosters & more</p>
+              </li>
+              <li>
+                  <a href="#" class="main-point"><i class="far fa-newspaper"></i>Forums</a>
+                  <p class="subpoint">Explore our community posts</p>
+              </li>
+              <li>
+                  <a href="#" class="main-point"><i class="fas fa-info-circle"></i>Support</a>
+                  <p class="subpoint">Got questions?</p>
+              </li>
+              <li>
+                  <a href="#" class="main-point"><i class="fas fa-sign-in-alt"></i>Register</a>
+                  <p class="subpoint">Set up your account</p>
+              </li>
+          </ul>
+          </div>
+      </aside> 
+      <main>
+        <div id="particles-js"></div>
+        <div class="container">
+            <div class="logo-block">
+                <img src="assets/callisto.png" alt="Logo">
+                <p class="logo-subtitle"><b>Uhc</b> minecraft server</p>
+            </div>
+
+            <section class="main-blocks">
+                <div class="play">
+                    <a href="#" class="play-btn"><i class="fas fa-play"></i>Play</a>
+                    <p class="ip-address"><i class="far fa-copy"></i>IP: Callisto.gg coppied to cipboard</p>
+                </div>
+
+                <form action="GET" class="login-form">
+                    <header>login form</header>
+                    <div class="form-fields">
+                        <label for="username">Username</label>
+                        <input type="text" name="username" id="username">
+
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password">
+
+                        <div class="remember-me">
+                            <input type="checkbox" id="remember" name="remember">
+                            <label for="remember">Remember me</label>
+                        </div>
+
+                        <input type="submit" name="submit" value="LOGIN">
+                    </div>
+                </form>
+            </section>
+        </div>
+      </main>
+    </div>
+
+    <footer>
+      <div class="container">
+          <div class="footer-links">
+              <ul class="main-nav">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Shop</a></li>
+                  <li><a href="#">Forums</a></li>
+                  <li><a href="#">Support</a></li>
+                  <li><a href="#">Register</a></li>
+              </ul>
+
+              <ul class="extra-links">
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Staff applications</a></li>
+                  <li><a href="#">Stats</a></li>
+              </ul>
+          </div>
+      </div>
+
+      <div class="container">
+        <p class="copyright">Copyright &copy; Callisto Network 2020. All rights reserved.</p>
+
+        <ul class="social">
+          <li><a href="https://discord.gg/yH4gbmF" class="discord"><i class="fab fa-discord"></i></a></li>
+          <li><a href="https://twitter.com/playcallisto"><i class="fab fa-twitter-square"></i></a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js"></script>
+    <script src="https://mcapi.us/scripts/minecraft.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+          "particles": {
+            "number": {
+              "value": 100,
+              "density": {
+                "enable": true,
+                "value_area": 789.1476416322727
+              }
+            },
+            "color": {
+              "value": "#ffffff"
+            },
+            "shape": {
+              "type": "circle",
+              "stroke": {
+                "width": 0,
+                "color": "#000000"
+              },
+              "polygon": {
+                "nb_sides": 5
+              },
+              "image": {
+                "src": "img/github.svg",
+                "width": 100,
+                "height": 100
+              }
+            },
+            "opacity": {
+              "value": 0.48927153781200905,
+              "random": false,
+              "anim": {
+                "enable": true,
+                "speed": 0.2,
+                "opacity_min": 0,
+                "sync": false
+              }
+            },
+            "size": {
+              "value": 2,
+              "random": true,
+              "anim": {
+                "enable": true,
+                "speed": 2,
+                "size_min": 0,
+                "sync": false
+              }
+            },
+            "line_linked": {
+              "enable": false,
+              "distance": 150,
+              "color": "#ffffff",
+              "opacity": 0.4,
+              "width": 1
+            },
+            "move": {
+              "enable": true,
+              "speed": 0.2,
+              "direction": "none",
+              "random": true,
+              "straight": false,
+              "out_mode": "out",
+              "bounce": false,
+              "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+              }
+            }
+          },
+          "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+              "onhover": {
+                "enable": true,
+                "mode": "bubble"
+              },
+              "onclick": {
+                "enable": true,
+                "mode": "push"
+              },
+              "resize": true
+            },
+            "modes": {
+              "grab": {
+                "distance": 400,
+                "line_linked": {
+                  "opacity": 1
+                }
+              },
+              "bubble": {
+                "distance": 83.91608391608392,
+                "size": 1,
+                "duration": 3,
+                "opacity": 1,
+                "speed": 3
+              },
+              "repulse": {
+                "distance": 200,
+                "duration": 0.4
+              },
+              "push": {
+                "particles_nb": 4
+              },
+              "remove": {
+                "particles_nb": 2
+              }
+            }
+          },
+          "retina_detect": true
+        });
+
+        $(".play-btn").click(() => {
+            $(".ip-address").css("display", "block");
+            $(".ip-address").animate({opacity: 1, "margin-top": "2.5em"}, 400);
+        })
+    </script>
+    
+</body>
+</html>

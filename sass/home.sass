@@ -1,0 +1,135 @@
+main
+	background: #141414
+	position: relative
+	z-index: 10
+
+	.logo-block
+		display: flex
+		flex-direction: column
+		margin-top: 5em
+
+		img
+			width: 12em
+
+		p
+			text-transform: uppercase
+			font-style: italic
+			text-transform: uppercase
+			margin-left: 0.8em
+			margin-top: 0.7em
+			font-size: 1.3rem
+			letter-spacing: 0.05em
+			color: #B4E0E3
+
+			b
+				font-weight: 700
+
+
+	.main-blocks
+		margin-top: 4em
+		display: flex
+		align-items: flex-start
+		width: 100%
+		justify-content: space-between
+
+		.play
+
+			.ip-address
+				color: #B4E0E3
+				text-transform: uppercase
+				letter-spacing: 0.02em
+				max-width: 220px
+				line-height: 1.4em
+				margin-top: 1em
+				font-size: 0.9rem
+				margin-left: 1em
+				transform: translateY(-1.3em)
+				opacity: 0
+				display: none
+
+				i
+					margin-right: 0.5em
+
+			&-btn
+				text-decoration: none
+				color: #fff
+				background: #111
+				border: 1px solid #000
+				border-radius: 2px
+				padding: 0.8em 0
+				padding-left: 1.5em
+				padding-right: 8em
+				text-transform: uppercase
+				font-weight: 500
+				display: inline-flex
+				align-items: center
+				transition: 0.3s
+				letter-spacing: 0.1em
+
+				&:hover
+					color: #B4E0E3
+
+
+				i
+					font-size: 0.7rem
+					margin-right: 1.3em
+
+		form
+			background: #111
+			display: inline-flex
+			flex-direction: column
+
+
+			.form-fields
+				padding: 2em
+				display: flex
+				flex-direction: column
+				align-items: flex-start
+
+			header
+				background: #191919
+				padding: 1em 2em
+				text-transform: uppercase
+				font-weight: 700
+				letter-spacing: 0.2em
+				color: #fff
+				font-size: 1rem
+
+			label
+				color: #fff
+				font-style: italic
+				letter-spacing: 0.05em
+
+			input[type=text], input[type=password]
+				background: #191919
+				border: none
+				outline: none
+				color: #fff
+				padding: 0.5em 1em
+				margin-top: 1em
+				margin-bottom: 1.5em
+
+		input[type=submit]
+			background: #000
+			border: none
+			outline: none
+			color: #fff
+			text-transform: uppercase
+			font-weight: 600
+			padding: 0.6em 2em
+			border-radius: 3px
+			margin-top: 2em
+			cursor: pointer
+			letter-spacing: 0.1em
+
+
+
+
+
+#particles-js
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	z-index: -1
+	height: 100vh

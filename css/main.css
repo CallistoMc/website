@@ -1,5 +1,10 @@
+@charset "UTF-8";
 #wrapper {
-  min-height: 100vh; }
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
 
 .preloader {
   width: 100%;
@@ -28,10 +33,40 @@ footer {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background: #111;
   color: #555;
-  padding: 3em 0;
-  width: 100%; }
+  padding: 4em 0;
+  width: 100%;
+  z-index: 20;
+  position: relative; }
+  footer .footer-links li:after {
+    content: '●';
+    font-size: 0.7rem;
+    color: #fafafa;
+    margin: 0 1em; }
+  footer .footer-links li {
+    display: inline-block;
+    text-transform: uppercase; }
+    footer .footer-links li:last-of-type:after {
+      content: ''; }
+    footer .footer-links li a {
+      color: #fafafa;
+      text-decoration: none; }
+      footer .footer-links li a:hover {
+        text-decoration: underline; }
+  footer .footer-links .extra-links {
+    margin-top: 0.8em;
+    margin-bottom: 4em; }
+    footer .footer-links .extra-links a {
+      font-size: 0.8rem;
+      color: #999; }
+    footer .footer-links .extra-links li:after {
+      color: #999; }
   footer .container {
     display: -webkit-box;
     display: -webkit-flex;
@@ -80,3 +115,89 @@ footer {
       margin-bottom: 1em; }
     footer a {
       margin-left: 0.9em !important; } }
+
+aside {
+  width: 20vw;
+  background: #0C0C0C;
+  min-width: 350px;
+  position: relative; }
+  aside .side-line {
+    height: 100vh;
+    width: 2vw;
+    background: #0A0A0A;
+    position: fixed;
+    left: 0;
+    top: 0; }
+  aside .side-container {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto; }
+  aside ul {
+    background: url("../assets/brian-patrick-tagalog-_8hGFBxWD0A-unsplash.jpg") no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: cover;
+    height: 100vh;
+    -webkit-filter: brightness(120%) contrast(96%);
+            filter: brightness(120%) contrast(96%);
+    height: 100%; }
+    aside ul li {
+      margin-top: 2.5em; }
+      aside ul li .fas, aside ul li .far {
+        display: none;
+        opacity: 0;
+        margin-right: 0.2em; }
+      aside ul li a {
+        font-size: 2.2rem;
+        text-decoration: none;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: #000;
+        letter-spacing: 0.05em; }
+        aside ul li a:hover .fas, aside ul li a:hover .far {
+          opacity: 1;
+          display: inline; }
+      aside ul li p {
+        color: #fafafa;
+        background: none !important; }
+  aside .search {
+    width: 100%;
+    border-bottom: 2px solid #111; }
+  aside .search-input {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    width: 100%;
+    padding: 2.5em 0;
+    padding-bottom: 2.3em;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    aside .search-input input {
+      border: none;
+      outline: none;
+      color: #585858;
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      font-weight: 600;
+      background: transparent; }
+      aside .search-input input::-webkit-input-placeholder {
+        color: #585858; }
+      aside .search-input input::-moz-placeholder {
+        color: #585858; }
+      aside .search-input input:-ms-input-placeholder {
+        color: #585858; }
+      aside .search-input input::-ms-input-placeholder {
+        color: #585858; }
+      aside .search-input input::placeholder {
+        color: #585858; }
+    aside .search-input i {
+      color: #585858;
+      margin-right: 0.8em;
+      font-size: 0.8rem; }
+
+main {
+  width: 100%; }

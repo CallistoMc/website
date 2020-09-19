@@ -1,5 +1,6 @@
 #wrapper
 	min-height: 100vh
+	display: flex
 
 .preloader
 	width: 100%
@@ -17,10 +18,47 @@
 
 footer
 	display: flex
+	flex-direction: column
 	background: #111
 	color: #555
-	padding: 3em 0
+	padding: 4em 0
 	width: 100%
+	z-index: 20
+	position: relative
+
+	.footer-links
+		li:after
+			content: '●'
+			font-size: 0.7rem
+			color: #fafafa
+			margin: 0 1em
+
+		li
+			display: inline-block
+			text-transform: uppercase
+
+			&:last-of-type
+				&:after
+					content: ''
+
+			a
+				color: #fafafa
+				text-decoration: none
+
+				&:hover
+					text-decoration: underline
+
+		.extra-links
+			margin-top: 0.8em
+			margin-bottom: 4em
+
+			a
+				font-size: 0.8rem
+				color: #999
+
+			li:after
+				color: #999
+
 
 	.container
 		display: flex
@@ -63,3 +101,93 @@ footer
 			margin-left: 0.9em !important
 
 
+
+aside
+	// height: 100%
+	width: 20vw
+	background: #0C0C0C
+	min-width: 350px
+	position: relative
+	// min-height: 100vh
+
+	.side-line
+		height: 100vh
+		// min-height: 100vh
+		width: 2vw
+		background: #0A0A0A
+		position: fixed
+		left: 0
+		top: 0
+
+	.side-container
+		width: 60%
+		margin-left: auto
+		margin-right: auto
+
+	ul
+		background: url("../assets/brian-patrick-tagalog-_8hGFBxWD0A-unsplash.jpg") no-repeat
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+		background-size: cover
+		height: 100vh
+		filter: brightness(120%) contrast(96%)
+		height: 100%
+		
+		li
+			margin-top: 2.5em
+
+			.fas, .far
+				display: none
+				opacity: 0
+				margin-right: 0.2em
+
+			a
+				font-size: 2.2rem
+				text-decoration: none
+				font-weight: 800
+				text-transform: uppercase
+				color: #000
+				letter-spacing: 0.05em
+
+				&:hover
+					.fas, .far
+						opacity: 1
+						display: inline
+
+			p
+				color: #fafafa
+				background: none !important
+
+	.search
+		width: 100%
+		border-bottom: 2px solid #111
+
+
+
+	.search-input
+		display: inline-flex
+		width: 100%
+		padding: 2.5em 0
+		padding-bottom: 2.3em
+		align-items: center
+
+		input
+			border: none
+			outline: none
+			color: #585858
+			font-size: 1rem
+			letter-spacing: 0.05em
+			text-transform: uppercase
+			font-weight: 600
+			background: transparent
+
+			&::placeholder
+				color: #585858
+
+		i
+			color: #585858
+			margin-right: 0.8em
+			font-size: 0.8rem
+
+main
+	width: 100%

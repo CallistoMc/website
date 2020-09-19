@@ -163,6 +163,7 @@ $(".dropdown").on("click", "li", (e) => {
 // This varibale contains chosen option from custom selection tag
 let dev_specialization = $(".dropdown .active span").html();
 
+
 // Preloader animation
 // $(".preloader img").animate({opacity: 1, width: "14em"}, 1500, () => {
 // })

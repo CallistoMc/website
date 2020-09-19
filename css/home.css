@@ -1,0 +1,153 @@
+main {
+  background: #141414;
+  position: relative;
+  z-index: 10; }
+  main .logo-block {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 5em; }
+    main .logo-block img {
+      width: 12em; }
+    main .logo-block p {
+      text-transform: uppercase;
+      font-style: italic;
+      text-transform: uppercase;
+      margin-left: 0.8em;
+      margin-top: 0.7em;
+      font-size: 1.3rem;
+      letter-spacing: 0.05em;
+      color: #B4E0E3; }
+      main .logo-block p b {
+        font-weight: 700; }
+  main .main-blocks {
+    margin-top: 4em;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    main .main-blocks .play .ip-address {
+      color: #B4E0E3;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      max-width: 220px;
+      line-height: 1.4em;
+      margin-top: 1em;
+      font-size: 0.9rem;
+      margin-left: 1em;
+      -webkit-transform: translateY(-1.3em);
+          -ms-transform: translateY(-1.3em);
+              transform: translateY(-1.3em);
+      opacity: 0;
+      display: none; }
+      main .main-blocks .play .ip-address i {
+        margin-right: 0.5em; }
+    main .main-blocks .play-btn {
+      text-decoration: none;
+      color: #fff;
+      background: #111;
+      border: 1px solid #000;
+      border-radius: 2px;
+      padding: 0.8em 0;
+      padding-left: 1.5em;
+      padding-right: 8em;
+      text-transform: uppercase;
+      font-weight: 500;
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s;
+      letter-spacing: 0.1em; }
+      main .main-blocks .play-btn:hover {
+        color: #B4E0E3; }
+      main .main-blocks .play-btn i {
+        font-size: 0.7rem;
+        margin-right: 1.3em; }
+    main .main-blocks form {
+      background: #111;
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+      main .main-blocks form .form-fields {
+        padding: 2em;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+            -ms-flex-align: start;
+                align-items: flex-start; }
+      main .main-blocks form header {
+        background: #191919;
+        padding: 1em 2em;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        color: #fff;
+        font-size: 1rem; }
+      main .main-blocks form label {
+        color: #fff;
+        font-style: italic;
+        letter-spacing: 0.05em; }
+      main .main-blocks form input[type=text], main .main-blocks form input[type=password] {
+        background: #191919;
+        border: none;
+        outline: none;
+        color: #fff;
+        padding: 0.5em 1em;
+        margin-top: 1em;
+        margin-bottom: 1.5em; }
+    main .main-blocks input[type=submit] {
+      background: #000;
+      border: none;
+      outline: none;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: 600;
+      padding: 0.6em 2em;
+      border-radius: 3px;
+      margin-top: 2em;
+      cursor: pointer;
+      letter-spacing: 0.1em; }
+
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  height: 100vh; }
