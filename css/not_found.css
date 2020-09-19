@@ -1,0 +1,39 @@
+body {
+  background: #222; }
+  body .page404 {
+    height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    body .page404 .container {
+      position: relative; }
+    body .page404 img {
+      width: 6em; }
+    body .page404 h1 {
+      font-size: 10rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #78ded9; }
+    body .page404 .subtitle {
+      margin-left: 1.5em;
+      color: #9df5f0; }
+    body .page404 img {
+      margin-bottom: -0.5em; }
+
+@media only screen and (max-width: 425px) {
+  h1 {
+    font-size: 5rem !important; }
+  .container {
+    width: 85% !important; }
+  main .subtitle {
+    font-size: 0.9rem;
+    margin-left: 1em !important; }
+  main img {
+    width: 4.5em !important;
+    margin-bottom: 0.4em !important; } }
