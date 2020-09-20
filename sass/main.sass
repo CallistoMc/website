@@ -100,7 +100,21 @@ footer
 		a
 			margin-left: 0.9em !important
 
+i.fa-times
+	position: fixed
+	right: 1em
+	top: 1em
+	color: #666
+	font-size: 1rem
+	z-index: 100
+	opacity: 0
+	display: none
+	cursor: pointer
+	transition: 0.3s
+	padding: 1em
 
+	&:hover
+		color: #999
 
 aside
 	// height: 100%
@@ -108,7 +122,9 @@ aside
 	background: #0C0C0C
 	min-width: 350px
 	position: relative
+	min-height: 100vh
 	// min-height: 100vh
+	transition: 0.5s
 
 	.side-line
 		height: 100vh
@@ -191,3 +207,162 @@ aside
 
 main
 	width: 100%
+
+p.form-error
+	color: red
+	margin-top: 1em
+	max-width: 100%
+
+@media only screen and (max-width: 768px)
+	body
+		position: relative
+
+	aside
+		position: fixed
+		left: -110%
+		top: 0
+		z-index: 40
+
+		.side-line
+			left: -10%
+
+	.main-blocks
+		flex-direction: column 
+
+	.logo-block
+		margin-top: 2em !important
+
+		img
+			width: 7em !important
+
+		p
+			margin-top: 0.3em !important
+			display: none
+
+		i
+			margin-right: 1em
+
+	.main-blocks
+		margin-top: 2em !important
+
+	.login-form
+		margin-top: 2em
+
+@media only screen and (max-width: 500px)
+	.container
+		width: 90% !important
+
+@media only screen and (max-width: 425px)
+	.play-btn, .login-form
+		width: 100% !important
+
+	.play
+		width: 100%
+
+	.play-btn
+		display: inline-flex !important
+		width: 100% !important
+
+	aside
+		width: 15vw !important
+		min-width: 75vw
+
+		&:before
+			content: ''
+			position: absolute
+			left: 0
+			top: 0
+			background: rgba(0, 0, 0, 0.5)
+			width: 100vw
+			height: 100vh
+			opacity: 0
+
+		a
+			font-size: 1.4rem !important
+
+		li
+			margin-top: 2em !important
+
+	footer
+
+		.footer-links
+			display: flex
+
+		ul.main-nav
+			display: flex
+			flex-direction: column
+			margin-top: 0 !important
+
+			li
+				padding: 0.5em 0
+				font-size: 0.9rem
+				
+				a
+					margin-left: 0 !important
+
+				&:after
+					content: ''
+
+		ul.extra-links
+			margin-top: 0 !important
+			display: flex
+			flex-direction: column
+
+			li
+				padding: 0.5em 0
+
+				a
+					margin-left: 0 !important
+
+				&:after
+					content: ''
+
+		p.copyright
+			margin-top: 1em
+
+.sideToggled
+	left: 0
+
+	&:before
+		opacity: 1
+
+@media only screen and (max-width: 1024px) and (max-height: 425px)
+	aside
+		width: 100vw !important
+
+		a
+			font-size: 1.2rem !important
+		ul
+			display: grid
+			grid-template-columns: repeat(3, 1fr)
+			grid-gap: 2em
+
+			li
+				margin-top: 0 !important
+
+	footer
+		font-size: 0.9rem
+
+@media only screen and (max-width: 1024px)
+	aside
+		position: fixed
+		left: -110%
+		top: 0
+		z-index: 40
+
+		.side-line
+			left: -10%
+
+	.logo-block
+		img
+			width: 9em !important
+
+		i
+			font-size: 1.6rem !important
+
+		p
+			display: none
+
+@media only screen and (max-width: 1600px)
+	.container
+		width: 90% !important

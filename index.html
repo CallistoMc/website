@@ -36,7 +36,10 @@
     </div> -->
 
     <!-- Main wrapper -->
-    <div id="wrapper">
+
+    <i class="fa fa-times"></i>
+
+    <div id="wrapper">      
       <aside>
         <div class="side-line"></div>
          <div class="search">
@@ -47,7 +50,6 @@
                     </div>
               </div>
           </div>
-
           <div class="side-container">
               <ul class="points">
               <li>
@@ -76,13 +78,16 @@
               </li>
           </ul>
           </div>
-      </aside> 
+      </aside>       
       <main>
         <div id="particles-js"></div>
         <div class="container">
             <div class="logo-block">
-                <img src="assets/callisto.png" alt="Logo">
-                <p class="logo-subtitle"><b>Uhc</b> minecraft server</p>
+                <a href="#"><i class="fas fa-bars"></i></a>
+                <div class="logo-block_inner">
+                    <img src="assets/callisto.png" alt="Logo">
+                    <p class="logo-subtitle"><b>Uhc</b> minecraft server</p>
+                </div>
             </div>
 
             <section class="main-blocks">
@@ -91,7 +96,7 @@
                     <p class="ip-address"><i class="far fa-copy"></i>IP: Callisto.gg coppied to cipboard</p>
                 </div>
 
-                <form action="GET" class="login-form">
+                <form action="_POST" class="login-form">
                     <header>login form</header>
                     <div class="form-fields">
                         <label for="username">Username</label>
@@ -106,6 +111,7 @@
                         </div>
 
                         <input type="submit" name="submit" value="LOGIN">
+                        <p class="form-error">Error 404 :3 Dino is not here right now so there's that :(</p>
                     </div>
                 </form>
             </section>
@@ -267,6 +273,42 @@
         $(".play-btn").click(() => {
             $(".ip-address").css("display", "block");
             $(".ip-address").animate({opacity: 1, "margin-top": "2.5em"}, 400);
+
+            Clipboard_CopyTo("Callisto.gg")
+        })
+
+        $(".form-error").hide();
+
+        $(".login-form").on("submit", (e) => {
+            $(".form-error").hide();
+
+            if($("input[name=username]").val() === "" || $("input[name=password]").val() === "") {
+                e.preventDefault();
+                $(".form-error").html("Please, fill in all the fields!");
+                $(".form-error").show();
+            }
+        })
+
+        function Clipboard_CopyTo(value) {
+          let tempInput = document.createElement("input");
+          tempInput.value = value;
+          document.body.appendChild(tempInput);
+          tempInput.select();
+          document.execCommand("copy");
+          document.body.removeChild(tempInput);
+        }
+
+        $(".fa-bars").click(() => {
+            $("aside").addClass("sideToggled");
+            $("i.fa-times").css("display", "block");
+            $("i.fa-times").animate({opacity: 1}, 400)
+        })
+
+        $(".fa-times").click(() => {
+            $("aside").removeClass("sideToggled");
+            $(".fa-times").animate({opacity: 0}, 400, () => {
+                $("i.fa-times").css("display", "none");
+            })
         })
     </script>
     
