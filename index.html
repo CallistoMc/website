@@ -323,12 +323,7 @@
         }
 
         $(".register-point").click(() => {
-            closeSidebar();
-
-            $(".modal-overlay").show().animate({opacity: 1}, 400, () => {
-                $("#reg-modal").show().animate({opacity: 1}, 10);
-                $("#reg-modal").addClass("scale-modal")
-            })
+            openModal();
         });
 
         $(".close-modal, .modal-overlay").click(() => {
@@ -336,7 +331,7 @@
 
             setTimeout(() => {
                 $("#reg-modal").show().animate({opacity: 0}, 100, () => {
-                    $("#reg-modal").css("display", "none !important");
+                    $("#reg-modal").css({"display": "none", "z-index": "-5"});
                     $(".modal-overlay").show().animate({opacity: 0}, 400, () => {
                         $(".modal-overlay").hide();
                     });
@@ -344,6 +339,24 @@
             }, 200)
 
         })
+
+        function openModal() {
+            closeSidebar();
+
+            $(".modal-overlay").show().animate({opacity: 1}, 400, () => {
+                $("#reg-modal").show().animate({opacity: 1}, 10);
+                $("#reg-modal").addClass("scale-modal").css("z-index", "35")
+            })
+        }
+
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+
+        // Show modal on redirection (link with parameter ?register)
+        if(urlParams.has("register")) {
+            openModal();
+        }
+
     </script>
     
 </body>
