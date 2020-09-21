@@ -73,7 +73,7 @@
                   <p class="subpoint">Got questions?</p>
               </li>
               <li>
-                  <a href="#" class="main-point"><i class="fas fa-sign-in-alt"></i>Register</a>
+                  <a href="#" class="main-point register-point"><i class="fas fa-sign-in-alt"></i>Register</a>
                   <p class="subpoint">Set up your account</p>
               </li>
           </ul>
@@ -148,6 +148,30 @@
         </ul>
       </div>
     </footer>
+
+    <div class="modal-overlay"></div>
+
+    <div id="reg-modal">
+        <header class="modal-header"></header>
+        <div class="modal-content">
+            <h1>Registration (in-game)</h1>
+
+            <div class="steps">
+                <div class="step">
+                    <h2>Step 1</h2>
+                    <p>Join our minecraft server "Callisto.gg" and use the command <i>/register &lt;yourmail&gt;</i></p>
+                    <p class="example">Example: /register johndoe@gmail.com</p>
+                </div>
+
+                <div class="step">
+                    <h2>Step 2</h2>
+                    <p>Check your mail and follow instructions we sent to it.</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="close-modal">&times;</a>
+    </div>
 
     <!-- Scripts -->
     <script src="libs/jquery/dist/jquery.min.js"></script>
@@ -298,17 +322,27 @@
           document.body.removeChild(tempInput);
         }
 
-        $(".fa-bars").click(() => {
-            $("aside").addClass("sideToggled");
-            $("i.fa-times").css("display", "block");
-            $("i.fa-times").animate({opacity: 1}, 400)
-        })
+        $(".register-point").click(() => {
+            closeSidebar();
 
-        $(".fa-times").click(() => {
-            $("aside").removeClass("sideToggled");
-            $(".fa-times").animate({opacity: 0}, 400, () => {
-                $("i.fa-times").css("display", "none");
+            $(".modal-overlay").show().animate({opacity: 1}, 400, () => {
+                $("#reg-modal").show().animate({opacity: 1}, 10);
+                $("#reg-modal").addClass("scale-modal")
             })
+        });
+
+        $(".close-modal, .modal-overlay").click(() => {
+            $("#reg-modal").removeClass("scale-modal");
+
+            setTimeout(() => {
+                $("#reg-modal").show().animate({opacity: 0}, 100, () => {
+                    $("#reg-modal").css("display", "none !important");
+                    $(".modal-overlay").show().animate({opacity: 0}, 400, () => {
+                        $(".modal-overlay").hide();
+                    });
+                });
+            }, 200)
+
         })
     </script>
     

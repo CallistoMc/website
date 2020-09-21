@@ -10,6 +10,24 @@ $(window).resize(() => {
 	}	
 })
 
+// Toggle sidebar
+$(".fa-bars").click(() => {
+	$("aside").addClass("sideToggled");
+	$("i.fa-times").css("display", "block");
+	$("i.fa-times").animate({opacity: 1}, 400)
+})
+
+$(".fa-times").click(() => {
+    closeSidebar();
+})
+
+function closeSidebar() {
+	$("aside").removeClass("sideToggled");
+    $(".fa-times").animate({opacity: 0}, 400, () => {
+    	$("i.fa-times").css("display", "none");
+    })
+}
+
 // $(window).on("load", () => {
 //     setTimeout(() => {
 //         $(".preloader").animate({opacity: 0}, 500, () => {
