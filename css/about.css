@@ -1,0 +1,155 @@
+main {
+  background: #fafafa; }
+
+.secondary-section {
+  min-height: 60vh;
+  width: 100%;
+  background: #fff; }
+  .secondary-section h1 {
+    color: #d9d9d9;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 4rem;
+    max-width: 300px;
+    margin-top: 1em; }
+  .secondary-section p {
+    margin-top: 1em; }
+  .secondary-section .container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .secondary-section .about-img {
+    width: 50%;
+    background-image: url("../assets/callisto_Render.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60vh;
+    background-position: 57% 100%; }
+  .secondary-section .about-info {
+    width: 70%;
+    position: relative; }
+    .secondary-section .about-info p {
+      width: 85%;
+      color: #444;
+      line-height: 1.5em;
+      margin-top: 1.5em; }
+      .secondary-section .about-info p:first-of-type {
+        margin-top: 2em; }
+    .secondary-section .about-info i {
+      position: absolute;
+      right: 1.8em;
+      bottom: 1.8em;
+      color: #222;
+      cursor: pointer;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s;
+      font-size: 1.4rem; }
+      .secondary-section .about-info i:hover {
+        color: #555; }
+
+.main-section {
+  min-height: 77vh;
+  margin-top: 3em;
+  background: #f1f1f1; }
+  .main-section .banner {
+    width: 100%;
+    min-height: 32vh;
+    background-image: url("../assets/callisto_Render.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+    .main-section .banner .banner-overlay {
+      background: rgba(0, 0, 0, 0.6);
+      width: 100%;
+      min-height: 32vh;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .main-section .banner .banner-overlay h1 {
+        color: #f1f1f1;
+        letter-spacing: 0.1em;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 4rem;
+        max-width: 300px; }
+  .main-section .secondary-info {
+    min-height: 45vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .main-section .secondary-info p {
+      width: 85%;
+      max-width: 700px;
+      color: #444;
+      line-height: 1.5em;
+      margin-top: 1.5em; }
+      .main-section .secondary-info p:first-of-type {
+        margin-top: 0; }
+    .main-section .secondary-info a.cta-about {
+      text-decoration: none;
+      color: #fff;
+      background: #111;
+      padding: 0.6em 1.6em;
+      text-transform: uppercase;
+      font-weight: 600;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      letter-spacing: 0.1em;
+      margin-top: 2em;
+      display: inline-block;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s; }
+      .main-section .secondary-info a.cta-about:hover {
+        background: #333; }
+
+@media only screen and (max-width: 768px) {
+  .secondary-section .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .secondary-section .container .about-info, .secondary-section .container .about-img {
+      width: 100%; }
+    .secondary-section .container i {
+      bottom: 0;
+      right: 0; }
+    .secondary-section .container .about-img {
+      margin-top: 3em;
+      margin-bottom: 3.5em; } }
+
+@media only screen and (max-width: 425px) {
+  h1 {
+    font-size: 2.5rem !important; }
+  .banner {
+    margin-bottom: 2em; }
+  .cta-about {
+    margin-bottom: 3em; }
+  .main-section {
+    margin-top: 2em; } }
+
+@media only screen and (max-height: 425px) and (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem !important; }
+  .banner {
+    margin-bottom: 2em; }
+  .cta-about {
+    margin-bottom: 3em; }
+  .main-section {
+    margin-top: 2em; }
+  .banner-overlay {
+    padding: 3em 0; } }

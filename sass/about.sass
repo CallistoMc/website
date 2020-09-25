@@ -1,0 +1,162 @@
+main
+	background: #fafafa
+
+.secondary-section
+	min-height: 60vh
+	width: 100%
+	background: #fff
+	// margin-top: 5vh
+
+	h1
+		color: #d9d9d9
+		letter-spacing: 0.1em
+		font-weight: 700
+		text-transform: uppercase
+		font-size: 4rem
+		max-width: 300px
+		margin-top: 1em
+
+	p
+		margin-top: 1em
+
+	.container
+		display: flex
+
+	.about-img
+		width: 50%
+		background-image: url("../assets/callisto_Render.png")
+		background-size: cover
+		background-repeat: no-repeat
+		height: 60vh
+		background-position: 57% 100%
+
+	.about-info
+		width: 70%
+		position: relative
+
+		p
+			width: 85%
+			color: #444
+			line-height: 1.5em
+			margin-top: 1.5em
+
+			&:first-of-type
+				margin-top: 2em
+
+		i
+			position: absolute
+			right: 1.8em
+			bottom: 1.8em
+			color: #222
+			cursor: pointer
+			transition: 0.3s
+			font-size: 1.4rem
+
+			&:hover
+				color: #555
+
+.main-section
+	min-height: 77vh
+	margin-top: 3em
+	background: #f1f1f1
+
+	.banner
+		width: 100%
+		min-height: 32vh
+		background-image: url("../assets/callisto_Render.png")
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center
+
+		.banner-overlay
+			background: rgba(0, 0, 0, 0.6)
+			width: 100%
+			min-height: 32vh
+			display: flex
+			align-items: center
+
+
+			h1
+				color: #f1f1f1
+				letter-spacing: 0.1em
+				font-weight: 700
+				text-transform: uppercase
+				font-size: 4rem
+				max-width: 300px
+
+	.secondary-info
+		min-height: 45vh
+		display: flex
+		align-items: center
+
+		p
+			width: 85%
+			max-width: 700px
+			color: #444
+			line-height: 1.5em
+			margin-top: 1.5em
+
+			&:first-of-type
+				margin-top: 0
+
+		a.cta-about
+			text-decoration: none
+			color: #fff
+			background: #111
+			padding: 0.6em 1.6em
+			text-transform: uppercase
+			font-weight: 600
+			border-radius: 4px
+			font-size: 0.9rem
+			letter-spacing: 0.1em
+			margin-top: 2em
+			display: inline-block
+			transition: 0.3s
+
+			&:hover
+				background: #333
+
+@media only screen and (max-width: 768px)
+	.secondary-section .container
+		flex-direction: column
+
+		.about-info, .about-img
+			width: 100%
+
+		i
+			bottom: 0
+			right: 0
+
+		.about-img
+			margin-top: 3em
+			margin-bottom: 3.5em
+
+@media only screen and (max-width: 425px)
+	
+	h1
+		font-size: 2.5rem !important
+	
+	.banner
+		margin-bottom: 2em
+
+	.cta-about
+		margin-bottom: 3em
+
+	.main-section
+		margin-top: 2em
+
+@media only screen and (max-height: 425px) and (max-width: 768px)
+	h1
+		font-size: 2.5rem !important
+	
+	.banner
+		margin-bottom: 2em
+
+	.cta-about
+		margin-bottom: 3em
+
+	.main-section
+		margin-top: 2em
+
+	.banner-overlay
+		padding: 3em 0
