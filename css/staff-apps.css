@@ -16,6 +16,9 @@ main img {
   width: 8em;
   margin-top: 5em; }
 
+footer {
+  margin-top: 5em; }
+
 .staff-apps {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -251,12 +254,11 @@ main img {
 
 .form-error {
   color: red;
-  margin-bottom: 10em;
   margin-top: 0.9em;
   font-size: 0.9rem; }
 
 .success {
-  color: green; }
+  color: green !important; }
 
 h1 {
   font-weight: 700;
@@ -288,9 +290,7 @@ h1 {
     width: 5em !important;
     margin-top: 2em !important; }
   .staff-apps {
-    margin-top: 1em !important; }
-  p.form-error {
-    margin-bottom: 2em !important; } }
+    margin-top: 1em !important; } }
 
 @media only screen and (max-width: 876px) and (max-height: 425px) {
   .tab {
@@ -315,6 +315,4 @@ h1 {
     width: 5em !important;
     margin-top: 2em !important; }
   .staff-apps {
-    margin-top: 1em !important; }
-  p.form-error {
-    margin-bottom: 2em !important; } }
+    margin-top: 1em !important; } }

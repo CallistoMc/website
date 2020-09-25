@@ -28,6 +28,74 @@ function closeSidebar() {
     })
 }
 
+$(document).keyup((e) => {
+	if(e.keyCode == 27) {
+		escSearch();
+		closeModal();
+        $("#screen").removeClass("tucked");
+
+	}
+})
+
+$(".close-search").click(() => {
+	escSearch();
+    $("#screen").removeClass("tucked");
+
+})
+
+function escSearch() {
+	$(".search-screen").hide();
+	$(".search-screen input").val("");
+}
+
+$(".search-input input").on("keydown", () => {
+    $("#screen").addClass("tucked");
+    $(".search-screen").show();
+    $(".search-screen input").focus();
+ })
+
+$("#main-search").on("keyup", () => {
+	$(".search-req").html($("#main-search").val())
+	$(".search-result").hide();
+	$(".no-search-results").hide();
+
+
+	let req = $(".search-req").html().toLowerCase();
+
+	// BACKEND TASK // show each block with convenient information depending on the request (input)
+	// Has to show result(s) as soon as a key has been released (this event)
+	// If nothing was found show element with class no-search-results, hide it otherwise
+	// Incorporate work with filters
+
+	switch(req) {
+		case "shop":
+			$(".search-shop").show();
+			break;
+
+		case "forums":
+			$(".search-forums").show();
+			break;
+
+		case "faq":
+			$(".search-faq").show();
+			break;
+
+		case "egirls be wildin":
+			$(".no-search-results").show();
+	}
+})
+
+// Indicate active filter (active filter has a class activeFilter)
+$(".filters").on("click", ".filter", (e) => {
+	if($(e.target).hasClass("activeFilter")) {
+		$(e.target).removeClass("activeFilter");
+
+	} else {
+		$(".filter").removeClass("activeFilter")
+		$(e.target).addClass("activeFilter");
+	}
+})
+
 // $(window).on("load", () => {
 //     setTimeout(() => {
 //         $(".preloader").animate({opacity: 0}, 500, () => {

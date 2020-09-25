@@ -184,6 +184,9 @@ aside
 		width: 100%
 		border-bottom: 2px solid #111
 
+		input
+			z-index: 20
+
 
 
 	.search-input
@@ -330,6 +333,7 @@ p.form-error
 		p.copyright
 			margin-top: 1em
 
+
 .sideToggled
 	left: 0
 
@@ -379,3 +383,219 @@ p.form-error
 @media only screen and (max-width: 1600px)
 	.container
 		width: 90% !important
+
+#screen.tucked
+	height: 100vh
+	overflow: hidden
+
+.search-screen
+	position: absolute
+	overflow-x: hidden
+	width: 100vw
+	min-height: 100vh
+	left: 0
+	top: 0
+	background: #fafafa
+	z-index: 102
+	display: flex
+	display: none
+
+	input
+		font-size: 4.5rem
+		color: #444
+		text-transform: uppercase
+		border: none
+		outline: none
+		background: none
+		font-weight: 700
+		letter-spacing: 0.05em
+		margin-top: 20vh
+		width: 100%
+
+		&::placeholder
+			color: #666
+
+	h2
+		font-size: 1rem
+		text-transform: uppercase
+
+	.filters
+		margin-top: 1.2em
+
+	.filter
+		text-decoration: none
+		text-transform: uppercase
+		font-weight: 700
+		letter-spacing: 0.05em
+		padding: 0.2em 1.6em
+		padding-bottom: 0.3em
+		border: 2px solid #000
+		color: #000
+		border-radius: 4px
+		transition: 0.3s
+
+		&:hover
+			background: #000
+			color: #fafafa
+
+	[data-search-filter="shop"]
+		margin-left: 1em
+
+	.search-results
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		padding-bottom: 4em
+
+		.search-result
+			margin-top: 2.5em
+			background: #f0f0f0
+			padding: 2em
+			width: 55%
+			display: none
+
+		p
+			text-transform: uppercase
+			margin-top: 0.5em
+
+		.categorie
+			font-weight: 600
+
+		.categorie, .location
+			margin-left: 0.3em
+
+		.search-details
+			h3
+				text-transform: uppercase
+				font-weight: 700
+				margin-top: 1.2em
+				letter-spacing: 0.05em
+				font-size: 1.1rem
+
+			p
+				text-transform: none
+
+			.detail-cat, .price
+				margin-left: 0.3em
+
+		.cta-goto
+			background: #fff
+			text-transform: uppercase
+			font-weight: 600
+			color: #000
+			border-radius: 5px
+			padding: 0.4em 1.5em
+			text-decoration: none
+			font-size: 0.9rem
+			margin-top: 2em
+			display: inline-block
+			transition: 0.3s
+
+			&:hover
+				background: #000
+				color: #fafafa
+
+		.no-search-results
+			text-transform: none
+			font-size: 1rem
+			text-align: center
+			display: inline-block
+			align-self: center
+			margin-top: 8em
+			display: none
+			line-height: 1.5em
+
+			.search-req
+				font-weight: 600
+		
+		.author
+			display: inline-flex
+			align-items: center
+			position: relative
+			margin-left: 2.5em
+
+
+			img
+				position: absolute
+				top: 0%
+				left: -1.8em
+				width: 1.2em
+
+	.close-search
+		position: absolute
+		right: 0
+		top: 0
+		margin: 3%
+		text-decoration: none
+		color: #777
+		font-size: 2rem
+		padding: 0.3em
+		transition: 0.3s
+
+		&:hover
+			color: #000
+
+	.activeFilter
+		background: #000
+		color: #fff
+
+@media only screen and (max-width: 425px)
+	
+	body
+		width: 100vw
+		overflow-x: hidden
+
+	.search-screen
+		width: 100vw
+		overflow-x: visible
+
+		.search-results
+			width: 100%
+
+			.search-result
+				width: 100%
+				min-width: 100%
+
+		input
+			font-size: 3rem
+
+		.location
+			margin-left: 0 !important
+
+		.container
+			width: 90% !important
+
+		input
+			margin-top: 1.5em
+
+		.filters
+			display: flex
+			flex-direction: column
+			width: 100%
+
+			.filter
+				margin-left: 0
+				text-align: center
+				margin-top: 1.3em
+				padding-top: 0.5em
+				padding-bottom: 0.6em
+
+				&:first-of-type
+					margin-top: 0
+
+@media only screen and (max-height: 425px) and (max-width: 768px)
+	.search-screen
+		input
+			font-size: 2rem
+
+		.filter
+			font-size: 0.9rem
+
+		.search-results
+			width: 100%
+
+		.search-result
+			min-width: 100%
+
+			p
+				font-size: 0.9rem

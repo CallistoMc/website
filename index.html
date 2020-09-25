@@ -39,7 +39,8 @@
 
     <i class="fa fa-times"></i>
 
-    <div id="wrapper">      
+    <div id="screen">
+        <div id="wrapper">      
       <aside>
         <div class="side-line"></div>
          <div class="search">
@@ -149,6 +150,7 @@
       </div>
     </footer>
 
+    </div>
     <div class="modal-overlay"></div>
 
     <div id="reg-modal">
@@ -173,6 +175,68 @@
         <a href="#" class="close-modal">&times;</a>
     </div>
 
+    <div class="search-screen">
+        <div class="container">
+            <input type="text" id="main-search" placeholder="Search...">
+
+            <h2>Filters</h2>
+            <div class="filters">
+                <a href="#" data-search-filter="forums" class="filter">Only forums</a>
+                <a href="#" data-search-filter="shop" class="filter">Only shop</a>
+            </div>
+
+            <div class="search-results" data-filter-type="shop">
+                <div class="search-result search-shop">
+                    <p class="search-info"><span class="info-type">Categorie: </span> <span class="categorie">Shop</span></p>
+                    <p class="search-info"><span class="info-type">Location: </span> <a href="#" class="location">https://callisto.gg/shop/ranks</span></a>
+
+                    <div class="search-details">
+                        <h3>Details</h3>
+
+                        <p class="detail-info"><span class="detail-type">Type:</span><span class="detail-cat">Rank</span></p>
+                        <p class="detail-info"><span class="detail-type">Price:</span><span class="price">$5</span></p>
+
+                    </div>
+
+                    <a href="#" class="cta-goto">Go to page</a>
+                </div>
+
+                <div class="search-result search-forums" data-filter-type="forums">
+                    <p class="search-info"><span class="info-type">Categorie: </span> <span class="categorie">Forums</span></p>
+                    <p class="search-info"><span class="info-type">Location: </span> <a href="#" class="location">https://callisto.gg/forums/how-to-get-an-egirl</span></a>
+
+                    <div class="search-details">
+                        <h3>Details</h3>
+
+                        <p class="detail-info"><span class="detail-type">Type:</span><span class="detail-cat">Post</span></p>
+                        <p class="detail-info"><span class="detail-type detail-author">Author:</span><span class="author"><img width="30px" data-uuid="9beb2226-980b-433a-9076-54b4efd6ed5a" class="skin" alt="Head">edqtings</span></p>
+
+                    </div>
+
+                    <a href="#" class="cta-goto">Go to page</a>
+                </div>
+
+                <div class="search-result search-faq" data-filter-type="faq">
+                    <p class="search-info"><span class="info-type">Categorie: </span> <span class="categorie">FAQ</span></p>
+                    <p class="search-info"><span class="info-type">Location: </span> <a href="#" class="location">https://callisto.gg/faq?about</span></a>
+
+                    <div class="search-details">
+                        <h3>Details</h3>
+
+                        <p class="detail-info"><span class="detail-type">Type:</span><span class="detail-cat">Question</span></p>
+
+                    </div>
+
+                    <a href="#" class="cta-goto">Go to page</a>
+                </div>
+
+                <p class="no-search-results">Nothing was found for the request <span class="search-req"></span></p>
+            </div>
+
+            <a href="#" class="close-search">&times;</a>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="libs/jquery/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js"></script>
@@ -180,6 +244,7 @@
     <script src="js/wow.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/uuid.js"></script>
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
@@ -327,16 +392,7 @@
         });
 
         $(".close-modal, .modal-overlay").click(() => {
-            $("#reg-modal").removeClass("scale-modal");
-
-            setTimeout(() => {
-                $("#reg-modal").show().animate({opacity: 0}, 100, () => {
-                    $("#reg-modal").css({"display": "none", "z-index": "-5"});
-                    $(".modal-overlay").show().animate({opacity: 0}, 400, () => {
-                        $(".modal-overlay").hide();
-                    });
-                });
-            }, 200)
+            closeModal();
 
         })
 
@@ -355,6 +411,19 @@
         // Show modal on redirection (link with parameter ?register)
         if(urlParams.has("register")) {
             openModal();
+        }
+
+        function closeModal() {
+            $("#reg-modal").removeClass("scale-modal");
+
+            setTimeout(() => {
+                $("#reg-modal").show().animate({opacity: 0}, 100, () => {
+                    $("#reg-modal").css({"display": "none", "z-index": "-5"});
+                    $(".modal-overlay").show().animate({opacity: 0}, 400, () => {
+                        $(".modal-overlay").hide();
+                    });
+                });
+            }, 200)
         }
 
     </script>

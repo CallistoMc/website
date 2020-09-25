@@ -190,6 +190,8 @@ aside {
   aside .search {
     width: 100%;
     border-bottom: 2px solid #111; }
+    aside .search input {
+      z-index: 20; }
   aside .search-input {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
@@ -380,3 +382,219 @@ p.form-error {
 @media only screen and (max-width: 1600px) {
   .container {
     width: 90% !important; } }
+
+#screen.tucked {
+  height: 100vh;
+  overflow: hidden; }
+
+.search-screen {
+  position: absolute;
+  overflow-x: hidden;
+  width: 100vw;
+  min-height: 100vh;
+  left: 0;
+  top: 0;
+  background: #fafafa;
+  z-index: 102;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  display: none; }
+  .search-screen input {
+    font-size: 4.5rem;
+    color: #444;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    background: none;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-top: 20vh;
+    width: 100%; }
+    .search-screen input::-webkit-input-placeholder {
+      color: #666; }
+    .search-screen input::-moz-placeholder {
+      color: #666; }
+    .search-screen input:-ms-input-placeholder {
+      color: #666; }
+    .search-screen input::-ms-input-placeholder {
+      color: #666; }
+    .search-screen input::placeholder {
+      color: #666; }
+  .search-screen h2 {
+    font-size: 1rem;
+    text-transform: uppercase; }
+  .search-screen .filters {
+    margin-top: 1.2em; }
+  .search-screen .filter {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 0.2em 1.6em;
+    padding-bottom: 0.3em;
+    border: 2px solid #000;
+    color: #000;
+    border-radius: 4px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+    .search-screen .filter:hover {
+      background: #000;
+      color: #fafafa; }
+  .search-screen [data-search-filter="shop"] {
+    margin-left: 1em; }
+  .search-screen .search-results {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-bottom: 4em; }
+    .search-screen .search-results .search-result {
+      margin-top: 2.5em;
+      background: #f0f0f0;
+      padding: 2em;
+      width: 55%;
+      display: none; }
+    .search-screen .search-results p {
+      text-transform: uppercase;
+      margin-top: 0.5em; }
+    .search-screen .search-results .categorie {
+      font-weight: 600; }
+    .search-screen .search-results .categorie, .search-screen .search-results .location {
+      margin-left: 0.3em; }
+    .search-screen .search-results .search-details h3 {
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-top: 1.2em;
+      letter-spacing: 0.05em;
+      font-size: 1.1rem; }
+    .search-screen .search-results .search-details p {
+      text-transform: none; }
+    .search-screen .search-results .search-details .detail-cat, .search-screen .search-results .search-details .price {
+      margin-left: 0.3em; }
+    .search-screen .search-results .cta-goto {
+      background: #fff;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: #000;
+      border-radius: 5px;
+      padding: 0.4em 1.5em;
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin-top: 2em;
+      display: inline-block;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s; }
+      .search-screen .search-results .cta-goto:hover {
+        background: #000;
+        color: #fafafa; }
+    .search-screen .search-results .no-search-results {
+      text-transform: none;
+      font-size: 1rem;
+      text-align: center;
+      display: inline-block;
+      -webkit-align-self: center;
+          -ms-flex-item-align: center;
+              align-self: center;
+      margin-top: 8em;
+      display: none;
+      line-height: 1.5em; }
+      .search-screen .search-results .no-search-results .search-req {
+        font-weight: 600; }
+    .search-screen .search-results .author {
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      position: relative;
+      margin-left: 2.5em; }
+      .search-screen .search-results .author img {
+        position: absolute;
+        top: 0%;
+        left: -1.8em;
+        width: 1.2em; }
+  .search-screen .close-search {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 3%;
+    text-decoration: none;
+    color: #777;
+    font-size: 2rem;
+    padding: 0.3em;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+    .search-screen .close-search:hover {
+      color: #000; }
+  .search-screen .activeFilter {
+    background: #000;
+    color: #fff; }
+
+@media only screen and (max-width: 425px) {
+  body {
+    width: 100vw;
+    overflow-x: hidden; }
+  .search-screen {
+    width: 100vw;
+    overflow-x: visible; }
+    .search-screen .search-results {
+      width: 100%; }
+      .search-screen .search-results .search-result {
+        width: 100%;
+        min-width: 100%; }
+    .search-screen input {
+      font-size: 3rem; }
+    .search-screen .location {
+      margin-left: 0 !important; }
+    .search-screen .container {
+      width: 90% !important; }
+    .search-screen input {
+      margin-top: 1.5em; }
+    .search-screen .filters {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      width: 100%; }
+      .search-screen .filters .filter {
+        margin-left: 0;
+        text-align: center;
+        margin-top: 1.3em;
+        padding-top: 0.5em;
+        padding-bottom: 0.6em; }
+        .search-screen .filters .filter:first-of-type {
+          margin-top: 0; } }
+
+@media only screen and (max-height: 425px) and (max-width: 768px) {
+  .search-screen input {
+    font-size: 2rem; }
+  .search-screen .filter {
+    font-size: 0.9rem; }
+  .search-screen .search-results {
+    width: 100%; }
+  .search-screen .search-result {
+    min-width: 100%; }
+    .search-screen .search-result p {
+      font-size: 0.9rem; } }

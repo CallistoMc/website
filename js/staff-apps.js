@@ -33,12 +33,13 @@ $("form").on("submit", (e) => {
 
     // Show success message and hide error(red) borders
     $(".form-error").html("Your application will be reviewed soon. We will reply as soon as possible.").addClass("success");
+    $(".form-error").show();
     $("input[type=text], input[type=number], input[type=email], textarea").css("border", "none");
 
     // Checks whether all inputs and textareas within specific section are empty
     for(let i = 0; i < parentNode.find("input[type=text], input[type=email]").length + 1; i++) {
         if(parentNode.find("input").eq(i).val() === "") {
-            $(".form-error").html("Please fill in all the fields.")
+            $(".form-error").html("Please fill in all the fields.").show()
             parentNode.find("input").eq(i).css("border", "1px solid #DC000F");
             $(".form-error").removeClass("success");
         }
@@ -46,7 +47,7 @@ $("form").on("submit", (e) => {
 
     for(let i = 0; i < parentNode.find("textarea").length; i++) {
         if(parentNode.find("textarea").eq(i).val() === "") {
-            $(".form-error").html("Please fill in all the fields.")
+            $(".form-error").html("Please fill in all the fields.").show()
             parentNode.find("textarea").eq(i).css("border", "1px solid #DC000F");
             $(".form-error").removeClass("success");
         }
@@ -55,7 +56,7 @@ $("form").on("submit", (e) => {
     // The same container is used in each and every section
     for(let i = 0; i < $(".basic-info").find("input[type=text]").length; i++) {
         if($(".basic-info").find("input").eq(i).val() === "") {
-            $(".form-error").html("Please fill in all the fields.")
+            $(".form-error").html("Please fill in all the fields.").show()
             $(".basic-info").find("input").eq(i).css("border", "1px solid #DC000F");
             $(".form-error").removeClass("success");
         }
@@ -63,7 +64,7 @@ $("form").on("submit", (e) => {
 
     if(parentNode.attr("data-block") === "helper") {
         if ($('.helper-block-2:not(:has(:radio:checked))').length) {
-            $(".form-error").html("Please choose one of the options above.").removeClass("success");
+            $(".form-error").html("Please choose one of the options above.").removeClass("success").show();;
         }
     }
 
