@@ -31,7 +31,6 @@ function closeSidebar() {
 $(document).keyup((e) => {
 	if(e.keyCode == 27) {
 		escSearch();
-		closeModal();
         $("#screen").removeClass("tucked");
 
 	}

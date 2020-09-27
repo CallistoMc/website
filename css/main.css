@@ -9,15 +9,15 @@
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
-  .logo-block i {
+  .logo-block i.fa-bars {
     font-size: 1.8rem;
     color: #B4E0E3;
     color: pointer !important;
-    z-index: 50;
+    z-index: 38;
     position: relative;
     margin-right: 1em; }
   .logo-block img {
-    width: 12em; }
+    width: 11em; }
   .logo-block p {
     text-transform: uppercase;
     font-style: italic;
@@ -295,7 +295,7 @@ p.form-error {
     .logo-block p {
       margin-top: 0.3em !important;
       display: none; }
-    .logo-block i {
+    .logo-block i.fa-bars {
       margin-right: 1em; }
   .main-blocks {
     margin-top: 2em !important; }
