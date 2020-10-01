@@ -32,7 +32,8 @@ main {
       margin-left: 1em; }
       .ranks .rank .rank-prefix .prefix {
         color: #0afafd;
-        margin-left: 0.3em; }
+        margin-left: 0.3em;
+        text-transform: capitalize; }
     .ranks .rank .main-info {
       padding: 1.5em;
       background: -o-linear-gradient(34deg, #020024 0%, #82c9da 0%, #7070a8 100%, #b78ac2 100%);
