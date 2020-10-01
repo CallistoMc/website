@@ -63,6 +63,7 @@ main {
         .ranks .rank .main-info .product-footer a.addToCart {
           background: #111;
           padding: 0.5em 1.4em;
+          padding-bottom: 0.6em;
           border-radius: 4px;
           text-decoration: none;
           color: #fff;
@@ -100,3 +101,14 @@ main {
 
 .glacier .prefix {
   color: #050cce !important; }
+
+.cart-block {
+  background: #222 !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important; }
+  .cart-block ul li {
+    color: #fff; }
+  .cart-block ul {
+    border-bottom-color: #333 !important; }
+  .cart-block .total {
+    color: #fff; }
