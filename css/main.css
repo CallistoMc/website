@@ -193,13 +193,13 @@ aside {
     margin-left: auto;
     margin-right: auto; }
   aside ul {
-    background: url("../assets/brian-patrick-tagalog-_8hGFBxWD0A-unsplash.jpg") no-repeat;
+    background: url("../assets/henry-co-tqu0IOMaiU8-unsplash.jpg") no-repeat;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: cover;
     height: 100vh;
-    -webkit-filter: brightness(120%) contrast(96%);
-            filter: brightness(120%) contrast(96%);
+    -webkit-filter: brightness(60%) contrast(456%);
+            filter: brightness(60%) contrast(456%);
     height: 100%; }
     aside ul li {
       margin-top: 2.5em; }
@@ -212,7 +212,6 @@ aside {
         text-decoration: none;
         font-weight: 800;
         text-transform: uppercase;
-        color: #000;
         letter-spacing: 0.05em; }
         aside ul li a:hover .fas, aside ul li a:hover .far {
           opacity: 1;

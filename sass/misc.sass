@@ -1,0 +1,94 @@
+main
+	background: #fafafa
+	
+.shop-marker
+	background: #c9c9c9
+
+.miscs
+	margin-top: 1.8em
+	display: grid
+	align-items: flex-start
+	grid-template-columns: repeat(2, 300px)
+	grid-gap: 4em
+	margin-bottom: 4em
+
+
+	.misc
+		display: inline-block
+		width: 100%
+
+		.main-info
+			padding: 1.5em
+			background: linear-gradient(56deg, rgba(2,0,36,1) 0%, rgba(130,201,218,1) 0%, rgba(112,112,168,1) 100%, rgba(183,138,194,1) 100%)
+			border-radius: 7px
+
+			// border-top: 4px solid #0af3fd
+
+			.product-name
+				color: #222
+				font-weight: 700
+				text-transform: uppercase
+
+				i
+					margin-right: 0.3em
+
+				span
+					letter-spacing: 0.1em
+
+			.product-footer
+				display: flex
+				justify-content: space-between
+				align-items: center
+				margin-top: 1.7em
+
+				a.addToCart
+					background: #111
+					padding: 0.5em 1.4em
+					padding-bottom: 0.6em
+					border-radius: 4px
+					text-decoration: none
+					color: #fff
+					text-transform: uppercase
+					font-size: 0.8rem
+					font-weight: 700
+					transition: 0.3s
+
+					&:hover
+						background: #222
+
+				.booster-info
+					display: flex
+					align-items: center
+					letter-spacing: 0.05em
+					text-transform: uppercase
+
+					.time	
+						position: relative
+
+						&:after
+							content: ''
+							position: absolute
+							right: -1em
+							top: 7px
+							width: 3px
+							height: 3px
+							background: #111
+							border-radius: 100%
+
+					.price
+						margin-left: 2em
+
+
+		.features
+			margin-top: 1em
+			margin-left: 0.5em
+			line-height: 1.4em
+
+@media only screen and (max-width: 1415px)
+	.miscs
+		grid-template-columns: repeat(2, 1fr)
+
+@media only screen and (max-width: 768px)
+	.miscs
+		grid-template-columns: 1fr
+		grid-gap: 2em

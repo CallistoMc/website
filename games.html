@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Page information -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Callisto ~ Shop</title>
+
+    <!-- Native Css project files -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/games.css">
+
+    <!-- Libraries -->
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"
+      />
+
+    <!-- Icon in the tab -->
+    <link rel="icon" href="assets/callisto-icon.png">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+
+
+</head>
+<body>
+
+   <!--  <div class="preloader">
+        <img src="assets/callisto.png" alt="Logo">
+    </div> -->
+
+    <!-- Main wrapper -->
+
+    <i class="fa fa-times"></i>
+
+    <div id="screen">
+        <div id="wrapper">      
+      <aside>
+        <div class="side-line"></div>
+         <div class="search">
+              <div class="side-container">
+                    <div class="search-input">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search">
+                    </div>
+              </div>
+          </div>
+          <div class="side-container">
+              <ul class="points">
+                <li>
+                    <a href="index.html" class="main-point"><i class="fas fa-home"></i>Home</a>
+                    <p class="subpoint">Home sweet home</p>
+                </li>
+                <li>
+                    <a href="about.html" class="main-point"><i class="fas fa-mountain"></i>About Callisto</a>
+                    <p class="subpoint">Get to know us</p>
+                </li>
+                <li>
+                    <a href="shop.html" class="main-point"><i class="fas fa-gem"></i>Shop</a>
+                    <p class="subpoint">Ranks, boosters & more</p>
+                </li>
+                <li>
+                    <a href="#" class="main-point"><i class="far fa-newspaper"></i>Forums</a>
+                    <p class="subpoint">Explore our community posts</p>
+                </li>
+                <li>
+                    <a href="#" class="main-point"><i class="fas fa-info-circle"></i>Support</a>
+                    <p class="subpoint">Got questions?</p>
+                </li>
+                <li>
+                    <a href="index.html?register" class="main-point register-point"><i class="fas fa-sign-in-alt"></i>Register</a>
+                    <p class="subpoint">Set up your account</p>
+                </li>
+            </ul>
+          </div>
+      </aside>       
+      <main>
+        <div class="container header-container">
+            <div class="logo-block">
+                <a href="#"><i class="fas fa-bars"></i></a>
+                <div class="logo-block_inner">
+                    <img src="assets/callisto.png" alt="Logo">
+                    <p class="logo-subtitle"><b>Shop</b></p>
+                </div>
+            </div>
+
+            <div class="cart-window">
+              <i class="fas fa-shopping-cart"></i>
+
+              <div class="cart-block toggleshow">
+
+                <!-- If the cart is empty gotta hide block with class cart-content and show element with class nothing-in-cart -->
+                <div class="cart-content">
+                  <h2>Cart</h2>
+
+                  <ul class="products">
+                    <li class="product"><span class="product-name">Ice</span> <span class="product-price">$5</span></li>
+                    <li class="product"><span class="product-name">Unban</span> <span class="product-price">$50</span></li>
+                  </ul>
+
+                  <div class="total">
+                    <p>Total <span class="total-price">$55</span></p>
+                  </div>
+
+                  <a href="#" class="checkout-btn">Checkout</a>
+                </div>
+
+                <p class="nothing-in-cart"><span class="oops">Oops</span><br>Seems You have not added anything to the cart...</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="container">
+            <p class="shop-marker">UHC Games</p>
+            
+            <div class="games">
+              <div class="game">
+                <div class="main-info">
+                  <div class="product-name"><i class="fas fa-gamepad"></i> <span class="name">Private Game</span></div>
+                  <div class="product-footer">
+                    <a href="#" class="addToCart">Add To Cart</a>
+                    <p class="price">$5</p>
+                  </div>
+                </div>
+                <p class="features">Buy a game to play with your friends (Customise every setting).</p>   
+              </div>
+
+              <div class="game">
+                <div class="main-info">
+                  <div class="product-name"><i class="fas fa-gamepad"></i> <span class="name">Public Game</span></div>
+                  <div class="product-footer">
+                    <a href="#" class="addToCart">Add To Cart</a>
+                    <p class="price">$15</p>
+                  </div>
+                </div>
+                <p class="features">Buy a game for all players to play (Customise every setting).</p>   
+              </div>
+
+              <div class="game">
+                <div class="main-info">
+                  <div class="product-name"><i class="fas fa-gamepad"></i> <span class="name">Custom Scenario</span></div>
+                  <div class="product-footer">
+                    <a href="#" class="order-now">Order Now</a>
+                    <p class="price">$40</p>
+                  </div>
+                </div>
+                <p class="features">Buy a custom scenario that our developers will implement for your game.</p>   
+              </div>
+          </div>
+          
+      </main>
+    </div>
+
+    <footer>
+      <div class="container">
+          <div class="footer-links">
+              <ul class="main-nav">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Shop</a></li>
+                  <li><a href="#">Forums</a></li>
+                  <li><a href="#">Support</a></li>
+                  <li><a href="#">Register</a></li>
+              </ul>
+
+              <ul class="extra-links">
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Staff applications</a></li>
+                  <li><a href="#">Stats</a></li>
+              </ul>
+          </div>
+      </div>
+
+      <div class="container">
+        <p class="copyright">Copyright &copy; Callisto Network 2020. All rights reserved.</p>
+
+        <ul class="social">
+          <li><a href="https://discord.gg/yH4gbmF" class="discord"><i class="fab fa-discord"></i></a></li>
+          <li><a href="https://twitter.com/playcallisto"><i class="fab fa-twitter-square"></i></a></li>
+        </ul>
+      </div>
+    </footer>
+
+    </div>
+
+    <div class="overlay"></div>
+    <div class="private-game">
+      <div class="modal-img"></div>
+      <div class="modal-content">
+        <h2><i class="fas fa-info"></i> Custom Scenario</h2>
+
+        <form action="" method="POST">
+          <div class="fields">
+            <div class="field">
+              <label for="game-name">Name of the game</label>
+              <input type="text" id="game-name" name="game-name">
+              <p class="tip"><span class="req">*</span> The name should be eye catching</p>
+              <p class="example">
+                Example: More and more crafting tables!
+              </p>
+            </div>
+
+            <div class="field">
+              <label for="game-descr">Description of the game</label>
+              <textarea name="game-descr" id="game-descr" cols="30" rows="10"></textarea>
+              <p class="tip"><span class="req">*</span> Describe your idea so that our developers can actually implement it</p>
+              <p class="example">
+                Tip: Be as descriptive as possible. The better you describe the better the game will be implemented.
+              </p>
+            </div>
+          </div>
+
+          <input type="submit" id="order-game" value="ADD TO CART" name="addToCart">
+          <p class="modal-error">Please, fill in all the fields!</p>
+        </form>
+      </div>
+      <a href="#" class="close-modal">&times;</a>
+
+    </div>
+
+    <div class="search-screen">
+        <div class="container">
+            <input type="text" id="main-search" placeholder="Search...">
+
+            <h2>Filters</h2>
+            <div class="filters">
+                <a href="#" data-search-filter="forums" class="filter">Only forums</a>
+                <a href="#" data-search-filter="shop" class="filter">Only shop</a>
+            </div>
+
+            <div class="search-results" data-filter-type="shop">
+                <div class="search-result search-shop">
+                    <p class="search-info"><span class="info-type">Categorie: </span> <span class="categorie">Shop</span></p>
+                    <p class="search-info"><span class="info-type">Location: </span> <a href="#" class="location">https://callisto.gg/shop/ranks</span></a>
+
+                    <div class="search-details">
+                        <h3>Details</h3>
+
+                        <p class="detail-info"><span class="detail-type">Type:</span><span class="detail-cat">Rank</span></p>
+                        <p class="detail-info"><span class="detail-type">Price:</span><span class="price">$5</span></p>
+
+                    </div>
+
+                    <a href="#" class="cta-goto">Go to page</a>
+                </div>
+
+                <div class="search-result search-forums" data-filter-type="forums">
+                    <p class="search-info"><span class="info-type">Categorie: </span> <span class="categorie">Forums</span></p>
+                    <p class="search-info"><span class="info-type">Location: </span> <a href="#" class="location">https://callisto.gg/forums/how-to-get-an-egirl</span></a>
+
+                    <div class="search-details">
+                        <h3>Details</h3>
+
+                        <p class="detail-info"><span class="detail-type">Type:</span><span class="detail-cat">Post</span></p>
+                        <p class="detail-info"><span class="detail-type detail-author">Author:</span><span class="author"><img width="30px" data-uuid="9beb2226-980b-433a-9076-54b4efd6ed5a" class="skin" alt="Head">edqtings</span></p>
+
+                    </div>
+
+                    <a href="#" class="cta-goto">Go to page</a>
+                </div>
+
+                <div class="search-result search-faq" data-filter-type="faq">
+                    <p class="search-info"><span class="info-type">Categorie: </span> <span class="categorie">FAQ</span></p>
+                    <p class="search-info"><span class="info-type">Location: </span> <a href="#" class="location">https://callisto.gg/faq?about</span></a>
+
+                    <div class="search-details">
+                        <h3>Details</h3>
+
+                        <p class="detail-info"><span class="detail-type">Type:</span><span class="detail-cat">Question</span></p>
+
+                    </div>
+
+                    <a href="#" class="cta-goto">Go to page</a>
+                </div>
+
+                <p class="no-search-results">Nothing was found for the request <span class="search-req"></span></p>
+            </div>
+
+            <a href="#" class="close-search">&times;</a>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js"></script>
+    <script src="https://mcapi.us/scripts/minecraft.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/uuid.js"></script>
+
+    <script>
+
+      $(".fa-shopping-cart").click(() => {
+        $(".cart-block").toggleClass("toggleshow");
+
+        if($(".cart-block").hasClass("toggleshow")) {
+          $(".cart-block").animate({opacity: 0}, 300, () => {
+            $(".cart-block").hide();
+          })
+        } else {
+          $(".cart-block").show()
+          $(".cart-block").animate({opacity: 1}, 300);
+        }
+      })
+
+      $(".order-now").click(() => {
+            openModal();
+        });
+
+        $(".close-modal, .overlay").click(() => {
+            closeModal();
+
+        })
+
+        function openModal() {
+            closeSidebar();
+
+            $(".overlay").show().animate({opacity: 1}, 400, () => {
+                $(".private-game").show().animate({opacity: 1}, 10);
+                $(".private-game").addClass("scale-modal").css("z-index", "35")
+            })
+        }
+
+      function closeModal() {
+            $(".private-game").removeClass("scale-modal");
+
+            setTimeout(() => {
+                $(".private-game").show().animate({opacity: 0}, 100, () => {
+                    $(".private-game").css({"display": "none", "z-index": "-5"});
+                    $(".overlay").show().animate({opacity: 0}, 400, () => {
+                        $(".overlay").hide();
+                    });
+                });
+            }, 200)
+        }
+
+        $(document).keyup((e) => {
+          if(e.keyCode == 27) {
+              closeModal();
+          }
+        })
+
+        $("form").submit((e) => {
+          $(".modal-error").hide();
+            e.preventDefault();
+
+
+          if($("form input").eq(0).val() === "" | $("form textarea").eq(0).val() === "") {
+            e.preventDefault();
+            $(".modal-error").show();
+          }
+        })
+    </script>
+    
+</body>
+</html>

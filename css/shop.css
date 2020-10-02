@@ -89,11 +89,15 @@ main {
 
 @media only screen and (max-width: 425px) {
   .shop-grid {
-    margin-bottom: 2em; } }
+    margin-bottom: 2em; }
+  .shop-marker {
+    margin-top: 2.5em !important; } }
 
-@media only screen and (max-height: 425px) and (max-width: 768px) {
+@media only screen and (max-height: 425px) and (max-width: 812px) {
   .shop-grid {
-    margin-bottom: 2em; } }
+    margin-bottom: 2em; }
+  .shop-marker {
+    margin-top: 2.5em !important; } }
 
 .header-container {
   display: -webkit-box;
@@ -177,3 +181,15 @@ main {
     color: red !important;
     text-transform: uppercase;
     font-weight: 700; }
+
+.shop-marker {
+  background: #222;
+  color: #fff;
+  padding: 0.4em 2em;
+  display: inline-block;
+  border-radius: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.8rem;
+  margin-top: 5em; }
