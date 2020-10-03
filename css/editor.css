@@ -5,6 +5,20 @@ html {
 
 main {
   background: #fafafa; }
+  main label {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.5em !important; }
+  main input {
+    background: #dadada;
+    border: none;
+    outline: none;
+    padding: 0.4em 1em;
+    width: 270px;
+    margin-bottom: 1em; }
+    main input:focus {
+      cursor: text; }
 
 .ck-editor__editable_inline {
   min-height: 300px;
@@ -45,42 +59,37 @@ footer p {
       -ms-flex-direction: column;
           flex-direction: column; }
 
-label {
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 0.9rem;
-  margin-bottom: 0.5em !important; }
-
-input {
-  background: #dadada;
-  border: none;
-  outline: none;
-  padding: 0.4em 1em;
-  width: 270px;
-  margin-bottom: 1em; }
-  input:focus {
-    cursor: text; }
-
 .tags-block {
-  margin-top: 1em; }
+  margin-top: 1em;
+  margin-bottom: 2em; }
   .tags-block .tags-content {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
   .tags-block .tags-input {
-    margin-top: 0.5em;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center; }
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .tags-block .tags-input .tag-input-block {
+      margin-top: 0.5em;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
     .tags-block .tags-input span {
-      background: #000;
-      color: #fff;
+      background: #999;
+      color: #000;
       text-transform: uppercase;
       font-weight: 700;
       letter-spacing: 0.1em;
@@ -94,7 +103,7 @@ input {
       transition: 0.3s;
       cursor: pointer; }
       .tags-block .tags-input span:hover {
-        background: #222; }
+        background: #888; }
     .tags-block .tags-input input {
       margin-bottom: 0; }
   .tags-block .tags {
@@ -102,7 +111,12 @@ input {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    margin-left: -0.5em; }
+    margin-left: -0.5em;
+    max-width: 100%;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    margin-top: 0.5em; }
     .tags-block .tags li {
       list-style: none;
       display: inline-block;
@@ -110,8 +124,6 @@ input {
       margin-right: 1.3em; }
       .tags-block .tags li:last-of-type {
         margin-right: 0; }
-      .tags-block .tags li:before {
-        content: '#'; }
 
 .add-banner {
   text-decoration: none;
@@ -148,5 +160,41 @@ input[type=submit] {
   background: none;
   width: auto;
   display: inline-block;
-  margin-left: -0.5em;
-  font-size: 1rem; }
+  margin-left: -1em;
+  font-size: 1rem;
+  margin-bottom: 0; }
+
+.submit-block {
+  margin-bottom: 4em; }
+  .submit-block .submit-error {
+    margin-top: 0em;
+    color: red;
+    display: none; }
+
+@media only screen and (max-width: 1024px) {
+  form {
+    margin-top: 1.5em; }
+  .tags-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .tags-content ul {
+      padding-left: 0 !important;
+      margin-left: 0 !important; } }
+
+@media only screen and (max-width: 768px) {
+  .tags-block {
+    margin-bottom: 0 !important; } }
+
+@media only screen and (max-width: 425px) {
+  input[name=title] {
+    min-width: 100% !important; }
+  #tag-input {
+    width: 85% !important; } }
+
+p.tags-error {
+  color: red;
+  display: none;
+  margin-bottom: 0 !important; }

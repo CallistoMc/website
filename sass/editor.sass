@@ -7,6 +7,23 @@ html
 main
 	background: #fafafa
 
+	label
+		text-transform: uppercase
+		font-weight: 600
+		font-size: 0.9rem
+		margin-bottom: 0.5em !important
+
+	input
+		background: #dadada
+		border: none
+		outline: none
+		padding: 0.4em 1em
+		width: 270px
+		margin-bottom: 1em
+
+		&:focus
+			cursor: text
+
 .ck-editor__editable_inline 
     min-height: 300px
     width: 100%
@@ -50,37 +67,26 @@ footer
 	display: flex
 	flex-direction: column
 
-label
-	text-transform: uppercase
-	font-weight: 600
-	font-size: 0.9rem
-	margin-bottom: 0.5em !important
-
-input
-	background: #dadada
-	border: none
-	outline: none
-	padding: 0.4em 1em
-	width: 270px
-	margin-bottom: 1em
-
-	&:focus
-		cursor: text
-
 .tags-block
 	margin-top: 1em
+	margin-bottom: 2em
 
 	.tags-content
 		display: flex
+		align-items: flex-start
 
 	.tags-input
-		margin-top: 0.5em
 		display: flex
-		align-items: center
+		flex-direction: column
+
+
+		.tag-input-block
+			margin-top: 0.5em
+			display: flex
 
 		span
-			background: #000
-			color: #fff
+			background: #999
+			color: #000
 			text-transform: uppercase
 			font-weight: 700
 			letter-spacing: 0.1em
@@ -93,7 +99,7 @@ input
 			cursor: pointer
 
 			&:hover
-				background: #222
+				background: #888
 
 		input
 			margin-bottom: 0
@@ -101,6 +107,9 @@ input
 	.tags
 		display: flex
 		margin-left: -0.5em
+		max-width: 100%
+		flex-wrap: wrap
+		margin-top: 0.5em
 
 		li
 			list-style: none
@@ -111,8 +120,6 @@ input
 			&:last-of-type
 				margin-right: 0
 
-			&:before
-				content: '#'
 
 .add-banner
 	text-decoration: none
@@ -149,5 +156,43 @@ input[type=submit]
 	background: none
 	width: auto
 	display: inline-block
-	margin-left: -0.5em
+	margin-left: -1em
 	font-size: 1rem
+	margin-bottom: 0
+
+.submit-block
+	margin-bottom: 4em
+
+	.submit-error
+		margin-top: 0em
+		color: red
+		display: none
+
+@media only screen and (max-width: 1024px)
+	form
+		margin-top: 1.5em
+
+	.tags-content
+		flex-direction: column
+
+		ul
+			padding-left: 0 !important
+			margin-left: 0 !important
+
+@media only screen and (max-width: 768px)
+	.tags-block
+		margin-bottom: 0 !important
+
+
+@media only screen and (max-width: 425px)
+	input[name=title]
+		min-width: 100% !important
+
+	#tag-input 
+		width: 85% !important
+
+
+p.tags-error
+	color: red
+	display: none
+	margin-bottom: 0 !important

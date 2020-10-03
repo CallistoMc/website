@@ -106,19 +106,19 @@
               </div>
 
               <div class="tags-block">
-                <label for="tag-input">Add related tags (max 4, without #)</label>
+
+                <label for="tag-input">Add related tags (max 5, without #)</label>
 
                 <div class="tags-content">
                   <div class="tags-input">
-                    <input type="text" id="tag-input"><span class="tag-btn">Add</span>
+                    <div class="tag-input-block"><input type="text" id="tag-input"><span class="tag-btn">Add</span></div>
+                    <p class="tags-error"></p>
                   </div>
 
                   <ul class="tags">
-                    <li>Shop</li>
-                    <li>Ranks</li>
                   </ul>
                 </div>
-              </div>
+              </div>              
 
               <input type="file" id="banner" name="banner">
               <label for="banner" class="add-banner">Add banner</label>
@@ -126,7 +126,10 @@
                 <span class="req">*</span> Size should be 1920x400
               </p>
 
-              <input type="submit" value="Post">
+              <div class="submit-block">
+                <input type="submit" value="Post">
+                <p class="submit-error"></p>
+              </div>
 
             </form>
           </div>
@@ -239,12 +242,76 @@
     <script src="js/uuid.js"></script>
 
     <script>
+      let theEditor;
+
       ClassicEditor
         .create( document.querySelector( '#editor' ), {height: "500px"} )
-
+        .then(editor => {
+          theEditor = editor;
+        })
         .catch( error => {
             console.error( error );
         } );
+
+      function getDataFromTheEditor() {
+        return theEditor.getData();
+      }
+
+      // Show / create tags
+      $(".tag-btn").click(() => {
+       addTag();
+      })
+
+      $("#tag-input").on("keypress", (e) => {
+        if(e.keyCode == 32){
+          addTag();
+          clearInput()
+        }
+      })
+
+      function addTag() {
+         $(".tags-error").hide()
+          let tagVal = $("#tag-input").val();
+
+          if(tagVal === "" || tagVal === " ") {
+            $(".tags-error").html("Please enter a certain tag").show();
+
+            if($(".tags li").length === 5) {
+              $(".tags-error").html("You can't add more tags").show();
+            }
+
+          } else {
+            if($(".tags li").length === 5) {
+              $(".tags-error").html("You can't add more tags").show();
+            } else {
+              let tag = document.createElement("li");
+              $(tag).html("#" + tagVal).appendTo($(".tags"))
+              clearInput()
+            }
+          }
+      }
+
+      function clearInput() {
+        $("#tag-input").val("");
+      }
+
+      $("form").submit((e) => {
+        e.preventDefault();
+         $(".submit-error").show().html("")
+
+        if($("input[name=title]").val() === "" || $("#editor").html() === "") {
+          $(".submit-error").show().html("Please fill in all the fields");
+        } else {
+          if($(".tags li").length === 0) {
+            $(".submit-error").show().html("Please add some tags");
+          } else {
+            $("form")[0].submit();
+          }
+        }
+
+        // alert($("#editor").html())
+
+      })
     </script>
 </body>
 </html>
