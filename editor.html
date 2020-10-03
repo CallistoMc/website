@@ -7,12 +7,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Callisto ~ About Us</title>
+    <title>Callisto ~ Forums</title>
 
     <!-- Native Css project files -->
-    <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/editor.css">
 
     <!-- Libraries -->
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
@@ -26,6 +25,7 @@
     <link rel="icon" href="assets/callisto-icon.png">
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>
 
 
 </head>
@@ -52,7 +52,7 @@
               </div>
           </div>
           <div class="side-container">
-            <ul class="points">
+             <ul class="points">
                 <li>
                     <a href="index.html" class="main-point"><i class="fas fa-home"></i>Home</a>
                     <p class="subpoint">Home sweet home</p>
@@ -81,51 +81,57 @@
           </div>
       </aside>       
       <main>
-        <div class="container">
+        <div class="container header-container">
             <div class="logo-block">
                 <a href="#"><i class="fas fa-bars"></i></a>
                 <div class="logo-block_inner">
                     <img src="assets/callisto.png" alt="Logo">
-                    <p class="logo-subtitle"><b>About</b> our network</p>
+                    <p class="logo-subtitle"><b>Forums</b></p>
                 </div>
             </div>
           </div>
 
-        
+          <div class="container">
+            <form action="" method="post">
+              <div class="field">
+                <label for="title">Posts title</label>
+                <input type="text" name="title" id="title">
+              </div>
 
-          <section class="main-section">
-            <div class="banner">
-              <div class="banner-overlay">
-                <div class="container">
-                  <h1 class="main-header">What is Callisto?</h1>
+              <div class="field">
+                <!-- CKE5 html editor -->
+                <!-- To get html content just get this form's element with name content (textarea below)-->
+                <label for="editor">Your post</label>
+                <textarea id="editor" name="content"></textarea>
+              </div>
+
+              <div class="tags-block">
+                <label for="tag-input">Add related tags (max 4, without #)</label>
+
+                <div class="tags-content">
+                  <div class="tags-input">
+                    <input type="text" id="tag-input"><span class="tag-btn">Add</span>
+                  </div>
+
+                  <ul class="tags">
+                    <li>Shop</li>
+                    <li>Ranks</li>
+                  </ul>
                 </div>
               </div>
-            </div>
 
-            <div class="secondary-info">
-              <div class="container">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At saepe sit in alias atque similique repellendus vitae porro accusamus, excepturi cupiditate vel quas, iusto rem exercitationem facere, minus, animi. Molestiae.</p>
+              <input type="file" id="banner" name="banner">
+              <label for="banner" class="add-banner">Add banner</label>
+              <p class="tip">
+                <span class="req">*</span> Size should be 1920x400
+              </p>
 
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam adipisci temporibus numquam illo tenetur, tempore repellat eos asperiores quasi modi!</p>
+              <input type="submit" value="Post">
 
-                <a href="#" class="cta-about">Explore forums</a>
-              </div>
-            </div>
-          </section>
+            </form>
+          </div>
 
-            <section class="secondary-section">
-            <div class="container">
-              <div class="about-info">
-                <h1>Why the moon?</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam dolorum, laborum odio impedit voluptates, et dolore autem totam nesciunt reprehenderit, cumque sapiente minus vero esse possimus. Quia molestiae, enim voluptate.</p>
-
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Debitis nesciunt, magnam, ducimus officia aperiam accusamus doloribus veniam eveniet dolorem aut?</p>
-
-                <i class="fas fa-arrow-alt-circle-up"></i>
-              </div>
-              <div class="about-img"></div>
-            </div>
-          </section>
+          
       </main>
     </div>
 
@@ -232,16 +238,13 @@
     <script src="js/index.js"></script>
     <script src="js/uuid.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
     <script>
-      // Scrolling function
-      $(".fa-arrow-alt-circle-up").click(() => {
-        $("html, body").animate({scrollTop: 0}, 500)
-      })
+      ClassicEditor
+        .create( document.querySelector( '#editor' ), {height: "500px"} )
 
-      
+        .catch( error => {
+            console.error( error );
+        } );
     </script>
-    
 </body>
 </html>

@@ -1,5 +1,5 @@
 $(".ign").each((index, el) => {
-    let uuid = $(el).closest(".person").attr("data-uuid");
+    let uuid = $(el).closest("div").find(".skin").attr("data-uuid");
 
     let request = new XMLHttpRequest();
     request.onload = function() {

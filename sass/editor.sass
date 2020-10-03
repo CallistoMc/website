@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,300;0,400;0,600;0,700;0,900;1,400;1,600&display=swap');
+
+html
+	font-size: 16px
+	font-family: 'Barlow Semi Condensed', sans-serif
+
+main
+	background: #fafafa
+
+.ck-editor__editable_inline 
+    min-height: 300px
+    width: 100%
+
+
+html, body
+	margin: 0 !important
+	padding: 0 !important
+
+	aside
+		ul
+			margin-left: 0 !important
+			padding: 0 !important
+
+		li
+			margin-top: 2em
+
+			&:first-of-type
+				margin-top: 1.5em
+
+		a
+			font-size: 1.7rem
+
+		// a
+		// 	margin: 0
+		// 	padding: 0
+
+		p
+			margin: 0
+			padding: 0
+footer
+	ul
+		margin: 0
+		padding: 0
+
+	p
+		margin: 0
+		padding: 0
+
+.field
+	display: flex
+	flex-direction: column
+
+label
+	text-transform: uppercase
+	font-weight: 600
+	font-size: 0.9rem
+	margin-bottom: 0.5em !important
+
+input
+	background: #dadada
+	border: none
+	outline: none
+	padding: 0.4em 1em
+	width: 270px
+	margin-bottom: 1em
+
+	&:focus
+		cursor: text
+
+.tags-block
+	margin-top: 1em
+
+	.tags-content
+		display: flex
+
+	.tags-input
+		margin-top: 0.5em
+		display: flex
+		align-items: center
+
+		span
+			background: #000
+			color: #fff
+			text-transform: uppercase
+			font-weight: 700
+			letter-spacing: 0.1em
+			border-top-right-radius: 5px
+			border-bottom-right-radius: 5px
+			display: inline-block
+			padding: 0.3em 1em
+			font-size: 0.9rem
+			transition: 0.3s
+			cursor: pointer
+
+			&:hover
+				background: #222
+
+		input
+			margin-bottom: 0
+
+	.tags
+		display: flex
+		margin-left: -0.5em
+
+		li
+			list-style: none
+			display: inline-block
+			color: blue
+			margin-right: 1.3em
+
+			&:last-of-type
+				margin-right: 0
+
+			&:before
+				content: '#'
+
+.add-banner
+	text-decoration: none
+	color: #fff
+	background: #000
+	padding: 0.5em 1.7em
+	border-radius: 4px
+	text-transform: uppercase
+	margin-top: 1.5em
+	display: inline-block
+	font-weight: 600
+	font-size: 0.9rem
+	transition: 0.3s
+	cursor: pointer
+
+	&:hover
+		background: #222
+
+input[type=file]
+	display: none
+
+p.tip
+	margin-top: 0em
+
+	span.req
+		color: red
+		margin-right: 0.2em
+
+input[type=submit]
+	color: #000
+	text-transform: uppercase
+	font-weight: 700
+	cursor: pointer
+	background: none
+	width: auto
+	display: inline-block
+	margin-left: -0.5em
+	font-size: 1rem
