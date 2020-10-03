@@ -156,7 +156,7 @@ input[type=submit] {
   color: #000;
   text-transform: uppercase;
   font-weight: 700;
-  cursor: pointer;
+  cursor: pointer !important;
   background: none;
   width: auto;
   display: inline-block;
@@ -192,9 +192,20 @@ input[type=submit] {
   input[name=title] {
     min-width: 100% !important; }
   #tag-input {
-    width: 85% !important; } }
+    width: 85% !important; }
+  aside li {
+    font-size: 0.8rem !important; } }
+
+@media only screen and (max-height: 425px) and (max-width: 812px) {
+  aside li {
+    font-size: 0.8rem !important; } }
 
 p.tags-error {
   color: red;
   display: none;
   margin-bottom: 0 !important; }
+
+.banner-upload-msg {
+  color: green;
+  margin-top: -0.5em;
+  display: none; }

@@ -202,7 +202,8 @@ aside {
             filter: brightness(60%) contrast(456%);
     height: 100%; }
     aside ul li {
-      margin-top: 2.5em; }
+      margin-top: 2.5em;
+      list-style: none !important; }
       aside ul li .fas, aside ul li .far {
         display: none;
         opacity: 0;

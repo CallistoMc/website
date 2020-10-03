@@ -40,8 +40,9 @@
     <i class="fa fa-times"></i>
 
     <div id="screen">
-        <div id="wrapper">      
-      <aside>
+      <div id="wrapper">
+
+    <aside>
         <div class="side-line"></div>
          <div class="search">
               <div class="side-container">
@@ -79,7 +80,8 @@
                 </li>
             </ul>
           </div>
-      </aside>       
+      </aside>         
+        
       <main>
         <div class="container header-container">
             <div class="logo-block">
@@ -125,6 +127,7 @@
               <p class="tip">
                 <span class="req">*</span> Size should be 1920x400
               </p>
+              <p class="banner-upload-msg"></p>
 
               <div class="submit-block">
                 <input type="submit" value="Post">
@@ -290,6 +293,10 @@
             }
           }
       }
+
+      $("#banner").on("change", () => {
+        $(".banner-upload-msg").show().html("The file has been successfully uploaded")
+      })
 
       function clearInput() {
         $("#tag-input").val("");
