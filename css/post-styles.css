@@ -1,0 +1,234 @@
+main {
+  background: #f9f9f9; }
+
+.post {
+  margin-top: 2.5em; }
+  .post ul.post-stats {
+    list-style: none;
+    margin-top: 0.7em; }
+    .post ul.post-stats li {
+      display: inline-block;
+      margin-right: 0.7em; }
+      .post ul.post-stats li i {
+        margin-left: 0.3em;
+        cursor: pointer;
+        -webkit-transition: 0.2s;
+        -o-transition: 0.2s;
+        transition: 0.2s; }
+    .post ul.post-stats .likes i:hover {
+      color: red; }
+    .post ul.post-stats .dislikes i:hover {
+      color: blue; }
+  .post-banner {
+    width: 100%;
+    height: 10em;
+    background-image: url("../assets/callisto_render2.png");
+    background-size: cover;
+    background-position: center; }
+  .post-content {
+    background: #fff;
+    -webkit-box-shadow: 0 0 1px rgba(34, 25, 25, 0.4);
+            box-shadow: 0 0 1px rgba(34, 25, 25, 0.4);
+    padding: 2em; }
+    .post-content .post-date {
+      color: #555;
+      font-size: 1rem; }
+    .post-content .post-title {
+      font-weight: 700;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      margin-top: 0.3em;
+      letter-spacing: 0.05em; }
+  .post-essentials {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .post-essentials .tags {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+      .post-essentials .tags li {
+        list-style: none;
+        color: blue;
+        margin-right: 1.5em; }
+        .post-essentials .tags li:last-of-type {
+          margin-right: 0; }
+  .post .ign {
+    font-weight: 600;
+    margin-left: 0.3em; }
+  .post .author {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .post .author img {
+      width: 1.5em;
+      margin-right: 1em; }
+  .post .post-content-inner {
+    margin-bottom: 2em;
+    margin-top: 0.5em; }
+    .post .post-content-inner h2 {
+      font-size: 1.6rem;
+      font-weight: 700; }
+    .post .post-content-inner h3 {
+      font-size: 1.4rem;
+      font-weight: 700; }
+    .post .post-content-inner h4 {
+      font-size: 1.2rem;
+      font-weight: 700; }
+    .post .post-content-inner ul, .post .post-content-inner ol {
+      margin-left: 1em;
+      margin-top: 0.7em;
+      margin-bottom: 0.7em;
+      line-height: 1.3em; }
+    .post .post-content-inner p {
+      margin-top: 0.2em; }
+    .post .post-content-inner h2, .post .post-content-inner h3, .post .post-content-inner h4 {
+      margin: 0.5em 0; }
+    .post .post-content-inner img {
+      width: 100%;
+      margin: 1em 0; }
+    .post .post-content-inner strong {
+      font-weight: 700; }
+    .post .post-content-inner i {
+      font-style: italic; }
+
+.post-comments {
+  margin-top: 2em;
+  margin-bottom: 3em; }
+  .post-comments .add-comment {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+    .post-comments .add-comment img {
+      width: 2em;
+      margin-right: 1em; }
+    .post-comments .add-comment input {
+      padding: 0.4em 0.8em;
+      background: #ddd;
+      outline: none;
+      border: none;
+      margin-top: 0.5em;
+      width: 240px; }
+    .post-comments .add-comment .comment-btn {
+      color: #000;
+      margin-left: 1em;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s; }
+      .post-comments .add-comment .comment-btn:hover {
+        color: #333; }
+  .post-comments .comments {
+    margin-top: 1em; }
+    .post-comments .comments .reply-send {
+      color: #000;
+      margin-left: 0.5em;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s; }
+      .post-comments .comments .reply-send:hover {
+        color: #333; }
+    .post-comments .comments .comment-inner {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: start;
+      -webkit-align-items: flex-start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      margin-top: 1.5em; }
+      .post-comments .comments .comment-inner img {
+        width: 2em; }
+      .post-comments .comments .comment-inner .ign {
+        color: #555; }
+      .post-comments .comments .comment-inner .comment-info {
+        margin-left: 0.9em;
+        margin-top: 0.3em; }
+        .post-comments .comments .comment-inner .comment-info ul {
+          list-style: none;
+          margin-top: 0.7em;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center; }
+          .post-comments .comments .comment-inner .comment-info ul li {
+            display: inline-block;
+            margin-right: 1em; }
+            .post-comments .comments .comment-inner .comment-info ul li i {
+              margin-left: 0.3em;
+              cursor: pointer;
+              -webkit-transition: 0.2s;
+              -o-transition: 0.2s;
+              transition: 0.2s; }
+          .post-comments .comments .comment-inner .comment-info ul .likes i:hover {
+            color: red; }
+          .post-comments .comments .comment-inner .comment-info ul .dislikes i:hover {
+            color: blue; }
+          .post-comments .comments .comment-inner .comment-info ul a {
+            color: #000; }
+      .post-comments .comments .comment-inner .reply-block {
+        display: none; }
+        .post-comments .comments .comment-inner .reply-block input {
+          padding: 0.4em 0.8em;
+          background: #ddd;
+          outline: none;
+          border: none;
+          margin-top: 1.5em;
+          width: 240px; }
+        .post-comments .comments .comment-inner .reply-block .reply-btn {
+          color: #000;
+          margin-left: 0.5em;
+          -webkit-transition: 0.3s;
+          -o-transition: 0.3s;
+          transition: 0.3s; }
+          .post-comments .comments .comment-inner .reply-block .reply-btn:hover {
+            color: #333; }
+  .post-comments .replies {
+    margin-left: 2em; }
+
+.dislike {
+  color: blue; }
+
+.like {
+  color: red; }
+
+@media only screen and (max-width: 425px) {
+  .post-essentials {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .post-essentials .tags {
+      -webkit-box-ordinal-group: 2;
+      -webkit-order: 1;
+          -ms-flex-order: 1;
+              order: 1;
+      margin-bottom: 1em; }
+    .post-essentials .main-info {
+      -webkit-box-ordinal-group: 3;
+      -webkit-order: 2;
+          -ms-flex-order: 2;
+              order: 2; }
+  #comment-input, #reply-input {
+    width: 82% !important; } }

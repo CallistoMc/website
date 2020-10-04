@@ -70,7 +70,8 @@ main {
       .announcements .posts-grid .post .tags li, .com-posts .posts-grid .post .tags li {
         color: blue;
         margin-right: 1em;
-        font-size: 0.9rem; }
+        font-size: 0.9rem;
+        list-style: none; }
     .announcements .posts-grid .see-more, .com-posts .posts-grid .see-more {
       color: #000;
       margin-top: .5em;

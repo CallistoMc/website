@@ -7,12 +7,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Callisto ~ Forums</title>
+    <title>Callisto ~ Post</title>
 
     <!-- Native Css project files -->
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/forums.css">
+    <link rel="stylesheet" href="css/post-styles.css">
 
     <!-- Libraries -->
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
@@ -66,7 +66,7 @@
                     <p class="subpoint">Ranks, boosters & more</p>
                 </li>
                 <li>
-                    <a href="forums.html" class="main-point"><i class="far fa-newspaper"></i>Forums</a>
+                    <a href="#" class="main-point"><i class="far fa-newspaper"></i>Forums</a>
                     <p class="subpoint">Explore our community posts</p>
                 </li>
                 <li>
@@ -92,170 +92,82 @@
           </div>
 
           <div class="container">
-            <div class="announcements">
-              <h2><i class="fas fa-bullhorn"></i>Latest announcements</h2>
-
-              <div class="posts-grid">
-                <div class="post">
-                  <div class="inner-post">
-                    <p class="date">12/09/2020</p>
-                    <h3 class="post-title">New ranks</h3>
-                    <div class="post-author">
-                      <!-- img tag with class skin has to have data-uuif attribute with proper uuid (not the ign) of the player -->
-                      <img src="" data-uuid="8066598f-b732-4acd-8151-aa0927c8ed41" alt="Skin" class="skin">
-                      <p>Post by <span class="author-ign ign"></span></p>
-                    </div>
-                    <ul class="post-stats">
-                      <li><i class="fas fa-heart"></i> 67</li>
-                      <li><i class="fas fa-thumbs-down"></i> 5</li>
-                      <li><i class="fas fa-comment"></i> 12</li>
-                    </ul>
-
+            <div class="post">
+              <div class="post-banner"></div>
+              
+              <div class="post-content">
+                <div class="post-essentials">
+                  <div class="main-info">
+                    <p class="post-date">12/09/2020</p>
+                    <h2 class="post-title">New Callisto ranks</h2>
                   </div>
                   <ul class="tags">
                     <li>#shop</li>
                     <li>#ranks</li>
                   </ul>
-                  <a href="post.html" class="see-more">See more</a>
+                </div>
+                <div class="post-content-inner">
+                  <p>This is supposed to be the article text itself</p>
                 </div>
 
-                <div class="post">
-                  <div class="inner-post">
-                    <p class="date">12/09/2020</p>
-                    <h3 class="post-title">New ranks</h3>
-                    <div class="post-author">
-                      <!-- img tag with class skin has to have data-uuif attribute with proper uuid (not the ign) of the player -->
-                      <img src="" data-uuid="9beb2226-980b-433a-9076-54b4efd6ed5a" alt="Skin" class="skin">
-                      <p>Post by <span class="author-ign ign"></span></p>
-                    </div>
-                    <ul class="post-stats">
-                      <li><i class="fas fa-heart"></i> 67</li>
-                      <li><i class="fas fa-thumbs-down"></i> 5</li>
-                      <li><i class="fas fa-comment"></i> 12</li>
-                    </ul>
-
+                <div class="post-info">
+                  <div class="author">
+                    <img src="" alt="" class="skin" data-uuid="5d440933-f0f4-4ed5-b574-a8739662b0d0">
+                    <p class="author">Posted by <span class="ign"></span></p>
                   </div>
-                  <ul class="tags">
-                    <li>#shop</li>
-                    <li>#ranks</li>
-                  </ul>
-                  <a href="#" class="see-more">See more</a>
-                </div>
-
-                <div class="post">
-                  <div class="inner-post">
-                    <p class="date">12/09/2020</p>
-                    <h3 class="post-title">New ranks</h3>
-                    <div class="post-author">
-                      <!-- img tag with class skin has to have data-uuif attribute with proper uuid (not the ign) of the player -->
-                      <img src="" data-uuid="e3b17fc9-6e5b-437a-9c88-a84dc6adaa39" alt="Skin" class="skin">
-                      <p>Post by <span class="author-ign ign"></span></p>
-                    </div>
-                    <ul class="post-stats">
-                      <li><i class="fas fa-heart"></i> 67</li>
-                      <li><i class="fas fa-thumbs-down"></i> 5</li>
-                      <li><i class="fas fa-comment"></i> 12</li>
+                  <ul class="post-stats">
+                      <li class="likes">23 <i class="fas fa-heart"></i></li>
+                      <li class="dislikes">4 <i class="fas fa-thumbs-down"></i></li>
+                      <li class="comment-amount">1 <i class="fas fa-comments"></i></li>
                     </ul>
-
-                  </div>
-                  <ul class="tags">
-                    <li>#shop</li>
-                    <li>#ranks</li>
-                  </ul>
-                  <a href="#" class="see-more">See more</a>
-                </div>
-              </div>
-
-              <a href="announcements.html" class="see-all">See all posts</a>
-            </div>
-
-            <div class="com-posts">
-              <h2><i class="far fa-newspaper"></i>Fresh community posts</h2>
-
-              <div class="posts-grid">
-                <div class="post">
-                  <div class="inner-post">
-                    <p class="date">12/09/2020</p>
-                    <h3 class="post-title">New ranks</h3>
-                    <div class="post-author">
-                      <!-- img tag with class skin has to have data-uuif attribute with proper uuid (not the ign) of the player -->
-                      <img src="" data-uuid="8066598f-b732-4acd-8151-aa0927c8ed41" alt="Skin" class="skin">
-                      <p>Post by <span class="author-ign ign"></span></p>
-                    </div>
-                    <ul class="post-stats">
-                      <li><i class="fas fa-heart"></i> 67</li>
-                      <li><i class="fas fa-thumbs-down"></i> 5</li>
-                      <li><i class="fas fa-comment"></i> 12</li>
-                    </ul>
-
-                  </div>
-                  <ul class="tags">
-                    <li>#shop</li>
-                    <li>#ranks</li>
-                  </ul>
-                  <a href="#" class="see-more">See more</a>
-                </div>
-
-                <div class="post">
-                  <div class="inner-post">
-                    <p class="date">12/09/2020</p>
-                    <h3 class="post-title">New ranks</h3>
-                    <div class="post-author">
-                      <!-- img tag with class skin has to have data-uuif attribute with proper uuid (not the ign) of the player -->
-                      <img src="" data-uuid="9beb2226-980b-433a-9076-54b4efd6ed5a" alt="Skin" class="skin">
-                      <p>Post by <span class="author-ign ign"></span></p>
-                    </div>
-                    <ul class="post-stats">
-                      <li><i class="fas fa-heart"></i> 67</li>
-                      <li><i class="fas fa-thumbs-down"></i> 5</li>
-                      <li><i class="fas fa-comment"></i> 12</li>
-                    </ul>
-
-                  </div>
-                  <ul class="tags">
-                    <li>#shop</li>
-                    <li>#ranks</li>
-                  </ul>
-                  <a href="#" class="see-more">See more</a>
-                </div>
-
-                <div class="post">
-                  <div class="inner-post">
-                    <p class="date">12/09/2020</p>
-                    <h3 class="post-title">New ranks</h3>
-                    <div class="post-author">
-                      <!-- img tag with class skin has to have data-uuif attribute with proper uuid (not the ign) of the player -->
-                      <img src="" data-uuid="e3b17fc9-6e5b-437a-9c88-a84dc6adaa39" alt="Skin" class="skin">
-                      <p>Post by <span class="author-ign ign"></span></p>
-                    </div>
-                    <ul class="post-stats">
-                      <li><i class="fas fa-heart"></i> 67</li>
-                      <li><i class="fas fa-thumbs-down"></i> 5</li>
-                      <li><i class="fas fa-comment"></i> 12</li>
-                    </ul>
-
-                  </div>
-                  <ul class="tags">
-                    <li>#shop</li>
-                    <li>#ranks</li>
-                  </ul>
-
-                  <a href="#" class="see-more">See more</a>
-                </div>
-              </div>
-
-              <div class="more-posts">
-                <a href="community.html" class="see-all">See all posts</a>
-                <div class="new-post-block">
-                  <span>or</span>
-                  <a href="editor.html" class="new-post"><i class="fas fa-pen"></i>Write your own post</a>
-                </div>
+                </div>     
               </div>
             </div>
-          </div>
-          </div>
 
-          
+            <form class="post-comments">
+              <div class="add-comment">
+                <img src="" data-uuid="b989a299-4cd0-4bef-809d-f180eecc9894" alt="" class="skin">
+                <div class="add-comment-inner">
+                  <label for="comment-input">Add your comment</label>
+                  <div class="add-comment-input">
+                    <input id="comment-input" type="text" name="comment">
+                    <a href="#" class="comment-btn"><i class="fas fa-paper-plane"></i></a>
+                  </div>
+                </div>
+              </div>
+              <!-- A brand new comment (not a reply) has to be prepended to block with a class comments  -->
+              <div class="comments">
+                <div class="comment">
+                  <div class="comment-inner">
+                    <!-- Data uuid here (the attribute on the image tag) is responsible for showing player head and correct ign -->
+                    <!-- Same thing is with replies as well -->
+                    <img src="" data-uuid="f59fe85f-942d-4be8-a034-804e189ea9f5" alt="" class="skin">
+                    <div class="comment-info">
+                      <div class="author ign"></div>
+                      <p class="comment-text">Poggers, nice ranks</p>
+                      <ul class="comment-stats">
+                        <li class="likes">23 <i class="fas fa-heart"></i></li>
+                        <li class="dislikes">4 <i class="fas fa-thumbs-down"></i></li>
+                        <li><a href="#" class="reply-btn">Reply</a></li>
+                      </ul>
+                      <div class="reply-block">
+                        <input type="text" id="reply-input">
+                        <a href="#" class="reply-send"><i class="fas fa-paper-plane"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="replies">
+                    <!-- When user submits reply, the reply should be posted in this element (div) -->
+                    <!-- If someone replies on that reply, the reply on the reply should aslo go into the "nested" replie's elemnent with class reply -->
+
+                    <!-- Scheme looks like that: -->
+
+                    <!-- Comment -> replies -> comment1[replies] -> comment2[replies] etc... (nested system)-->
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
       </main>
     </div>
 
@@ -360,9 +272,97 @@
     <script src="js/wow.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/index.js"></script>
-    <script src="js/uuid.js"></script>
+    <!-- <script src="js/uuid.js"></script> -->
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+      $(".comment .ign").each((index, el) => {
+        let uuid = $(el).closest(".comment").find(".skin").attr("data-uuid");
+
+        let request = new XMLHttpRequest();
+        request.onload = function() {
+            let response = JSON.parse(request.responseText);
+                // If error exists throw the message
+                console.log(response)
+                if (response.code != null) {
+                    throw response.msg;
+                }
+                $(el).html(response.username);
+        };
+
+        request.open("GET", "https://api.year4000.net/minecraft/" + uuid, true);
+        request.send();
+      });
+
+      $(".post .ign, .add-comment .ign").each((index, el) => {
+        let uuid = $(el).closest("div").find(".skin").attr("data-uuid");
+
+        let request = new XMLHttpRequest();
+        request.onload = function() {
+            let response = JSON.parse(request.responseText);
+                // If error exists throw the message
+                console.log(response)
+                if (response.code != null) {
+                    throw response.msg;
+                }
+                $(el).html(response.username);
+        };
+
+        request.open("GET", "https://api.year4000.net/minecraft/" + uuid, true);
+        request.send();
+    });
+
+    $(".skin").each((index, el) => {
+        let uuid = $(el).attr("data-uuid");
+        $(el).attr("src", "https://crafatar.com/avatars/" + uuid + "?size=45&default=MHF_Steve&overlay");
+    });
+
+    // Toggle reply block
+    $(".reply-btn").each((index, el) => {
+      $(el).click(() => {
+        $(el).closest(".comment").find(".reply-block").toggle();
+      })
+    }) 
+
+    //Input validation (wether its empty)
+    validateInput(".comment-btn", $("#comment-input"))
+
+    $(".reply-send").each((index, el) => {
+      validateInput(el, $(el).closest(".reply-block").find("#reply-input"))
+    })
+
+    // Indicate action of liking/disliking with colors
+    $(".fa-heart").each((index, el) => {
+      $(el).closest("ul").on("click", "i", (e) => {
+        if($(e.target).hasClass("fa-thumbs-down")) {
+          if(!$(e.target).hasClass("dislike")) {
+            $(el).closest("ul").find("i.fa-heart").removeClass("like");
+            $(e.target).addClass("dislike")
+          } else {
+            $(e.target).removeClass("dislike")
+          }
+        } else if($(e.target).hasClass("fa-heart")){
+          if(!$(e.target).hasClass("like")) {
+            $(el).closest("ul").find("i.fa-thumbs-down").removeClass("dislike");
+            $(e.target).addClass("like")
+          } else {
+            $(e.target).removeClass("like")
+          }
+        }
+      })
+    })
+
+    function validateInput(eventEl, el) {
+        $(eventEl).click(() => {
+          if(el.val() !== "") {
+            // Remove red error border
+            el.css("border", "none")
+          } else {
+            // Error
+            el.css("border", "1px solid rgba(255, 0, 0, 0.8)")
+          }
+        })
+    }
+    </script>
     
 </body>
 </html>
