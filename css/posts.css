@@ -137,3 +137,17 @@ main {
 
 li {
   list-style: none !important; }
+
+@media only screen and (max-width: 420px) {
+  .additional {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start !important;
+    -webkit-align-items: flex-start !important;
+        -ms-flex-align: start !important;
+            align-items: flex-start !important; }
+  .tags {
+    margin-left: 0 !important; } }

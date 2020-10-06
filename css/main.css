@@ -633,3 +633,9 @@ p.form-error {
     min-width: 100%; }
     .search-screen .search-result p {
       font-size: 0.9rem; } }
+
+.addedToCart {
+  background: #333 !important;
+  cursor: not-allowed !important; }
+  .addedToCart:hover {
+    background: #333 !important; }

@@ -95,6 +95,15 @@ $(".filters").on("click", ".filter", (e) => {
 	}
 })
 
+$(".addToCart").each((index, el) => {
+	$(el).click(() => {
+		if(!$(el).hasClass("addedToCart")) {
+			$(el).html("Added to cart")
+			$(el).addClass("addedToCart")
+		}
+	})
+})
+
 // $(window).on("load", () => {
 //     setTimeout(() => {
 //         $(".preloader").animate({opacity: 0}, 500, () => {

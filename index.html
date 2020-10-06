@@ -218,7 +218,11 @@
 
                 <div class="search-result search-faq" data-filter-type="faq">
                     <p class="search-info"><span class="info-type">Categorie: </span> <span class="categorie">FAQ</span></p>
-                    <p class="search-info"><span class="info-type">Location: </span> <a href="#" class="location">https://callisto.gg/faq?about</span></a>
+
+                    <!-- In order for javascript script properly handle the url in support.html page the url should be maindomain.com/support.html?faq={faqTitleWithNoSpace} -->
+
+                    <!-- If you don't understand what does it do go to http://localhost:3000/support.html?faq=notarandomquestion and see how the page behaves depending on given params in url -->
+                    <p class="search-info"><span class="info-type">Location: </span> <a href="support.html?faq=notarandomquestion" class="location">https://callisto.gg/faq=notarandomquestion</span></a>
 
                     <div class="search-details">
                         <h3>Details</h3>
