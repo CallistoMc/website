@@ -7,12 +7,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Callisto ~ Support</title>
+    <title>Callisto ~ Checkout</title>
 
     <!-- Native Css project files -->
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/support.css">
+    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/checkout.css">
 
     <!-- Libraries -->
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
@@ -52,7 +53,7 @@
               </div>
           </div>
           <div class="side-container">
-              <ul class="points">
+             <ul class="points">
                 <li>
                     <a href="index.html" class="main-point"><i class="fas fa-home"></i>Home</a>
                     <p class="subpoint">Home sweet home</p>
@@ -86,61 +87,36 @@
                 <a href="#"><i class="fas fa-bars"></i></a>
                 <div class="logo-block_inner">
                     <img src="assets/callisto.png" alt="Logo">
-                    <p class="logo-subtitle"><b>Support</b></p>
+                    <p class="logo-subtitle"><b>Checkout</b></p>
                 </div>
-            </div>           
-          </div>
-
-          <div class="container">
-            <div class="support-info">
-              <h2>Have anything to ask?</h2>
-              <p>Yoo can always reach out to us using discord or twitter
-                <span class="links">
-                  <a href="https://discord.gg/yH4gbmF" class="discord"><i class="fab fa-discord"></i></a>
-                  <a href="https://twitter.com/playcallisto"><i class="fab fa-twitter-square"></i></a>
-                </span>
-              </p>
-              <p>Your answer might already be answered in FAQ, check that!</p>
             </div>
 
-            <div class="faq">
-              <h2>FAQ</h2>
-              <div class="faq-grid">
-                <div class="faq-block">
-                  <h3>Not A random question</h3>
-                  <p class="faq-answer">Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Eligendi nam quo rerum officiis, impedit necessitatibus.</p>
+            <div class="cart-window">
+              <i class="fas fa-shopping-cart"></i>
+
+              <div class="cart-block toggleshow">
+
+                <!-- If the cart is empty gotta hide block with class cart-content and show element with class nothing-in-cart -->
+                <div class="cart-content">
+                  <h2>Cart</h2>
+
+                  <ul class="products">
+                    <li class="product"><span class="product-name">Ice</span> <span class="product-price">$5</span></li>
+                    <li class="product"><span class="product-name">Unban</span> <span class="product-price">$55</span></li>
+                  </ul>
+
+                  <div class="total">
+                    <p>Total <span class="total-price">$55</span></p>
+                  </div>
+
+                  <a href="#" class="checkout-btn">Checkout</a>
                 </div>
-                 <div class="faq-block">
-                  <h3>A random question</h3>
-                  <p class="faq-answer">Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Eligendi nam quo rerum officiis, impedit necessitatibus.</p>
-                </div>
-                 <div class="faq-block">
-                  <h3>A random question</h3>
-                  <p class="faq-answer">Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Eligendi nam quo rerum officiis, impedit necessitatibus.</p>
-                </div>
-                 <div class="faq-block">
-                  <h3>A random question</h3>
-                  <p class="faq-answer">Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Eligendi nam quo rerum officiis, impedit necessitatibus.</p>
-                </div>
-                 <div class="faq-block">
-                  <h3>A random question</h3>
-                  <p class="faq-answer">Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Eligendi nam quo rerum officiis, impedit necessitatibus.</p>
-                </div>
-                 <div class="faq-block">
-                  <h3>A random question</h3>
-                  <p class="faq-answer">Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Eligendi nam quo rerum officiis, impedit necessitatibus.</p>
-                </div>
-                 <div class="faq-block">
-                  <h3>A random question</h3>
-                  <p class="faq-answer">Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Eligendi nam quo rerum officiis, impedit necessitatibus.</p>
-                </div>
-                 <div class="faq-block">
-                  <h3>A random question</h3>
-                  <p class="faq-answer">Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Eligendi nam quo rerum officiis, impedit necessitatibus.</p>
-                </div>
+
+                <p class="nothing-in-cart"><span class="oops">Oops</span><br>Seems You have not added anything to the cart...</p>
               </div>
             </div>
           </div>
+             
       </main>
     </div>
 
@@ -247,40 +223,28 @@
     <script src="js/index.js"></script>
     <script src="js/uuid.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
     <script>
-      $(".faq-block").each((index, el) => {
+      // Shop redirections (on click)
+      $("[data-shop-href]").each((index, el) => {
         $(el).click(() => {
-          $(".activeFaq").find("p").hide(400)
-          $(".activeFaq").not($(el)).removeClass("activeFaq");
-
-          if(!$(el).hasClass("activeFaq")) {
-            $(el).addClass("activeFaq");
-            $(el).find("p").show(400)
-          } else {
-            $(el).removeClass("activeFaq");
-
-          }
-
+          window.location = $(el).attr("data-shop-href")
         })
       })
 
-      const queryString = window.location.search;
-      const urlParams = new URLSearchParams(queryString);
+      $(".fa-shopping-cart").click(() => {
+        $(".cart-block").toggleClass("toggleshow");
 
-      // Opens and indicates faq block given in url params (?faq={faq-block-title})
-      if(urlParams.has("faq")) {
-        let faqTitle = urlParams.getAll("faq")[0].toLowerCase() ;
-
-        for(let i = 0; i < $(".faq-block").length; i++) {
-          let el = $(".faq-block").eq(i).find("h3").html().toLowerCase().replace(/\s/g, '')
-          if(el === faqTitle) {
-            $("html, body").animate({scrollTop:  ($(".faq-block").eq(i).offset().top - 30)+ "px"}, 400)
-            $(".faq-block").eq(i).addClass("activeFaq");
-            $(".faq-block").eq(i).find("p").show(400)
-          }
-      }
-    }
-
+        if($(".cart-block").hasClass("toggleshow")) {
+          $(".cart-block").animate({opacity: 0}, 300, () => {
+            $(".cart-block").hide();
+          })
+        } else {
+          $(".cart-block").show()
+          $(".cart-block").animate({opacity: 1}, 300);
+        }
+      })
     </script>
     
 </body>

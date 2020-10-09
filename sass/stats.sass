@@ -1,0 +1,59 @@
+#wrapper
+	min-height: 100vh
+	background: #f4f4f4
+	position: relative
+	width: 100vw
+	overflow: hidden
+
+
+	.callisto-stats
+		padding-top: 4em
+
+		img
+			width: 10em
+			cursor: pointer
+
+		p
+			padding: 0.4em 1.4em
+			background: lightblue
+			color: white
+			font-weight: 600
+			text-transform: uppercase
+			display: inline-block
+			margin-top: 1em
+			font-size: 0.9rem
+
+footer
+	position: absolute
+	bottom: 2em
+	right: 3em
+
+	a
+		text-decoration: none
+		color: #7ec8e6
+		margin-left: 0.2em
+
+@media only screen and (max-width: 768px)
+	.callisto-stats
+		padding-top: 2em
+
+@media only screen and (max-width: 425px)
+	.container
+		width: 90% !important
+
+	.callisto-stats
+		padding-top: 2em !important
+
+		img
+			width: 7em !important
+
+@media only screen and (max-height: 425px) and (max-width: 812px)
+	.container
+		width: 90% !important
+
+	.callisto-stats
+		padding-top: 2em !important
+
+		img
+			width: 7em !important
+

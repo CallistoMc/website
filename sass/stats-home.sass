@@ -1,0 +1,70 @@
+form
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	left: 0
+	right: 0
+
+	.form-content
+		display: inline-block 
+		margin-left: 50%
+		transform: translateX(-50%)
+
+		input
+			width: 400px
+			border: none
+			outline: none
+			padding: 0.5em 0.8em
+			box-shadow: 5px 5px 10px #dadada
+			margin-top: 1em
+			font-size: 1rem
+
+		i
+			cursor: pointer
+			margin-left: 0.8em
+
+.form-error
+	color: red
+	margin-top: 1em
+
+@media only screen and (max-width: 425px)
+	form
+		position: static
+		width: 100%
+		margin-left: auto
+		margin-right: auto
+		margin-top: 4em
+
+		.form-content
+			width: 100% !important
+			margin-left: 0 !important
+			transform: none !important
+
+		input
+			width: 85% !important
+			padding: 0.6em 0.8em !important
+
+@media only screen and (max-height: 425px) and (max-width: 812px)
+	form
+		position: static
+		width: 100%
+		margin-left: auto
+		margin-right: auto
+		margin-top: 3.5em
+
+		.form-content
+			width: 100% !important
+			margin-left: 0 !important
+			transform: none !important
+
+		input
+			width: 85% !important
+			padding: 0.6em 0.8em !important
+
+@media only screen and (max-width: 768px)
+	input
+		width: 85% !important
+		padding: 0.6em 0.8em !important
+
+	.form-content
+		width: 500px

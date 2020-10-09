@@ -1,0 +1,118 @@
+body
+	width: 100vw
+	overflow-x: hidden
+
+.leaderboards
+	margin-top: 2em
+	margin-bottom: 4em
+
+	h2
+		text-transform: uppercase
+		font-weight: 700
+		font-size: 1.8rem
+		letter-spacing: 0.05em
+
+	p.lb-date
+		margin-top: 0.3em
+
+	.leaderboard
+		margin-top: 3em
+
+		&:first-of-type
+			margin-top: 2em
+
+		.lb-info
+			display: flex
+			align-items: flex-start
+
+		.mode
+			background: #000
+			color: #fff
+			border-radius: 4px
+			text-transform: uppercase
+			font-weight: 700
+			font-size: 0.9rem
+			padding: 0.5em 1.7em
+			letter-spacing: 0.1em
+			display: inline-block	
+
+		p.active-filter
+			background: #fff
+			border-radius: 4px
+			text-transform: uppercase
+			font-weight: 700
+			font-size: 0.9rem
+			min-width: 200px
+			padding: 0.6em 1.5em
+			letter-spacing: 0.1em
+			cursor: pointer
+			display: flex
+			justify-content: space-between
+			transition: 0.3s
+
+			i
+				transition: 0.3s
+
+			&:hover
+				box-shadow: 0 0 1px rgba(34, 25, 25, 0.4)
+				
+
+		.dropdown
+			position: relative
+			margin-left: 2.5em
+
+			ul
+				position: absolute
+				left: 0
+				top: 1.81em
+				display: none
+
+
+				li
+					list-style: none
+					border-top: 1px solid #f0f0f0
+					text-transform: uppercase
+					font-weight: 700
+					font-size: 0.9rem
+					padding: 0.6em 1.5em
+					letter-spacing: 0.1em
+					display: inline-block	
+					cursor: pointer
+					width: 100%
+					background: #f9f9f9
+					transition: 0.3s
+
+					&:hover
+						background: #ededed
+
+
+.rotate
+	transform: rotate(180deg)
+
+.rounded
+	border-bottom-left-radius: 0
+	border-bottom-right-radius: 0
+
+.lb
+	margin-left: 1em
+
+	li
+		font-weight: 600
+		margin-top: 1.5em
+
+
+		.stats
+
+@media only screen and (max-width: 425px)
+	.lb-info
+		flex-direction: column
+
+		.active-filter, .dropdown
+			margin-left: 0 !important
+
+		.active-filter
+			margin-top: 1.5em
+
+	.dropdown
+		ul
+			margin-top: 1.4em

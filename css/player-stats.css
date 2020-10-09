@@ -1,0 +1,118 @@
+.player-stats {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 4em; }
+
+.player-stats-block {
+  background: #fff;
+  -webkit-box-shadow: 0 0 1px rgba(34, 25, 25, 0.4);
+          box-shadow: 0 0 1px rgba(34, 25, 25, 0.4);
+  padding: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-bottom: 5em; }
+  .player-stats-block ul {
+    margin-top: 0.5em; }
+    .player-stats-block ul li {
+      list-style: none;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-top: 1em; }
+      .player-stats-block ul li span {
+        font-weight: 400;
+        margin-left: 0.3em; }
+  .player-stats-block img {
+    width: 2.5em;
+    margin-top: 1.5em; }
+  .player-stats-block .ign {
+    font-weight: 600; }
+  .player-stats-block .rank-name {
+    font-size: 1.1rem; }
+  .player-stats-block .rank {
+    width: 100%;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #ddd; }
+  .player-stats-block .admin {
+    color: red;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-right: 0.3em; }
+  .player-stats-block .offline {
+    color: red;
+    text-transform: capitalize; }
+
+.stats {
+  margin-left: 5em; }
+  .stats h2 {
+    background: #000;
+    padding: 0.5em 1.7em;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    border-radius: 3px;
+    font-weight: 700;
+    display: inline-block;
+    letter-spacing: 0.1em; }
+  .stats table {
+    text-align: center;
+    margin-top: 1.5em; }
+    .stats table th, .stats table td {
+      border: 1px solid #000;
+      padding: 1em; }
+    .stats table th {
+      font-weight: 600; }
+  .stats .positions {
+    margin-top: 2em; }
+    .stats .positions ul {
+      margin-top: 1em;
+      margin-bottom: 0.5em; }
+      .stats .positions ul li {
+        list-style: none;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-top: 0.5em; }
+        .stats .positions ul li span {
+          font-weight: 400; }
+
+@media only screen and (max-width: 1023px) {
+  .player-stats {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 5em;
+    margin-top: 2em; }
+  .stats {
+    margin-left: 0;
+    width: 100vw; }
+  .player-stats-block {
+    width: 100%;
+    margin-bottom: 2em; } }
+
+#wrapper {
+  width: 100vw;
+  overflow: hidden; }
+
+@media only screen and (max-width: 425px) {
+  .gamemodes {
+    overflow-x: auto; }
+  table {
+    font-size: 0.7rem; } }

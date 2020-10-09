@@ -3,6 +3,15 @@ main
 	position: relative
 	z-index: 10
 
+	p.version
+		position: absolute
+		right: 2em
+		bottom: 1.6em
+		background: #000
+		color: #fff
+		padding: 0.4em 1.4em
+		border-radius: 4px
+
 
 	.main-blocks
 		margin-top: 4em
@@ -219,6 +228,9 @@ main
 		margin-left: 0 !important
 		margin-top: 1em
 
+	p.version
+		display: none
+
 @media only screen and (max-width: 425px)
 	.close-modal
 		right: -0.5em !important
@@ -244,3 +256,6 @@ main
 
 		.close-modal
 			top: -1em
+
+	p.version
+		display: none

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Page information -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Callisto ~ Stats</title>
+
+    <!-- Native Css project files -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/stats.css">
+    <link rel="stylesheet" href="css/player-stats.css">
+
+    <!-- Libraries -->
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"
+      />
+
+    <!-- Icon in the tab -->
+    <link rel="icon" href="assets/callisto-icon.png">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+
+
+</head>
+<body>
+
+  <div id="wrapper">
+   <div class="container">
+      <div class="callisto-stats">
+        <img src="assets/callisto.png" alt="Logo"> <br>
+        <p class="stats-label">Stats</p>
+      </div>
+
+      <div class="player-stats" data-uuid="9beb2226-980b-433a-9076-54b4efd6ed5a">
+        <div class="player-stats-block">
+          <p class="rank"><span class="rank-name admin">[Admin]</span><span class="ign"></span></p>
+
+          <ul>
+            <li>Network booster: <span>x6</span></li>
+            <li>Network level: <span>40</span></li>
+            <li>first login: <span>19:30 edt</span></li>
+            <li>Last login: <span>07/10/2020 19:30 EDT</span></li>
+            <li>Status: <span class="offline">Offline</span></li>
+          </ul>
+
+          <img src="" alt="" class="skin">
+        </div>
+
+        <div class="stats">
+            <h2>Gamemodes</h2>
+
+          <div class="gamemodes">
+
+            <table>
+              <tr>
+                <th>game</th>
+                <th>kills</th>
+                <th>deaths</th>
+                <th>k/d</th>
+                <th>wins</th>
+                <th>losses</th>
+                <th>w/l</th>
+              </tr>
+
+              <tr>
+                <td>VAL</td>
+                <td>30</td>
+                <td>5</td>
+                <td>6</td>
+                <td>3</td>
+                <td>2</td>
+                <td>1.5</td>
+              </tr>
+
+               <tr>
+                <td>UHC</td>
+                <td>30</td>
+                <td>5</td>
+                <td>6</td>
+                <td>3</td>
+                <td>2</td>
+                <td>1.5</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="positions">
+            <h2>Lifetime positions</h2>
+            <ul>
+              <li>wins <span>#1026</span></li>
+              <li>kills <span>#875</span></li>
+            </ul>
+            <p>Check our <a href="leaderboards.html">Lifetime Leaderboards</a></p>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <p>Powered by <a href="#">Callisto</a></p>
+      </footer>
+   </div>
+  </div>
+
+    <!-- Scripts -->
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js"></script>
+    <script src="https://mcapi.us/scripts/minecraft.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
+
+    <script>
+      $(".ign").each((index, el) => {
+        let uuid = $(el).closest(".player-stats").attr("data-uuid");
+
+        let request = new XMLHttpRequest();
+        request.onload = function() {
+            let response = JSON.parse(request.responseText);
+                // If error exists throw the message
+                console.log(response)
+                if (response.code != null) {
+                    throw response.msg;
+                }
+                $(el).html(response.username);
+        };
+
+        request.open("GET", "https://api.year4000.net/minecraft/" + uuid, true);
+        request.send();
+      });
+
+      $(".skin").each((index, el) => {
+          let uuid = $(".player-stats").attr("data-uuid");
+          $(el).attr("src", "https://crafatar.com/avatars/" + uuid + "?size=45&default=MHF_Steve&overlay");
+      });
+    </script>
+    
+</body>
+</html>

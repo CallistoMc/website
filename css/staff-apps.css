@@ -181,7 +181,8 @@ footer {
       -webkit-transition: 0.2s;
       -o-transition: 0.2s;
       transition: 0.2s;
-      width: 100%; }
+      width: 100%;
+      list-style: none; }
       .staff-apps .multiple li:last-of-type {
         border: none; }
       .staff-apps .multiple li:hover {

@@ -88,6 +88,7 @@ $(".dropdown").on("click", "li", (e) => {
     $(".dropdown").hide();
     $(".active span").html(newOption)
     $(e.target).hide();
+    $(".multiple .fas").toggleClass("rotate");
 })
 
 // This varibale contains chosen option from custom selection tag

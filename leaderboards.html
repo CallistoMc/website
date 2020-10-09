@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Page information -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Callisto ~ Leadeboards</title>
+
+    <!-- Native Css project files -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/stats.css">
+    <link rel="stylesheet" href="css/leaderboards.css">
+
+    <!-- Libraries -->
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"
+      />
+
+    <!-- Icon in the tab -->
+    <link rel="icon" href="assets/callisto-icon.png">
+
+
+</head>
+<body>
+
+  <div id="wrapper">
+   <div class="container">
+      <div class="callisto-stats">
+        <img src="assets/callisto.png" alt="Logo"> <br>
+        <p class="stats-label">Stats</p>
+      </div>
+
+      <div class="leaderboards">
+        <h2>Leaderboards</h2>
+        <p class="lb-date">09/10/2020</p>
+
+        <div class="leaderboard">
+          <div class="lb-info">
+            <p class="mode">Valorant</p>
+            <div class="dropdown">
+              <p class="active-filter"><span class="filter-name">Kills</span> <i class="fas fa-caret-up"></i></p>
+              <ul class="lb-filter">
+                <li style="display: none">Kills</li>
+                <li>Wins</li>
+                <li>Best w/l</li>
+                <li>Best k/d</li>
+                <li>Games played</li>
+              </ul>
+            </div>
+          </div>
+          <ol class="lb">
+            <li><span class="ign">Zova</span> - <span class="stats">21</span></li>
+            <li><span class="ign">krustydavid</span> - <span class="stats">21</span></li>
+            <li><span class="ign">Epaxial</span><span class="stats">21</span></li>
+            <li><span class="ign">Fusionchestplate</span> - <span class="stats">21</span></li>
+            <li><span class="ign">Frya</span> - <span class="stats">21</span></li>
+            <li><span class="ign">Zova</span> - <span class="stats">21</span></li>
+            <li><span class="ign">krustydavid</span> - <span class="stats">21</span></li>
+            <li><span class="ign">Epaxial</span><span class="stats">21</span></li>
+            <li><span class="ign">Fusionchestplate</span> - <span class="stats">21</span></li>
+            <li><span class="ign">Frya</span> - <span class="stats">21</span></li>
+          </ol>
+        </div>
+
+        <div class="leaderboard">
+          <div class="lb-info">
+            <p class="mode">Auto Uhc</p>
+            <div class="dropdown">
+              <p class="active-filter"><span class="filter-name">Kills</span> <i class="fas fa-caret-up"></i></p>
+              <ul class="lb-filter">
+                <li style="display: none">Kills</li>
+                <li>Wins</li>
+                <li>Best w/l</li>
+                <li>Best k/d</li>
+                <li>Games played</li>
+              </ul>
+            </div>
+          </div>
+          <ol class="lb">
+            <li><span class="ign">Zova</span> - <span class="stats">21</span></li>
+            <li><span class="ign">krustydavid</span> - <span class="stats">21</span></li>
+            <li><span class="ign">Epaxial</span><span class="stats">21</span></li>
+            <li><span class="ign">Fusionchestplate</span> - <span class="stats">21</span></li>
+            <li><span class="ign">Frya</span> - <span class="stats">21</span></li>
+            <li><span class="ign">Zova</span> - <span class="stats">21</span></li>
+            <li><span class="ign">krustydavid</span> - <span class="stats">21</span></li>
+            <li><span class="ign">Epaxial</span><span class="stats">21</span></li>
+            <li><span class="ign">Fusionchestplate</span> - <span class="stats">21</span></li>
+            <li><span class="ign">Frya</span> - <span class="stats">21</span></li>
+          </ol>
+        </div>
+      </div>
+
+      <footer>
+        <p>Powered by <a href="#">Callisto</a></p>
+      </footer>
+   </div>
+  </div>
+
+    <!-- Scripts -->
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js"></script>
+    <script src="https://mcapi.us/scripts/minecraft.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
+
+    <script>
+      // This variable contains type of selected leaderboard (e.g. "Kills", "Wins", "k/d" etc.)
+      let newOption;
+
+      $(".active-filter").each((index, el) => {
+        $(el).click((e) => {
+          $(el).closest(".leaderboard").find(".dropdown ul").toggle();
+          $(el).closest(".leaderboard").find(".active-filter i").toggleClass("rotate");
+          $(el).closest(".leaderboard").find(".active-filter").toggleClass("rounded");
+        })
+      })
+
+      $(".dropdown").on("click", "li", (e) => {
+        $(e.target).closest(".leaderboard").find(".dropdown li").show();
+        let prevOption = $(e.target).closest(".leaderboard").find(".active-filter span").html();
+        newOption = $(e.target).html()
+
+        $(e.target).closest(".leaderboard").find(".dropdown ul").hide();
+        $(e.target).closest(".leaderboard").find(".active-filter span").html(newOption)
+        $(e.target).hide();
+
+        $(e.target).closest(".leaderboard").find(".active-filter i").toggleClass("rotate");
+        $(e.target).closest(".leaderboard").find(".active-filter").toggleClass("rounded");
+      })
+    </script> 
+    
+</body>
+</html>

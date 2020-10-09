@@ -144,7 +144,8 @@ main {
       border-bottom: 1px solid #ededed;
       padding-bottom: 0.8em; }
       .cart-window .cart-block ul li {
-        margin-top: 0.2em; }
+        margin-top: 0.2em;
+        list-style: none; }
         .cart-window .cart-block ul li .product-price {
           margin-left: 0.2em;
           font-style: italic; }

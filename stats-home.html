@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Page information -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Callisto ~ Stats</title>
+
+    <!-- Native Css project files -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/stats.css">
+    <link rel="stylesheet" href="css/stats-home.css">
+
+    <!-- Libraries -->
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"
+      />
+
+    <!-- Icon in the tab -->
+    <link rel="icon" href="assets/callisto-icon.png">
+
+
+</head>
+<body>
+
+  <div id="wrapper">
+   <div class="container">
+      <div class="callisto-stats">
+        <img src="assets/callisto.png" alt="Logo"> <br>
+        <p class="stats-label">Stats</p>
+      </div>
+
+      <form action="player-stats.html" method="get">
+        <div class="form-content">
+          <label for="ign-input">Eneter your IGN</label>
+          <div class="ign-input">
+            <input type="text" name="ign-data" id="ign-input">
+            <i class="fas fa-search"></i>
+          </div>
+          <p class="form-error"></p>
+        </div>
+      </form>
+
+      <footer>
+        <p>Powered by <a href="#">Callisto</a></p>
+      </footer>
+   </div>
+  </div>
+
+    <!-- Scripts -->
+    <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js"></script>
+    <script src="https://mcapi.us/scripts/minecraft.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/uuid.js"></script>
+
+    <script>
+      $("form").submit((e) => {
+        e.preventDefault()
+        $("p.form-error").hide();
+
+        if($("form input").val() === "") {
+          $("p.form-error").html("Please enter your IGN...").show()
+        } else {
+          $("form")[0].submit()
+        }
+      })
+    </script>
+    
+</body>
+</html>

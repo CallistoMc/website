@@ -2,6 +2,14 @@ main {
   background: #141414;
   position: relative;
   z-index: 10; }
+  main p.version {
+    position: absolute;
+    right: 2em;
+    bottom: 1.6em;
+    background: #000;
+    color: #fff;
+    padding: 0.4em 1.4em;
+    border-radius: 4px; }
   main .main-blocks {
     margin-top: 4em;
     display: -webkit-box;
@@ -238,7 +246,9 @@ main {
     margin-top: 0.5em !important; }
   .step {
     margin-left: 0 !important;
-    margin-top: 1em; } }
+    margin-top: 1em; }
+  p.version {
+    display: none; } }
 
 @media only screen and (max-width: 425px) {
   .close-modal {
@@ -256,4 +266,6 @@ main {
     #reg-modal header {
       height: auto !important; }
     #reg-modal .close-modal {
-      top: -1em; } }
+      top: -1em; }
+  p.version {
+    display: none; } }

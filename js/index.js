@@ -104,6 +104,14 @@ $(".addToCart").each((index, el) => {
 	})
 })
 
+$(".callisto-stats img").click(() => {
+	window.location.href = "stats-home.html"
+})
+
+$("a[href='#']").click((e) => {
+	e.preventDefault()
+})
+
 // $(window).on("load", () => {
 //     setTimeout(() => {
 //         $(".preloader").animate({opacity: 0}, 500, () => {
