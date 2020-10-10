@@ -30,17 +30,10 @@
 
 </head>
 <body>
+  <i class="fa fa-times"></i>
 
-   <!--  <div class="preloader">
-        <img src="assets/callisto.png" alt="Logo">
-    </div> -->
-
-    <!-- Main wrapper -->
-
-    <i class="fa fa-times"></i>
-
-    <div id="screen">
-        <div id="wrapper">      
+  <div id="screen">
+    <div id="wrapper">      
       <aside>
         <div class="side-line"></div>
          <div class="search">
@@ -52,33 +45,33 @@
               </div>
           </div>
           <div class="side-container">
-             <ul class="points">
-                <li>
-                    <a href="index.html" class="main-point"><i class="fas fa-home"></i>Home</a>
-                    <p class="subpoint">Home sweet home</p>
-                </li>
-                <li>
-                    <a href="about.html" class="main-point"><i class="fas fa-mountain"></i>About Callisto</a>
-                    <p class="subpoint">Get to know us</p>
-                </li>
-                <li>
-                    <a href="shop.html" class="main-point"><i class="fas fa-gem"></i>Shop</a>
-                    <p class="subpoint">Ranks, boosters & more</p>
-                </li>
-                <li>
-                    <a href="#" class="main-point"><i class="far fa-newspaper"></i>Forums</a>
-                    <p class="subpoint">Explore our community posts</p>
-                </li>
-                <li>
-                    <a href="#" class="main-point"><i class="fas fa-info-circle"></i>Support</a>
-                    <p class="subpoint">Got questions?</p>
-                </li>
-                <li>
-                    <a href="index.html?register" class="main-point register-point"><i class="fas fa-sign-in-alt"></i>Register</a>
-                    <p class="subpoint">Set up your account</p>
-                </li>
-            </ul>
-          </div>
+            <ul class="points">
+              <li>
+                  <a href="index.html" class="main-point"><i class="fas fa-home"></i>Home</a>
+                  <p class="subpoint">Home sweet home</p>
+              </li>
+              <li>
+                  <a href="about.html" class="main-point"><i class="fas fa-mountain"></i>About Callisto</a>
+                  <p class="subpoint">Get to know us</p>
+              </li>
+              <li>
+                  <a href="shop.html" class="main-point"><i class="fas fa-gem"></i>Shop</a>
+                  <p class="subpoint">Ranks, boosters & more</p>
+              </li>
+              <li>
+                  <a href="forums.html" class="main-point"><i class="far fa-newspaper"></i>Forums</a>
+                  <p class="subpoint">Explore our community posts</p>
+              </li>
+              <li>
+                  <a href="support.html" class="main-point"><i class="fas fa-info-circle"></i>Support</a>
+                  <p class="subpoint">Got questions?</p>
+              </li>
+              <li>
+                  <a href="index.html?register" class="main-point register-point"><i class="fas fa-sign-in-alt"></i>Register</a>
+                  <p class="subpoint">Set up your account</p>
+              </li>
+          </ul>
+        </div>
       </aside>       
       <main>
         <div class="container header-container">
@@ -100,7 +93,9 @@
 
               <div class="posts-grid">
                 <div class="post">
-                  <div class="post-img"></div>
+                  <!-- If the post made by a regular user contains image, the data-src attribute has to have path to the image -->
+                  <!-- If not - the element with class post-img shold not be rendered in DOM (should not exist) -->
+                  <div class="post-img" data-src="assets/callisto_render2.png"></div>
                   <div class="inner-post">
                     <p class="date">12/09/2020</p>
                     <h3 class="post-title">New ranks</h3>
@@ -126,7 +121,7 @@
                 </div>
 
                 <div class="post">
-                  <div class="post-img"></div>
+                  <div class="post-img" data-src="assets/callisto_render2.png"></div>
                   <div class="inner-post">
                     <p class="date">12/09/2020</p>
                     <h3 class="post-title">New ranks</h3>
@@ -178,7 +173,7 @@
                 </div>
 
                 <div class="post">
-                  <div class="post-img"></div>
+                  <div class="post-img" data-src="assets/callisto_render2.png"></div>
                   <div class="inner-post">
                     <p class="date">12/09/2020</p>
                     <h3 class="post-title">New ranks</h3>
@@ -236,21 +231,21 @@
     <footer>
       <div class="container">
           <div class="footer-links">
-              <ul class="main-nav">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Shop</a></li>
-                  <li><a href="#">Forums</a></li>
-                  <li><a href="#">Support</a></li>
-                  <li><a href="#">Register</a></li>
-              </ul>
+            <ul class="main-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="forums.html">Forums</a></li>
+              <li><a href="support.html">Support</a></li>
+              <li><a href="index.html?register">Register</a></li>
+            </ul>
 
-              <ul class="extra-links">
-                  <li><a href="#">FAQ</a></li>
-                  <li><a href="#">Staff applications</a></li>
-                  <li><a href="#">Stats</a></li>
-              </ul>
-          </div>
+            <ul class="extra-links">
+              <li><a href="support.html">FAQ</a></li>
+              <li><a href="staff-apps.html">Staff applications</a></li>
+              <li><a href="stats-home.html">Stats</a></li>
+            </ul>
+        </div>
       </div>
 
       <div class="container">
@@ -262,8 +257,7 @@
         </ul>
       </div>
     </footer>
-
-    </div>
+  </div>
 
     <div class="search-screen">
         <div class="container">
@@ -334,9 +328,6 @@
     <script src="js/wow.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/index.js"></script>
-    <script src="js/uuid.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    
+    <script src="js/uuid.js"></script>    
 </body>
 </html>

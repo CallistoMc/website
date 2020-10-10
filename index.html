@@ -24,23 +24,13 @@
 
     <!-- Icon in the tab -->
     <link rel="icon" href="assets/callisto-icon.png">
-
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
-
-
 </head>
 <body>
+  <i class="fa fa-times"></i>
 
-   <!--  <div class="preloader">
-        <img src="assets/callisto.png" alt="Logo">
-    </div> -->
-
-    <!-- Main wrapper -->
-
-    <i class="fa fa-times"></i>
-
-    <div id="screen">
-        <div id="wrapper">      
+  <!-- Main wrapper -->
+  <div id="screen">
+    <div id="wrapper">      
       <aside>
         <div class="side-line"></div>
          <div class="search">
@@ -52,7 +42,7 @@
               </div>
           </div>
           <div class="side-container">
-              <ul class="points">
+            <ul class="points">
               <li>
                   <a href="index.html" class="main-point"><i class="fas fa-home"></i>Home</a>
                   <p class="subpoint">Home sweet home</p>
@@ -70,7 +60,7 @@
                   <p class="subpoint">Explore our community posts</p>
               </li>
               <li>
-                  <a href="#" class="main-point"><i class="fas fa-info-circle"></i>Support</a>
+                  <a href="support.html" class="main-point"><i class="fas fa-info-circle"></i>Support</a>
                   <p class="subpoint">Got questions?</p>
               </li>
               <li>
@@ -78,8 +68,9 @@
                   <p class="subpoint">Set up your account</p>
               </li>
           </ul>
-          </div>
-      </aside>       
+        </div>
+      </aside>
+
       <main>
         <div id="particles-js"></div>
         <div class="container">
@@ -122,24 +113,27 @@
       </main>
     </div>
 
+    <!-- End of #wrapper -->
+
+    <!-- Pgae footer -->
     <footer>
       <div class="container">
           <div class="footer-links">
-              <ul class="main-nav">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Shop</a></li>
-                  <li><a href="#">Forums</a></li>
-                  <li><a href="#">Support</a></li>
-                  <li><a href="#">Register</a></li>
-              </ul>
+            <ul class="main-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="forums.html">Forums</a></li>
+              <li><a href="support.html">Support</a></li>
+              <li><a href="index.html?register">Register</a></li>
+            </ul>
 
-              <ul class="extra-links">
-                  <li><a href="#">FAQ</a></li>
-                  <li><a href="#">Staff applications</a></li>
-                  <li><a href="#">Stats</a></li>
-              </ul>
-          </div>
+            <ul class="extra-links">
+              <li><a href="support.html">FAQ</a></li>
+              <li><a href="staff-apps.html">Staff applications</a></li>
+              <li><a href="stats-home.html">Stats</a></li>
+            </ul>
+        </div>
       </div>
 
       <div class="container">
@@ -151,36 +145,38 @@
         </ul>
       </div>
     </footer>
+  </div>
+  <!-- End of the page visible content -->
 
-    </div>
-    <div class="modal-overlay"></div>
+  <!-- Registration modal -->
+  <div class="modal-overlay"></div>
+  <div id="reg-modal" style="display: none">
+    <header class="modal-header"></header>
+    <div class="modal-content">
+      <h1>Registration (in-game)</h1>
 
-    <div id="reg-modal" style="display: none">
-        <header class="modal-header"></header>
-        <div class="modal-content">
-            <h1>Registration (in-game)</h1>
+        <div class="steps">
+          <div class="step">
+            <h2>Step 1</h2>
+            <p>Join our minecraft server "Callisto.gg" and use the command <i>/register &lt;yourmail&gt;</i></p>
+            <p class="example">Example: /register johndoe@gmail.com</p>
+          </div>
 
-            <div class="steps">
-                <div class="step">
-                    <h2>Step 1</h2>
-                    <p>Join our minecraft server "Callisto.gg" and use the command <i>/register &lt;yourmail&gt;</i></p>
-                    <p class="example">Example: /register johndoe@gmail.com</p>
-                </div>
-
-                <div class="step">
-                    <h2>Step 2</h2>
-                    <p>Check your mail and follow instructions we sent to it.</p>
-                </div>
-            </div>
+          <div class="step">
+            <h2>Step 2</h2>
+            <p>Check your mail and follow instructions we sent to it.</p>
+          </div>
         </div>
+      </div>
 
-        <a href="#" class="close-modal">&times;</a>
+      <a href="#" class="close-modal">&times;</a>
     </div>
 
     <div class="search-screen">
         <div class="container">
             <input type="text" id="main-search" placeholder="Search...">
 
+            <!-- Search filters -->
             <h2>Filters</h2>
             <div class="filters">
                 <a href="#" data-search-filter="forums" class="filter">Only forums</a>
@@ -236,9 +232,11 @@
                     <a href="#" class="cta-goto">Go to page</a>
                 </div>
 
+                <!-- This shows up when nothing was found by the request (Element with class search-req has the request itself in it) -->
                 <p class="no-search-results">Nothing was found for the request <span class="search-req"></span></p>
             </div>
 
+            <!-- Close search screen by plressing Esc or clicking on this "X" icon -->
             <a href="#" class="close-search">&times;</a>
         </div>
     </div>
@@ -251,120 +249,11 @@
     <script src="js/common.js"></script>
     <script src="js/index.js"></script>
     <script src="js/uuid.js"></script>
-
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-        particlesJS("particles-js", {
-          "particles": {
-            "number": {
-              "value": 100,
-              "density": {
-                "enable": true,
-                "value_area": 789.1476416322727
-              }
-            },
-            "color": {
-              "value": "#ffffff"
-            },
-            "shape": {
-              "type": "circle",
-              "stroke": {
-                "width": 0,
-                "color": "#000000"
-              },
-              "polygon": {
-                "nb_sides": 5
-              },
-              "image": {
-                "src": "img/github.svg",
-                "width": 100,
-                "height": 100
-              }
-            },
-            "opacity": {
-              "value": 0.48927153781200905,
-              "random": false,
-              "anim": {
-                "enable": true,
-                "speed": 0.2,
-                "opacity_min": 0,
-                "sync": false
-              }
-            },
-            "size": {
-              "value": 2,
-              "random": true,
-              "anim": {
-                "enable": true,
-                "speed": 2,
-                "size_min": 0,
-                "sync": false
-              }
-            },
-            "line_linked": {
-              "enable": false,
-              "distance": 150,
-              "color": "#ffffff",
-              "opacity": 0.4,
-              "width": 1
-            },
-            "move": {
-              "enable": true,
-              "speed": 0.2,
-              "direction": "none",
-              "random": true,
-              "straight": false,
-              "out_mode": "out",
-              "bounce": false,
-              "attract": {
-                "enable": false,
-                "rotateX": 600,
-                "rotateY": 1200
-              }
-            }
-          },
-          "interactivity": {
-            "detect_on": "canvas",
-            "events": {
-              "onhover": {
-                "enable": true,
-                "mode": "bubble"
-              },
-              "onclick": {
-                "enable": true,
-                "mode": "push"
-              },
-              "resize": true
-            },
-            "modes": {
-              "grab": {
-                "distance": 400,
-                "line_linked": {
-                  "opacity": 1
-                }
-              },
-              "bubble": {
-                "distance": 83.91608391608392,
-                "size": 1,
-                "duration": 3,
-                "opacity": 1,
-                "speed": 3
-              },
-              "repulse": {
-                "distance": 200,
-                "duration": 0.4
-              },
-              "push": {
-                "particles_nb": 4
-              },
-              "remove": {
-                "particles_nb": 2
-              }
-            }
-          },
-          "retina_detect": true
-        });
+    <script src="js/particles.js"></script>
 
+    <script>
+        // Copy IP to clipboard
         $(".play-btn").click(() => {
             $(".ip-address").css("display", "block");
             $(".ip-address").animate({opacity: 1, "margin-top": "2.5em"}, 400);
@@ -372,8 +261,8 @@
             Clipboard_CopyTo("Callisto.gg")
         })
 
+        // Validate Form
         $(".form-error").hide();
-
         $(".login-form").on("submit", (e) => {
             $(".form-error").hide();
 
@@ -432,13 +321,12 @@
             }, 200)
         }
 
+        // Close modal window by pressing Esc
         $(document).keyup((e) => {
           if(e.keyCode == 27) {
               closeModal();
           }
         })
-
     </script>
-    
 </body>
 </html>

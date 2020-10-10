@@ -1,6 +1,9 @@
 main {
   background: #141414; }
 
+.nothing-in-cart {
+  color: #666; }
+
 .cosmetics {
   margin-top: 1.8em;
   display: grid;
@@ -24,7 +27,6 @@ main {
     width: 100%; }
     .cosmetics .cosmetic .cosmetic-header {
       background-size: cover;
-      background: url("../assets/wings_display.png");
       height: 8.5em;
       border-top-right-radius: 7px;
       border-top-left-radius: 7px;

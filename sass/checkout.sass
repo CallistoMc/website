@@ -1,0 +1,123 @@
+main
+  .checkout-title
+    text-transform: uppercase
+    font-size: 1.4rem
+    font-weight: 700
+    margin-top: 2em
+    letter-spacing: 0.05em
+
+  .checkout
+    padding: 2em
+    background: #fff
+    display: inline-flex
+    margin-top: 1em
+    flex-direction: column
+    align-items: flex-start
+    box-shadow: 0 0 1px rgba(34, 25, 25, 0.4)
+    padding-bottom: 5em
+
+    input[type=submit]
+      background: #000
+      border-radius: 4px
+      text-transform: uppercase
+      font-weight: 700
+      font-size: 0.9rem
+      padding: 0.4em 1.5em
+      letter-spacing: 0.1em
+      cursor: pointer
+      display: inline-block
+      transition: 0.3s
+      color: #fff
+      border: none
+      outline: none
+      margin-top: 1.5em
+
+      &:hover
+        background: #333
+
+    ul.items
+      padding-bottom: 1.2em
+      border-bottom: 1px solid #ddd
+      width: 100%
+
+      li
+        list-style: none
+        margin-top: 0.9em
+
+        &:first-of-type
+          margin-top: 0
+
+        .price
+          font-weight: 600
+          margin-left: 0.5em
+
+    .total
+      display: flex
+      margin-top: 1em
+
+      &-price
+        margin-left: 0.5em
+        font-weight: 600
+
+    p.active-filter
+      background: #d9d9d9
+      border-radius: 4px
+      text-transform: uppercase
+      font-weight: 700
+      font-size: 0.9rem
+      min-width: 200px
+      padding: 0.6em 1.5em
+      letter-spacing: 0.1em
+      cursor: pointer
+      display: inline-flex
+      justify-content: space-between
+      transition: 0.3s
+
+      i
+        transition: 0.3s
+
+      &:hover
+        box-shadow: 0 0 1px rgba(34, 25, 25, 0.4)
+        
+
+    .dropdown
+      position: relative
+      width: 200px
+      margin-top: 1em
+
+      ul
+        position: absolute
+        left: 0
+        top: 1.81em
+        display: none
+        width: 100%
+
+
+        li
+          list-style: none
+          border-top: 1px solid #f0f0f0
+          text-transform: uppercase
+          font-weight: 700
+          font-size: 0.9rem
+          padding: 0.6em 1.5em
+          letter-spacing: 0.1em
+          display: inline-block 
+          cursor: pointer
+          width: 100%
+          background: #f9f9f9
+          transition: 0.3s
+
+          &:hover
+            background: #ededed
+
+
+.rotate
+  transform: rotate(180deg)
+
+.rounded
+  border-bottom-left-radius: 0
+  border-bottom-right-radius: 0
+
+@media only screen and (max-width: 425px)
+  form
+    width: 100%

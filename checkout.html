@@ -25,23 +25,12 @@
 
     <!-- Icon in the tab -->
     <link rel="icon" href="assets/callisto-icon.png">
-
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
-
-
 </head>
 <body>
+  <i class="fa fa-times"></i>
 
-   <!--  <div class="preloader">
-        <img src="assets/callisto.png" alt="Logo">
-    </div> -->
-
-    <!-- Main wrapper -->
-
-    <i class="fa fa-times"></i>
-
-    <div id="screen">
-        <div id="wrapper">      
+  <div id="screen">
+    <div id="wrapper">      
       <aside>
         <div class="side-line"></div>
          <div class="search">
@@ -52,34 +41,34 @@
                     </div>
               </div>
           </div>
-          <div class="side-container">
-             <ul class="points">
-                <li>
-                    <a href="index.html" class="main-point"><i class="fas fa-home"></i>Home</a>
-                    <p class="subpoint">Home sweet home</p>
-                </li>
-                <li>
-                    <a href="about.html" class="main-point"><i class="fas fa-mountain"></i>About Callisto</a>
-                    <p class="subpoint">Get to know us</p>
-                </li>
-                <li>
-                    <a href="shop.html" class="main-point"><i class="fas fa-gem"></i>Shop</a>
-                    <p class="subpoint">Ranks, boosters & more</p>
-                </li>
-                <li>
-                    <a href="#" class="main-point"><i class="far fa-newspaper"></i>Forums</a>
-                    <p class="subpoint">Explore our community posts</p>
-                </li>
-                <li>
-                    <a href="#" class="main-point"><i class="fas fa-info-circle"></i>Support</a>
-                    <p class="subpoint">Got questions?</p>
-                </li>
-                <li>
-                    <a href="index.html?register" class="main-point register-point"><i class="fas fa-sign-in-alt"></i>Register</a>
-                    <p class="subpoint">Set up your account</p>
-                </li>
-            </ul>
-          </div>
+         <div class="side-container">
+            <ul class="points">
+              <li>
+                  <a href="index.html" class="main-point"><i class="fas fa-home"></i>Home</a>
+                  <p class="subpoint">Home sweet home</p>
+              </li>
+              <li>
+                  <a href="about.html" class="main-point"><i class="fas fa-mountain"></i>About Callisto</a>
+                  <p class="subpoint">Get to know us</p>
+              </li>
+              <li>
+                  <a href="shop.html" class="main-point"><i class="fas fa-gem"></i>Shop</a>
+                  <p class="subpoint">Ranks, boosters & more</p>
+              </li>
+              <li>
+                  <a href="forums.html" class="main-point"><i class="far fa-newspaper"></i>Forums</a>
+                  <p class="subpoint">Explore our community posts</p>
+              </li>
+              <li>
+                  <a href="support.html" class="main-point"><i class="fas fa-info-circle"></i>Support</a>
+                  <p class="subpoint">Got questions?</p>
+              </li>
+              <li>
+                  <a href="index.html?register" class="main-point register-point"><i class="fas fa-sign-in-alt"></i>Register</a>
+                  <p class="subpoint">Set up your account</p>
+              </li>
+          </ul>
+        </div>
       </aside>       
       <main>
         <div class="container header-container">
@@ -87,57 +76,58 @@
                 <a href="#"><i class="fas fa-bars"></i></a>
                 <div class="logo-block_inner">
                     <img src="assets/callisto.png" alt="Logo">
-                    <p class="logo-subtitle"><b>Checkout</b></p>
+                    <p class="logo-subtitle"><b>Shop</b></p>
                 </div>
-            </div>
-
-            <div class="cart-window">
-              <i class="fas fa-shopping-cart"></i>
-
-              <div class="cart-block toggleshow">
-
-                <!-- If the cart is empty gotta hide block with class cart-content and show element with class nothing-in-cart -->
-                <div class="cart-content">
-                  <h2>Cart</h2>
-
-                  <ul class="products">
-                    <li class="product"><span class="product-name">Ice</span> <span class="product-price">$5</span></li>
-                    <li class="product"><span class="product-name">Unban</span> <span class="product-price">$55</span></li>
-                  </ul>
-
-                  <div class="total">
-                    <p>Total <span class="total-price">$55</span></p>
-                  </div>
-
-                  <a href="#" class="checkout-btn">Checkout</a>
-                </div>
-
-                <p class="nothing-in-cart"><span class="oops">Oops</span><br>Seems You have not added anything to the cart...</p>
-              </div>
             </div>
           </div>
-             
+
+          <div class="container">
+            <h2 class="checkout-title">Checkout</h2>
+            <form class="checkout">
+              <ul class="items">
+                <li>Ice[Rank] <span class="price">$5</span></li>
+                <li>Unban <span class="price">$50</span></li>
+                <li>Booster <span class="price">$2.50</span></li>
+              </ul>
+
+              <div class="total">
+                <h2>Total <span class="total-price">$57.50</span></h2>
+              </div>
+
+              <div class="dropdown">
+                <p class="active-filter"><span class="filter-name">Paypal</span> <i class="fas fa-caret-up"></i></p>
+                <ul class="method-filter">
+                  <li style="display: none">Paypal</li>
+                  <li>Yandex Money</li>
+                  <li>Qiwi</li>
+                </ul>
+              </div>
+
+              <input type="submit" value="Pay">
+
+            </form>
+          </div>
       </main>
     </div>
 
     <footer>
       <div class="container">
           <div class="footer-links">
-              <ul class="main-nav">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Shop</a></li>
-                  <li><a href="#">Forums</a></li>
-                  <li><a href="#">Support</a></li>
-                  <li><a href="#">Register</a></li>
-              </ul>
+            <ul class="main-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="forums.html">Forums</a></li>
+              <li><a href="support.html">Support</a></li>
+              <li><a href="index.html?register">Register</a></li>
+            </ul>
 
-              <ul class="extra-links">
-                  <li><a href="#">FAQ</a></li>
-                  <li><a href="#">Staff applications</a></li>
-                  <li><a href="#">Stats</a></li>
-              </ul>
-          </div>
+            <ul class="extra-links">
+              <li><a href="support.html">FAQ</a></li>
+              <li><a href="staff-apps.html">Staff applications</a></li>
+              <li><a href="stats-home.html">Stats</a></li>
+            </ul>
+        </div>
       </div>
 
       <div class="container">
@@ -149,8 +139,7 @@
         </ul>
       </div>
     </footer>
-
-    </div>
+  </div>
 
     <div class="search-screen">
         <div class="container">
@@ -216,36 +205,34 @@
 
     <!-- Scripts -->
     <script src="libs/jquery/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js"></script>
-    <script src="https://mcapi.us/scripts/minecraft.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/index.js"></script>
-    <script src="js/uuid.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
+    
     <script>
-      // Shop redirections (on click)
-      $("[data-shop-href]").each((index, el) => {
-        $(el).click(() => {
-          window.location = $(el).attr("data-shop-href")
+      // This variable contains type of selected payment method (e.g. "Paypal", "Qiwi", etc.)
+      let newOption;
+
+      $(".active-filter").each((index, el) => {
+        $(el).click((e) => {
+          $(el).closest("form").find(".dropdown ul").toggle();
+          $(el).closest("form").find(".active-filter i").toggleClass("rotate");
+          $(el).closest("form").find(".active-filter").toggleClass("rounded");
         })
       })
 
-      $(".fa-shopping-cart").click(() => {
-        $(".cart-block").toggleClass("toggleshow");
+      $(".dropdown").on("click", "li", (e) => {
+        $(e.target).closest("form").find(".dropdown li").show();
+        let prevOption = $(e.target).closest("form").find(".active-filter span").html();
+        newOption = $(e.target).html()
 
-        if($(".cart-block").hasClass("toggleshow")) {
-          $(".cart-block").animate({opacity: 0}, 300, () => {
-            $(".cart-block").hide();
-          })
-        } else {
-          $(".cart-block").show()
-          $(".cart-block").animate({opacity: 1}, 300);
-        }
+        $(e.target).closest("form").find(".dropdown ul").hide();
+        $(e.target).closest("form").find(".active-filter span").html(newOption)
+        $(e.target).hide();
+
+        $(e.target).closest("form").find(".active-filter i").toggleClass("rotate");
+        $(e.target).closest("form").find(".active-filter").toggleClass("rounded");
       })
-    </script>
-    
+    </script> 
 </body>
 </html>

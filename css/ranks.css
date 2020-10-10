@@ -1,6 +1,9 @@
 main {
   background: #141414; }
 
+.nothing-in-cart {
+  color: #666; }
+
 .ranks {
   margin-top: 1.8em;
   display: grid;

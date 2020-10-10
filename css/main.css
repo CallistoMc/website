@@ -155,7 +155,7 @@ footer {
   .logo-block img {
     width: 5.5em !important; } }
 
-i.fa-times {
+body > i.fa-times {
   position: fixed;
   right: 1em;
   top: 1em;
@@ -169,7 +169,7 @@ i.fa-times {
   -o-transition: 0.3s;
   transition: 0.3s;
   padding: 1em; }
-  i.fa-times:hover {
+  body > i.fa-times:hover {
     color: #999; }
 
 aside {
