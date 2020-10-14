@@ -148,6 +148,24 @@ main {
       margin-right: 0.7em;
       font-size: 0.8rem; }
 
+@media only screen and (max-width: 600px) {
+  .forums-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start !important;
+    -webkit-justify-content: flex-start !important;
+        -ms-flex-pack: start !important;
+            justify-content: flex-start !important;
+    -webkit-box-align: start !important;
+    -webkit-align-items: flex-start !important;
+        -ms-flex-align: start !important;
+            align-items: flex-start !important; }
+    .forums-header a {
+      margin-top: 1em; } }
+
 @media only screen and (max-width: 425px) {
   .more-posts {
     display: -webkit-box;
