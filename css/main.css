@@ -17,7 +17,7 @@
     position: relative;
     margin-right: 1em; }
   .logo-block img {
-    width: 11em; }
+    width: 8em; }
   .logo-block p {
     text-transform: uppercase;
     font-style: italic;
@@ -503,7 +503,9 @@ p.form-error {
       display: none; }
     .search-screen .search-results p {
       text-transform: uppercase;
-      margin-top: 0.5em; }
+      margin-top: 0.5em;
+      width: 100%;
+      word-wrap: break-word; }
     .search-screen .search-results .categorie {
       font-weight: 600; }
     .search-screen .search-results .categorie, .search-screen .search-results .location {

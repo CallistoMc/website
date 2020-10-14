@@ -174,6 +174,65 @@
                 <p class="rank-prefix">Rank prefix <span class="prefix">[glacier]</span></p>
               </div>
             </div>
+            <div class="rank creator">
+                 <div class="main-info">
+                  <div class="product-name"><i class="fas fa-video"></i> <span class="name">[Creator]</span></div>
+                  <div class="product-footer">
+                    <p>In order to apply for this rank you have to meet minimal requirements.</p>
+                    <div class="platforms">
+                       <ul>
+                        <li><i class="fab fa-youtube"></i></li>
+                        <li><i class="fab fa-twitch"></i></li>
+                       </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="rank-bottom">
+                  <div class="rank-info">
+                    <div class="features">
+                      <ul>
+                        <li>All [Galcier] rank perks</li>
+                        <li>Access to /nick (custom nick)</li>
+                      </ul>
+                      <p class="rank-prefix">Rank prefix <span class="prefix">[Creator]</span></p>
+                    </div>
+
+                    <div class="requirements">
+                      <div class="yt">
+                        <h2>Youtube</h2>
+
+                        <ul>
+                          <li>15,000 or more subscribers</li>
+                          <li>Records and uploads PRIMARILY Minecraft content</li>
+                          <li>Active uploading schedule</li>
+                          <li>Promotion of Castillo in some way, shape, or form. This can be promotion through: a video, a stream, or promoting our server through your social media.</li>
+                        </ul>
+                      </div>
+
+                      <div class="twitch">
+                        <h2>Twitch</h2>
+
+                        <ul>
+                          <li>Average of 25 consistent concurrent viewers</li>
+                          <li>1000 or more followers</li>
+                          <li>Streams PRIMARILY Minecraft content</li>
+                          <li>Active streaming schedule</li>
+                          <li>At least 1 Callisto-related stream within the past two weeks</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <form class="apply">
+                    <div class="field">
+                      <label for="page-url">URL of your Youtube/Twitch page</label> <br>
+                      <input type="text" name="url" id="page-url" placeholder="https://www.youtube.com/channel/UC8r6QzRwMEJggurBCGiwxuQ">
+                      <p class="url-error">Please enter a URL</p>
+                    </div>
+                    <input type="submit" value="apply">
+                  </form>
+                </div>
+              </div>
           </div>
           
       </main>
@@ -195,6 +254,7 @@
               <li><a href="support.html">FAQ</a></li>
               <li><a href="staff-apps.html">Staff applications</a></li>
               <li><a href="stats-home.html">Stats</a></li>
+              <li><a href="dashboard.html">Dashboard</a></li>
             </ul>
         </div>
       </div>
@@ -278,5 +338,19 @@
     <script src="js/common.js"></script>
     <script src="js/index.js"></script>
     <script src="js/cart.js"></script>   
+
+    <script>
+      $("form.apply").submit((e) => {
+        $(".url-error").hide();
+        e.preventDefault();
+
+        if($("#page-url").val() === "") {
+          $(".url-error").show();
+        } else {
+          $(".url-error").hide();
+          $("form.apply")[0].submit()
+        }
+      })
+    </script>
 </body>
 </html>

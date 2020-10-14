@@ -96,6 +96,31 @@ main
 .glacier .prefix
 	color: #050cce !important
 
+.creator
+	.product-name
+		color: #000 !important
+
+	.product-footer
+		margin-top: 0.7em !important
+		flex-direction: column
+
+		.platforms
+			width: 100%
+			margin-top: 1em
+
+			ul
+
+				li
+					list-style: none
+					display: inline-block
+					margin-right: 0.8em
+
+	.prefix
+		color: #ff55ff !important
+
+	.main-info
+		background: linear-gradient(56deg, rgba(2,0,36,1) 0%, rgba(231,97,231,1) 00%, rgba(80,14,94,1) 100%, rgba(112,112,168,1) 100%) !important
+
 .cart-block
 	background: #111 !important
 	box-shadow: none !important
@@ -108,3 +133,153 @@ main
 
 	.total
 		color: #fff
+
+.rank-bottom
+	display: flex
+	align-items: flex-start
+	flex-direction: column
+
+.creator
+	margin-bottom: 4em
+	width: auto 
+
+	.rank-info
+		display: flex
+		align-items: flex-start
+
+	.requirements
+		display: flex
+
+
+	display: inline-block
+	width: 100%
+
+	.rank-prefix
+		color: #ccc
+		margin-top: 1em
+		margin-left: 1em
+
+		.prefix
+			color: #0afafd
+			margin-left: 0.3em
+			text-transform: capitalize
+
+	.main-info
+		padding: 1.5em
+		border-radius: 7px
+
+		.product-name
+			color: #222
+			font-weight: 700
+			text-transform: uppercase
+
+			i
+				margin-right: 0.3em
+
+			span
+				letter-spacing: 0.1em
+
+		.product-footer
+			display: flex
+			justify-content: space-between
+			align-items: flex-start
+			margin-top: 1.5em
+
+			a.addToCart
+				background: #111
+				padding: 0.5em 1.4em
+				padding-bottom: 0.6em
+				border-radius: 4px
+				text-decoration: none
+				color: #fff
+				text-transform: uppercase
+				font-size: 0.8rem
+				font-weight: 700
+				transition: 0.3s
+
+				&:hover
+					background: #222
+
+	.features
+		ul 
+			margin-top: 1.5em
+			margin-left: 1.5em
+
+			li
+				list-style: disc outside none
+				color: #666
+				line-height: 1.3em
+				margin-top: 1em
+				color: #ccc
+
+	.requirements	
+		margin-top: 1.5em
+
+		& > *
+			margin-left: 3em
+
+		h2
+			color: #fff
+			text-transform: uppercase
+			font-weight: 700
+			font-size: 1.1rem
+
+		ul 
+			margin-left: 1.5em
+
+			li
+				list-style: disc outside none
+				color: #666
+				line-height: 1.3em
+				margin-top: 1em
+				color: #ccc
+				max-width: 270px
+
+	.apply
+		margin-top: 2.5em
+
+		label
+			color: #fff
+
+		input
+			margin-top: 0.7em
+			background: #222
+			padding: 0.5em 1em
+			border: none
+			outline: none
+
+		input[type=submit]
+			cursor: pointer
+			color: #fff
+			background: #000
+			text-transform: uppercase
+			font-weight: 600
+			font-size: 0.8rem
+			padding: 0.7em 1.9em
+			margin-top: 1.5em
+			transition: 0.3s
+			border-radius: 4px
+
+			&:hover
+				background: #fff
+				color: #000
+
+		.url-error
+			color: red
+			margin-top: 0.6em
+			display: none
+
+@media only screen and (max-width: 768px)
+	.rank-info
+		flex-direction: column
+
+	.yt
+		margin-left: 0 !important
+
+@media only screen and (max-width: 600px)
+	.requirements
+		flex-direction: column 
+
+		.twitch
+			margin-left: 0 !important
+			margin-top: 1em

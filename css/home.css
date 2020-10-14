@@ -69,6 +69,27 @@ main {
       main .main-blocks .play-btn i {
         font-size: 0.7rem;
         margin-right: 1.3em; }
+    main .main-blocks .signed-in-as {
+      background: #111;
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      max-width: 300px;
+      margin-bottom: 4em;
+      padding: 2em; }
+      main .main-blocks .signed-in-as img {
+        width: 2.5em; }
+      main .main-blocks .signed-in-as p {
+        color: #fff;
+        margin-left: 1.7em;
+        line-height: 1.4em; }
+        main .main-blocks .signed-in-as p .ign {
+          font-weight: 600; }
     main .main-blocks form {
       background: #111;
       display: -webkit-inline-box;
@@ -128,7 +149,73 @@ main {
       border-radius: 3px;
       margin-top: 2em;
       cursor: pointer;
-      letter-spacing: 0.1em; }
+      letter-spacing: 0.1em;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s; }
+      main .main-blocks input[type=submit]:hover {
+        background: #090909; }
+    main .main-blocks .announcements {
+      margin-top: 4em;
+      margin-bottom: 4em; }
+    main .main-blocks .post {
+      color: #fff;
+      width: 400px;
+      margin-top: 2.5em; }
+      main .main-blocks .post .inner-post {
+        background: #090909;
+        padding: 2em; }
+      main .main-blocks .post p.date {
+        color: #ccc;
+        font-size: 0.9rem;
+        font-weight: 300; }
+      main .main-blocks .post h3 {
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin-top: 0.1em; }
+      main .main-blocks .post .post-author {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center;
+        margin-top: 0.9em; }
+        main .main-blocks .post .post-author .author-ign {
+          font-weight: 600; }
+        main .main-blocks .post .post-author .skin {
+          margin-right: 0.8em;
+          width: 1.5em; }
+      main .main-blocks .post .post-stats {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        margin-top: 1.2em; }
+        main .main-blocks .post .post-stats li {
+          list-style: none !important; }
+        main .main-blocks .post .post-stats i {
+          margin-right: 0.5em;
+          margin-left: 1.1em; }
+        main .main-blocks .post .post-stats .fa-heart {
+          margin-left: 0; }
+      main .main-blocks .post .tags {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        margin-top: 0.8em; }
+        main .main-blocks .post .tags li {
+          color: lightblue;
+          margin-right: 1em;
+          font-size: 0.9rem;
+          list-style: none; }
+    main .main-blocks .see-more {
+      color: #ccc;
+      margin-top: .5em;
+      display: inline-block; }
 
 #particles-js {
   position: absolute;
@@ -235,6 +322,24 @@ main {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s; }
+
+@media only screen and (max-width: 1000px) {
+  .main-blocks {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+    -webkit-flex-direction: column !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important; } }
+
+@media only screen and (max-width: 768px) {
+  .main-section {
+    width: 100%; }
+  .announcements {
+    width: 100% !important;
+    margin-top: 2em !important;
+    margin-bottom: 2em !important; }
+  .post {
+    width: 100% !important; } }
 
 @media only screen and (max-width: 425px) {
   .steps {

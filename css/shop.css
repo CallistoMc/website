@@ -6,7 +6,8 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 1.5em;
-  margin-top: 2.5em; }
+  margin-top: 2.5em;
+  margin-bottom: 2em; }
   .shop-grid .shop-section {
     background: url("../assets/julien-leclercq-DK9VZ6YvXqI-unsplash.jpg");
     background-repeat: no-repeat;

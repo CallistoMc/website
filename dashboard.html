@@ -7,12 +7,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Callisto ~ Shop</title>
+    <title>Callisto ~ Dashboard</title>
 
     <!-- Native Css project files -->
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/dashboard.css">
 
     <!-- Libraries -->
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
@@ -26,7 +26,7 @@
     <link rel="icon" href="assets/callisto-icon.png">
 </head>
 <body>
-    <i class="fa fa-times"></i>
+  <i class="fa fa-times"></i>
 
   <div id="screen">
     <div id="wrapper">      
@@ -75,80 +75,71 @@
                 <a href="#"><i class="fas fa-bars"></i></a>
                 <div class="logo-block_inner">
                     <img src="assets/callisto.png" alt="Logo">
-                    <p class="logo-subtitle"><b>Shop</b></p>
+                    <p class="logo-subtitle"><b>Dashboard</b></p>
                 </div>
             </div>
+          </div>
 
-            <div class="cart-window">
-              <i class="fas fa-shopping-cart"></i>
+          <div class="container">
+            <div class="dashboard">
+              <div class="notifications">
+                <i class="fas fa-bell"></i>
+                <!-- data-post-href attribute has to contain path to the page of the post -->
+                <p class="notification"><span data-uuid="9beb2226-980b-433a-9076-54b4efd6ed5a" data-post-href="post.html" class="ign"></span> liked your post</p>
+                <p class="notification"><span data-uuid="9beb2226-980b-433a-9076-54b4efd6ed5a" data-post-href="post.html" class="ign"></span> commented on your post</p>
+                <a href="#" class="load-more">Load more</a>
+              </div>
 
-              <div class="cart-block toggleshow">
-
-                <!-- If the cart is empty gotta hide block with class cart-content and show element with class nothing-in-cart -->
-                <div class="cart-content">
-                  <h2>Cart</h2>
-                  <ul class="products">
-                    <li class="product"><span class="product-name">Ice</span> <span class="product-price">$5</span><i class="fa fa-times"></i></li>
-                    <li class="product"><span class="product-name">Unban</span> <span class="product-price">$55</span><i class="fa fa-times"></i></li>
+              <div class="posts">
+                <h2><i class="far fa-newspaper"></i>Your posts</h2>
+                <div class="post" data-post-href="post.html">
+                  <h3 class="post-title">How to get good</h3>
+                  <ul class="insights">
+                    <li><i class="fas fa-eye"></i> 1240</li>
+                    <li><i class="fas fa-heart"></i> 7</li>
+                    <li><i class="fas fa-thumbs-down"></i>2</li>
+                    <li><i class="fas fa-comments"></i>4</li>
                   </ul>
-
-                  <div class="total">
-                    <p>Total <span class="total-price">$55</span></p>
-                  </div>
-
-                  <a href="checkout.html" class="checkout-btn">Checkout</a>
                 </div>
 
-                <p class="nothing-in-cart"><span class="oops">Oops</span><br>Seems You have not added anything to the cart...</p>
+                <div class="post" data-post-href="post.html">
+                  <h3 class="post-title">How to stop throwing bad</h3>
+                  <ul class="insights">
+                    <li><i class="fas fa-eye"></i> 1240</li>
+                    <li><i class="fas fa-heart"></i> 7</li>
+                    <li><i class="fas fa-thumbs-down"></i>2</li>
+                    <li><i class="fas fa-comments"></i>4</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="reach">
+                <h2><i class="fas fa-project-diagram"></i> Total Reach</h2>
+                <div class="insight">
+                  <h3><i class="fas fa-eye"></i> Views</h3>
+                  <p>On average you get around 30 views per post or 2303 in total</p>
+                </div>
+                <div class="insight">
+                  <h3><i class="fas fa-heart"></i> Likes</h3>
+                  <p>On average you get around 30 likes per post or 2303 in total</p>
+                </p>
+                <div class="insight">
+                  <h3><i class="fas fa-thumbs-down"></i> Dislikes</h3>
+                  <p>On average you get around 30 views per post or 2303 in total</p>
+                </p>
+                <div class="insight">
+                  <h3><i class="fas fa-comments"></i> Comments</h3>
+                  <p>On average you get around 30 comments per post or 2303 in total</p>
+                </div>
+
               </div>
             </div>
           </div>
-
-          <!-- Shop-section grid -->
-          <div class="grid-block">
-            <div class="container">
-              <div class="shop-grid">
-                <div class="shop-section shop-tall" data-shop-href="ranks.html">
-                  <div class="section-inner">
-                    <i class="fas fa-icicles"></i>
-                    <p>Ranks</p>
-                  </div>
-                </div>
-
-                <div class="shop-section shop-long" data-shop-href="cosmetics.html">
-                  <div class="section-inner">
-                    <i class="fas fa-hat-cowboy-side"></i>
-                    <p>Cosmetics</p>
-                  </div>
-                </div>
-
-                <div class="shop-section shop-small" data-shop-href="misc.html">
-                 <div class="section-inner">
-                    <i class="fa fa-lock"></i>
-                    <p>Misc</p>
-                 </div>
-                </div>
-
-                <div class="shop-section shop-long" data-shop-href="boosters.html">
-                  <div class="section-inner">
-                    <i class="fas fa-bolt"></i>
-                    <p>Xp boosters</p>
-                  </div>
-                </div>
-
-                <div class="shop-section shop-tall" data-shop-href="games.html">
-                  <div class="section-inner">
-                    <i class="fas fa-gamepad"></i>
-                    <p>games</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        </div>
       </main>
     </div>
 
-   <footer>
+    <footer>
       <div class="container">
           <div class="footer-links">
             <ul class="main-nav">
@@ -214,7 +205,7 @@
                         <h3>Details</h3>
 
                         <p class="detail-info"><span class="detail-type">Type:</span><span class="detail-cat">Post</span></p>
-                        <p class="detail-info"><span class="detail-type detail-author">Author:</span><span class="author"><img width="30px" data-uuid="9beb2226-980b-433a-9076-54b4efd6ed5a" class="skin" alt="Head">edqtings</span></p>
+                        <p class="detail-info"><span class="detail-type detail-author">Author:</span><span class="author"><img width="30px" data-uuid="9beb2226-980b-433a-9076-54b4efd6ed5a" class="skin" alt="Head"></span></p>
 
                     </div>
 
@@ -244,20 +235,36 @@
 
     <!-- Scripts -->
     <script src="libs/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js"></script>
+    <script src="https://mcapi.us/scripts/minecraft.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/common.js"></script>
-    <script src="js/index.js"></script>
-    <script src="js/cart.js"></script>
+    <script src="js/index.js"></script>  
 
     <script>
-      // Shop redirections (on click)
-      $("[data-shop-href]").each((index, el) => {
-        $(el).click(() => {
-          window.location = $(el).attr("data-shop-href")
+      $(".ign").each((index, el) => {
+        let uuid = $(el).attr("data-uuid");
+
+        let request = new XMLHttpRequest();
+        request.onload = function() {
+            let response = JSON.parse(request.responseText);
+                // If error exists throw the message
+                console.log(response)
+                if (response.code != null) {
+                    throw response.msg;
+                }
+                $(el).html(response.username);
+        };
+
+        request.open("GET", "https://api.year4000.net/minecraft/" + uuid, true);
+        request.send();
+      });
+
+      $("[data-post-href]").each((index, el) => {
+        $(el).click((e) => {
+          window.location.href = $(el).attr("data-post-href")
         })
       })
-
     </script>
-    
 </body>
 </html>

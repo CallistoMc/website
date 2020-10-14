@@ -3,6 +3,26 @@ main {
 
 .announcements, .com-posts {
   margin-top: 2em; }
+  .announcements .forums-header, .com-posts .forums-header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .announcements .forums-header a, .com-posts .forums-header a {
+      color: #000;
+      text-decoration: none; }
+      .announcements .forums-header a:hover, .com-posts .forums-header a:hover {
+        text-decoration: underline; }
+      .announcements .forums-header a i, .com-posts .forums-header a i {
+        margin-right: 0.5em; }
   .announcements h2, .com-posts h2 {
     text-transform: uppercase;
     font-weight: 700;
