@@ -227,8 +227,14 @@
                     <div class="field">
                       <label for="page-url">URL of your Youtube/Twitch page</label> <br>
                       <input type="text" name="url" id="page-url" placeholder="https://www.youtube.com/channel/UC8r6QzRwMEJggurBCGiwxuQ">
-                      <p class="url-error">Please enter a URL</p>
                     </div>
+
+                    <div class="field">
+                      <label for="email">Your email address</label> <br>
+                      <input type="email" name="email" id="email" placeholder="example@gmail.com">
+                    </div>
+
+                    <p class="application-error">Please fill in all the fields</p>
                     <input type="submit" value="apply">
                   </form>
                 </div>
@@ -341,13 +347,13 @@
 
     <script>
       $("form.apply").submit((e) => {
-        $(".url-error").hide();
+        $(".application-error").hide();
         e.preventDefault();
 
-        if($("#page-url").val() === "") {
-          $(".url-error").show();
+        if($("#page-url").val() === "" || $("#email").val() === "") {
+          $(".application-error").show();
         } else {
-          $(".url-error").hide();
+          $(".application-error").hide();
           $("form.apply")[0].submit()
         }
       })

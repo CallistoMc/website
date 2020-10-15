@@ -241,7 +241,11 @@ main {
         color: #ccc;
         max-width: 270px; }
   .creator .apply {
-    margin-top: 2.5em; }
+    margin-top: 2.5em;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
     .creator .apply label {
       color: #fff; }
     .creator .apply input {
@@ -250,6 +254,10 @@ main {
       padding: 0.5em 1em;
       border: none;
       outline: none; }
+    .creator .apply .field:last-of-type {
+      margin-top: 1em; }
+    .creator .apply .field input {
+      width: 280px; }
     .creator .apply input[type=submit] {
       cursor: pointer;
       color: #fff;
@@ -266,7 +274,7 @@ main {
       .creator .apply input[type=submit]:hover {
         background: #fff;
         color: #000; }
-    .creator .apply .url-error {
+    .creator .apply .application-error {
       color: red;
       margin-top: 0.6em;
       display: none; }
@@ -291,3 +299,9 @@ main {
     .requirements .twitch {
       margin-left: 0 !important;
       margin-top: 1em; } }
+
+@media only screen and (max-width: 425px) {
+  .apply {
+    width: 100%; }
+    .apply input {
+      width: 100% !important; } }

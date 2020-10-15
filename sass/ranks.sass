@@ -237,6 +237,7 @@ main
 
 	.apply
 		margin-top: 2.5em
+		align-items: flex-start
 
 		label
 			color: #fff
@@ -247,6 +248,13 @@ main
 			padding: 0.5em 1em
 			border: none
 			outline: none
+
+		.field:last-of-type
+			margin-top: 1em
+
+		.field
+			input
+				width: 280px				
 
 		input[type=submit]
 			cursor: pointer
@@ -264,7 +272,7 @@ main
 				background: #fff
 				color: #000
 
-		.url-error
+		.application-error
 			color: red
 			margin-top: 0.6em
 			display: none
@@ -283,3 +291,10 @@ main
 		.twitch
 			margin-left: 0 !important
 			margin-top: 1em
+
+@media only screen and (max-width: 425px)
+	.apply
+		width: 100% 
+		
+		input
+			width: 100% !important
