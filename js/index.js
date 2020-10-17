@@ -14,19 +14,23 @@ $(window).resize(() => {
 // Toggle sidebar
 $(".fa-bars").click(() => {
 	$("aside").addClass("sideToggled");
-	$("i.fa-times").css("display", "block");
-	$("i.fa-times").animate({opacity: 1}, 400)
+	$(".aside-overlay").show(() => {
+		$(".aside-overlay").animate({opacity: 1}, 400)
+	})
 })
 
-$("body > .fa-times").click(() => {
+$(".aside-overlay").click(() => {
     closeSidebar();
 })
 
 function closeSidebar() {
 	$("aside").removeClass("sideToggled");
-    $(".fa-times").animate({opacity: 0}, 400, () => {
-    	$("i.fa-times").css("display", "none");
-    })
+	
+	setTimeout(() => {
+		$(".aside-overlay").animate({opacity: 0}, 400, () => {
+			$(".aside-overlay").hide()
+		})
+	}, 200)
 }
 
 $(document).keyup((e) => {

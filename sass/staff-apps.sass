@@ -18,14 +18,18 @@ footer
 	display: inline-flex
 	margin-top: 2.5em
 	align-self: flex-start
+	max-width: 100% !important
 
 
 	.tabs
-		display: inline-flex
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr
+		max-width: 100%
 
 		.tab
 			background: #fff
-			padding: 0.7em 4em
+			padding: 0.7em 0
+			text-align: center
 			cursor: pointer
 			text-transform: uppercase
 			font-weight: 500

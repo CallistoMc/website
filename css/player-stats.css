@@ -44,19 +44,33 @@
   .player-stats-block .ign {
     font-weight: 600; }
   .player-stats-block .rank-name {
-    font-size: 1.1rem; }
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-right: 0.3em; }
   .player-stats-block .rank {
     width: 100%;
     padding-bottom: 1em;
     border-bottom: 1px solid #ddd; }
+  .player-stats-block .owner {
+    color: #FF0000; }
   .player-stats-block .admin {
-    color: red;
-    text-transform: capitalize;
-    font-weight: 600;
-    margin-right: 0.3em; }
+    color: #EF2D30; }
+  .player-stats-block .mod {
+    color: #216993; }
+  .player-stats-block .creator {
+    color: #ff55ff; }
+  .player-stats-block .glacier {
+    color: #050cce; }
+  .player-stats-block .frost {
+    color: #024ba0; }
+  .player-stats-block .ice {
+    color: #0afafd; }
   .player-stats-block .offline {
     color: red;
     text-transform: capitalize; }
+  .player-stats-block .online {
+    color: #3BC429; }
 
 .stats {
   margin-left: 5em; }

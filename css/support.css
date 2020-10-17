@@ -42,7 +42,7 @@ h2 {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.5em;
   margin-top: 1em;
-  margin-bottom: 2em;
+  margin-bottom: 2.5em;
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
@@ -68,7 +68,7 @@ h2 {
     .faq-grid .faq-block h3 {
       text-transform: uppercase;
       font-weight: 600;
-      font-size: 1.1rem; }
+      font-size: 1rem; }
 
 .activeFaq {
   background: #222 !important;

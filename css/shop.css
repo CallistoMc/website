@@ -122,7 +122,8 @@ main {
     margin-top: 1.5em; }
 
 .cart-window {
-  position: relative; }
+  position: relative;
+  z-index: 20; }
   .cart-window .cart-block {
     position: absolute;
     top: 4em;

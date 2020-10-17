@@ -11,7 +11,7 @@ main {
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
           align-items: flex-start;
-  grid-template-columns: repeat(3, 330px);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 3em;
   margin-bottom: 4em; }
   .cosmetics .cosmetic {

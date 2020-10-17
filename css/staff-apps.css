@@ -32,15 +32,16 @@ footer {
   margin-top: 2.5em;
   -webkit-align-self: flex-start;
       -ms-flex-item-align: start;
-          align-self: flex-start; }
+          align-self: flex-start;
+  max-width: 100% !important; }
   .staff-apps .tabs {
-    display: -webkit-inline-box;
-    display: -webkit-inline-flex;
-    display: -ms-inline-flexbox;
-    display: inline-flex; }
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 100%; }
     .staff-apps .tabs .tab {
       background: #fff;
-      padding: 0.7em 4em;
+      padding: 0.7em 0;
+      text-align: center;
       cursor: pointer;
       text-transform: uppercase;
       font-weight: 500;

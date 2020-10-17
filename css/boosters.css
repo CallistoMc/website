@@ -71,7 +71,8 @@ main {
           letter-spacing: 0.05em;
           text-transform: uppercase; }
           .boosters .booster .main-info .product-footer .booster-info .time {
-            position: relative; }
+            position: relative;
+            z-index: 0; }
             .boosters .booster .main-info .product-footer .booster-info .time:after {
               content: '';
               position: absolute;
