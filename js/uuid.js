@@ -5,7 +5,6 @@ $(".ign").each((index, el) => {
     request.onload = function() {
         let response = JSON.parse(request.responseText);
             // If error exists throw the message
-            console.log(response)
             if (response.code != null) {
                 throw response.msg;
             }
