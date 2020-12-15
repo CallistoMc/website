@@ -16,22 +16,14 @@
     z-index: 38;
     position: relative;
     margin-right: 1em; }
-  .logo-block_inner {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center; }
   .logo-block img {
-    width: 4em; }
+    width: 8em; }
   .logo-block p {
     text-transform: uppercase;
     font-style: italic;
     text-transform: uppercase;
-    margin-left: 1.3em;
+    margin-left: 0.8em;
+    margin-top: 0.7em;
     font-size: 1.3rem;
     letter-spacing: 0.05em;
     color: #B4E0E3; }
